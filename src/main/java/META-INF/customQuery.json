@@ -1,0 +1,4647 @@
+{
+	"auth": {
+		"customId": "auth",
+		"queryName": "Autenticar",
+		"screen": "",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "User",
+		"entityFullName": "app.entity.User",
+		"query": "select o from User o where o.login = :login",
+		"queryParamsValues": [
+			{
+				"fieldName": "login",
+				"fieldValue": ""
+			}
+		],
+		"verbs": {
+			"GET": false,
+			"GETAuthorities": null,
+			"POST": false,
+			"POSTAuthorities": null,
+			"PUT": false,
+			"PUTAuthorities": null,
+			"DELETE": false,
+			"DELETEAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null
+		},
+		"security": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null
+		},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/auth/"
+	},
+	"roles": {
+		"customId": "roles",
+		"queryName": "Obter Autorização",
+		"screen": "",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Role",
+		"entityFullName": "app.entity.Role",
+		"query": "select o.id from Role o where o.user.login = :login",
+		"queryParamsValues": [
+			{
+				"fieldName": "login",
+				"fieldValue": ""
+			}
+		],
+		"verbs": {
+			"GET": false,
+			"GETAuthorities": null,
+			"POST": false,
+			"POSTAuthorities": null,
+			"PUT": false,
+			"PUTAuthorities": null,
+			"DELETE": false,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"user": null
+		},
+		"security": {
+			"id": null,
+			"user": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/roles/"
+	},
+	"tenant": {
+		"customId": "tenant",
+		"queryName": "Obter Id de Multi-inquilino",
+		"screen": "",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "User",
+		"entityFullName": "app.entity.User",
+		"query": "select u.company.id from User u where u.login = :login",
+		"queryParamsValues": [
+			{
+				"fieldName": "login",
+				"fieldValue": ""
+			}
+		],
+		"verbs": {
+			"GET": false,
+			"GETAuthorities": null,
+			"POST": false,
+			"POSTAuthorities": null,
+			"PUT": false,
+			"PUTAuthorities": null,
+			"DELETE": false,
+			"DELETEAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null
+		},
+		"security": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null
+		},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/tenant/"
+	},
+	"device": {
+		"customId": "device",
+		"queryName": "Atualizar Dispositivos",
+		"screen": "",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Device",
+		"entityFullName": "app.entity.Device",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "Device",
+					"namespace": "app.entity.Device",
+					"alias": "d"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "d",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "d.id",
+						"field": "d.id",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":id",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "id",
+				"fieldValue": ""
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"token": null
+		},
+		"security": {
+			"id": null,
+			"token": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/1jy88nt41afza/"
+	},
+	"vbpr82iararb": {
+		"customId": "UsuarioAdm",
+		"queryName": "UsuariosAdmin",
+		"screen": "src/main/webapp/views/admin/usuario.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "User",
+		"entityFullName": "app.entity.User",
+		"query": {
+			"isValid": true,
+			"rulesEntity": [
+				{
+					"entity": "User",
+					"alias": "u",
+					"namespace": "app.entity.User"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "u"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"not": false,
+				"valid": true,
+				"rules": []
+			}
+		},
+		"queryParamsValues": [],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": {
+				"blocklyClass": "blockly.UsuarioEntidade",
+				"blocklyMethod": "ExcluirRole",
+				"blocklyLanguage": "java",
+				"blocklyJson": {
+					"namespace": "blockly.UsuarioEntidade",
+					"classNameNew": "UsuarioEntidade",
+					"classNameOld": "UsuarioEntidade",
+					"sourcePath": "src/main/java/blockly/UsuarioEntidade.blockly",
+					"language": "java",
+					"class": "blockly.UsuarioEntidade",
+					"methods": [
+						{
+							"name": "InserirRole",
+							"hasReturn": "true",
+							"params": [
+								"Dados<app.entity.User>"
+							]
+						},
+						{
+							"name": "ExcluirRole",
+							"hasReturn": "false",
+							"params": [
+								"user"
+							]
+						}
+					]
+				},
+				"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.UsuarioEntidade:ExcluirRole', null, null)"
+			},
+			"afterInsert": {
+				"blocklyClass": "blockly.UsuarioEntidade",
+				"blocklyMethod": "InserirRole",
+				"blocklyLanguage": "java",
+				"blocklyJson": {
+					"namespace": "blockly.UsuarioEntidade",
+					"classNameNew": "UsuarioEntidade",
+					"classNameOld": "UsuarioEntidade",
+					"sourcePath": "src/main/java/blockly/UsuarioEntidade.blockly",
+					"language": "java",
+					"class": "blockly.UsuarioEntidade",
+					"methods": [
+						{
+							"name": "InserirRole",
+							"hasReturn": "true",
+							"params": [
+								"Dados<app.entity.User>"
+							]
+						}
+					]
+				},
+				"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.UsuarioEntidade:InserirRole', null, null)"
+			},
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null,
+			"convenio": null,
+			"estabelecimentoDeSaude": null
+		},
+		"security": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null,
+			"convenio": null,
+			"estabelecimentoDeSaude": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/vbpr82iararb/"
+	},
+	"rhg4fvd1alo6": {
+		"customId": "dsConvenio",
+		"queryName": "ConvenioAdmin",
+		"screen": "src/main/webapp/views/admin/convenio.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Convenio",
+		"entityFullName": "app.entity.Convenio",
+		"query": {
+			"isValid": true,
+			"rulesEntity": [
+				{
+					"entity": "Convenio",
+					"alias": "c",
+					"namespace": "app.entity.Convenio"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "c"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"not": false,
+				"valid": true,
+				"rules": []
+			}
+		},
+		"queryParamsValues": [],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": {
+				"blocklyClass": "blockly.ConvenioEntidade",
+				"blocklyMethod": "remove_usuarios_convenio",
+				"blocklyLanguage": "java",
+				"blocklyJson": {
+					"namespace": "blockly.ConvenioEntidade",
+					"classNameNew": "ConvenioEntidade",
+					"classNameOld": "ConvenioEntidade",
+					"sourcePath": "src/main/java/blockly/ConvenioEntidade.blockly",
+					"language": "java",
+					"class": "blockly.ConvenioEntidade",
+					"methods": [
+						{
+							"name": "remove_usuarios_convenio",
+							"hasReturn": "false",
+							"params": [
+								"dados<app.entity.Convenio>"
+							]
+						},
+						{
+							"name": "InserirUsuario",
+							"hasReturn": "true",
+							"params": [
+								"dados<app.entity.Convenio>"
+							]
+						}
+					]
+				},
+				"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.ConvenioEntidade:remove_usuarios_convenio', null, null)"
+			},
+			"afterInsert": {
+				"blocklyClass": "blockly.ConvenioEntidade",
+				"blocklyMethod": "InserirUsuario",
+				"blocklyLanguage": "java",
+				"blocklyJson": {
+					"namespace": "blockly.ConvenioEntidade",
+					"classNameNew": "ConvenioEntidade",
+					"classNameOld": "ConvenioEntidade",
+					"sourcePath": "src/main/java/blockly/ConvenioEntidade.blockly",
+					"language": "java",
+					"class": "blockly.ConvenioEntidade",
+					"methods": [
+						{
+							"name": "remove_usuarios_convenio",
+							"hasReturn": "false",
+							"params": [
+								"dados<app.entity.Convenio>"
+							]
+						},
+						{
+							"name": "InserirUsuario",
+							"hasReturn": "true",
+							"params": [
+								"dados<app.entity.Convenio>"
+							]
+						}
+					]
+				},
+				"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.ConvenioEntidade:InserirUsuario', null, null)"
+			},
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"nome": null,
+			"razaoSocial": null,
+			"cnPJ": null,
+			"registroANS": null,
+			"cep": null,
+			"endereco": null,
+			"bairro": null,
+			"numero": null,
+			"complemento": null,
+			"cidade": null,
+			"estado": null,
+			"email": null,
+			"telefone1": null,
+			"telefone2": null,
+			"contatoResponsavel": null,
+			"tipoCobranca": null,
+			"ativo": "Sim",
+			"dataInclusao": {
+				"blocklyClass": "blockly.RetornarData",
+				"blocklyMethod": "RetornaData",
+				"blocklyLanguage": "java",
+				"blocklyJson": {
+					"namespace": "blockly.RetornarData",
+					"classNameNew": "RetornarData",
+					"classNameOld": "RetornarData",
+					"sourcePath": "src/main/java/blockly/RetornarData.blockly",
+					"language": "java",
+					"class": "blockly.RetornarData",
+					"methods": [
+						{
+							"name": "RetornaData",
+							"hasReturn": "true",
+							"params": [
+								"Entidade<app.entity.Convenio>"
+							]
+						}
+					]
+				},
+				"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.RetornarData:RetornaData', null, null)",
+				"blocklyGETMethod": null,
+				"blocklyPOSTMethod": null,
+				"blocklyPUTMethod": null,
+				"blocklyDELETEMethod": null,
+				"blocklyFILTERMethod": null
+			}
+		},
+		"security": {
+			"id": null,
+			"nome": null,
+			"razaoSocial": null,
+			"cnPJ": null,
+			"registroANS": null,
+			"cep": null,
+			"endereco": null,
+			"bairro": null,
+			"numero": null,
+			"complemento": null,
+			"cidade": null,
+			"estado": null,
+			"email": null,
+			"telefone1": null,
+			"telefone2": null,
+			"contatoResponsavel": null,
+			"tipoCobranca": null,
+			"ativo": null,
+			"dataInclusao": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/rhg4fvd1alo6/"
+	},
+	"1je9wcd3whcgx": {
+		"customId": "dsEstabelecimento",
+		"queryName": "EstabelecimentoAdmin",
+		"screen": "src/main/webapp/views/admin/estabelecimentodesaude.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "EstabelecimentoDeSaude",
+		"entityFullName": "app.entity.EstabelecimentoDeSaude",
+		"query": {
+			"isValid": true,
+			"rulesEntity": [
+				{
+					"entity": "EstabelecimentoDeSaude",
+					"alias": "e",
+					"namespace": "app.entity.EstabelecimentoDeSaude"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "e"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"not": false,
+				"valid": true,
+				"rules": []
+			}
+		},
+		"queryParamsValues": [],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": {
+				"blocklyClass": "blockly.EstabelecimentoEntidade",
+				"blocklyMethod": "remove_usuario_estabelecimento",
+				"blocklyLanguage": "java",
+				"blocklyJson": {
+					"namespace": "blockly.EstabelecimentoEntidade",
+					"classNameNew": "EstabelecimentoEntidade",
+					"classNameOld": "EstabelecimentoEntidade",
+					"sourcePath": "src/main/java/blockly/EstabelecimentoEntidade.blockly",
+					"language": "java",
+					"class": "blockly.EstabelecimentoEntidade",
+					"methods": [
+						{
+							"name": "InserirUsuario",
+							"hasReturn": "true",
+							"params": [
+								"dados<app.entity.EstabelecimentoDeSaude>"
+							]
+						},
+						{
+							"name": "remove_usuario_estabelecimento",
+							"hasReturn": "false",
+							"params": [
+								"dados<app.entity.EstabelecimentoDeSaude>"
+							]
+						}
+					]
+				},
+				"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.EstabelecimentoEntidade:remove_usuario_estabelecimento', null, null)"
+			},
+			"afterInsert": {
+				"blocklyClass": "blockly.EstabelecimentoEntidade",
+				"blocklyMethod": "InserirUsuario",
+				"blocklyLanguage": "java",
+				"blocklyJson": {
+					"namespace": "blockly.EstabelecimentoEntidade",
+					"classNameNew": "EstabelecimentoEntidade",
+					"classNameOld": "EstabelecimentoEntidade",
+					"sourcePath": "src/main/java/blockly/EstabelecimentoEntidade.blockly",
+					"language": "java",
+					"class": "blockly.EstabelecimentoEntidade",
+					"methods": [
+						{
+							"name": "InserirUsuario",
+							"hasReturn": "true",
+							"params": [
+								"dados<app.entity.EstabelecimentoDeSaude>"
+							]
+						},
+						{
+							"name": "remove_usuario_estabelecimento",
+							"hasReturn": "false",
+							"params": [
+								"dados<app.entity.EstabelecimentoDeSaude>"
+							]
+						}
+					]
+				},
+				"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.EstabelecimentoEntidade:InserirUsuario', null, null)"
+			},
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"nome": null,
+			"cnPJ": null,
+			"razaoSocial": null,
+			"cnES": null,
+			"endereco": null,
+			"bairro": null,
+			"numero": null,
+			"complemento": null,
+			"cidade": null,
+			"estado": null,
+			"ceP": null,
+			"contatoResponsavel": null,
+			"telefone1": null,
+			"telefone2": null,
+			"email": null,
+			"ativo": "Sim",
+			"bloqueado": "Não",
+			"dataInclusao": {
+				"blocklyClass": "blockly.RetornarData",
+				"blocklyMethod": "RetornaData",
+				"blocklyLanguage": "java",
+				"blocklyJson": {
+					"namespace": "blockly.RetornarData",
+					"classNameNew": "RetornarData",
+					"classNameOld": "RetornarData",
+					"sourcePath": "src/main/java/blockly/RetornarData.blockly",
+					"language": "java",
+					"class": "blockly.RetornarData",
+					"methods": [
+						{
+							"name": "RetornaData",
+							"hasReturn": "true",
+							"params": []
+						}
+					]
+				},
+				"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.RetornarData:RetornaData', null, null)",
+				"blocklyGETMethod": null,
+				"blocklyPOSTMethod": null,
+				"blocklyPUTMethod": null,
+				"blocklyDELETEMethod": null,
+				"blocklyFILTERMethod": null
+			}
+		},
+		"security": {
+			"id": null,
+			"nome": null,
+			"cnPJ": null,
+			"razaoSocial": null,
+			"cnES": null,
+			"endereco": null,
+			"bairro": null,
+			"numero": null,
+			"complemento": null,
+			"cidade": null,
+			"estado": null,
+			"ceP": null,
+			"contatoResponsavel": null,
+			"telefone1": null,
+			"telefone2": null,
+			"email": null,
+			"ativo": null,
+			"bloqueado": null,
+			"dataInclusao": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/1je9wcd3whcgx/"
+	},
+	"r1iv3694t8pt": {
+		"customId": "r1iv3694t8pt",
+		"queryName": "lista_operadores_convenio",
+		"screen": "src/main/webapp/views/admin/convenio.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "User",
+		"entityFullName": "app.entity.User",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "User",
+					"namespace": "app.entity.User",
+					"alias": "u"
+				},
+				{
+					"entity": "Role",
+					"namespace": "app.entity.Role",
+					"alias": "r"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "u",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "r.id",
+						"field": "r.id",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": "Convenio Operador",
+						"valueIsField": false
+					},
+					{
+						"id": "r.user.convenio.id",
+						"field": "r.user.convenio.id",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":userConvenioId",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "userConvenioId",
+				"fieldValue": "Convenio.active.id"
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null,
+			"convenio": null,
+			"estabelecimentoDeSaude": null
+		},
+		"security": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null,
+			"convenio": null,
+			"estabelecimentoDeSaude": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/r1iv3694t8pt/{{Convenio.active.id}}/"
+	},
+	"t86wp61sr68z": {
+		"customId": "dsPaciente",
+		"queryName": "PacientePorLogin",
+		"screen": "src/main/mobileapp/www/views/logged/meusdados_paciente.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Paciente",
+		"entityFullName": "app.entity.Paciente",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "Paciente",
+					"namespace": "app.entity.Paciente",
+					"alias": "p"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "p",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "p.user.login",
+						"field": "p.user.login",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":userLogin",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "userLogin",
+				"fieldValue": {
+					"blocklyClass": "blockly.UsuarioEntidade",
+					"blocklyMethod": "obterLogin",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.UsuarioEntidade",
+						"classNameNew": "UsuarioEntidade",
+						"classNameOld": "UsuarioEntidade",
+						"sourcePath": "src/main/java/blockly/UsuarioEntidade.blockly",
+						"language": "java",
+						"class": "blockly.UsuarioEntidade",
+						"methods": [
+							{
+								"name": "retornarIdUsuarioLogado",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "obterLogin",
+								"hasReturn": "true",
+								"params": []
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.UsuarioEntidade:obterLogin', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"nome": null,
+			"cpf": null,
+			"dataNascimento": null,
+			"telefone1": null,
+			"telefone2": null,
+			"endereco": null,
+			"bairro": null,
+			"numero": null,
+			"complemento": null,
+			"cidade": null,
+			"estado": null,
+			"cep": null,
+			"ativo": null,
+			"bloqueado": null,
+			"dataInclusao": null,
+			"dataAtivacao": null,
+			"user": null,
+			"sexo": null,
+			"cancelado": null,
+			"agenteAutorizador": null
+		},
+		"security": {
+			"id": null,
+			"nome": null,
+			"cpf": null,
+			"dataNascimento": null,
+			"telefone1": null,
+			"telefone2": null,
+			"endereco": null,
+			"bairro": null,
+			"numero": null,
+			"complemento": null,
+			"cidade": null,
+			"estado": null,
+			"cep": null,
+			"ativo": null,
+			"bloqueado": null,
+			"dataInclusao": null,
+			"dataAtivacao": null,
+			"user": null,
+			"sexo": null,
+			"cancelado": null,
+			"agenteAutorizador": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/t86wp61sr68z/"
+	},
+	"qdys2tv94qpi": {
+		"customId": "dsProfissional",
+		"queryName": "ProfissionalPorLogin",
+		"screen": "src/main/webapp/views/admin/profissional.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Profissional",
+		"entityFullName": "app.entity.Profissional",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "Profissional",
+					"namespace": "app.entity.Profissional",
+					"alias": "p"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "p",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "p.id",
+						"field": "p.id",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":id",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "id",
+				"fieldValue": {
+					"blocklyClass": "blockly.DadosProfissionalLogadoTela",
+					"blocklyMethod": "retornarIdProfissional",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.DadosProfissionalLogadoTela",
+						"classNameNew": "DadosProfissionalLogadoTela",
+						"classNameOld": "DadosProfissionalLogadoTela",
+						"sourcePath": "src/main/java/blockly/DadosProfissionalLogadoTela.blockly",
+						"language": "java",
+						"class": "blockly.DadosProfissionalLogadoTela",
+						"methods": [
+							{
+								"name": "buscarCep",
+								"hasReturn": "false",
+								"params": []
+							},
+							{
+								"name": "atualizar",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "retornarIdProfissional",
+								"hasReturn": "true",
+								"params": []
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.DadosProfissionalLogadoTela:retornarIdProfissional', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"nome": null,
+			"cpF": null,
+			"crM": null,
+			"numCRM": null,
+			"dataNascimento": null,
+			"sexo": null,
+			"telefone1": null,
+			"telefone2": null,
+			"endereco": null,
+			"bairro": null,
+			"numero": null,
+			"complemento": null,
+			"cidade": null,
+			"estado": null,
+			"cep": null,
+			"ativo": null,
+			"bloqueado": null,
+			"dataInclusao": null,
+			"dataAtivacao": null,
+			"user": null,
+			"userAutorizador": null
+		},
+		"security": {
+			"id": null,
+			"nome": null,
+			"cpF": null,
+			"crM": null,
+			"numCRM": null,
+			"dataNascimento": null,
+			"sexo": null,
+			"telefone1": null,
+			"telefone2": null,
+			"endereco": null,
+			"bairro": null,
+			"numero": null,
+			"complemento": null,
+			"cidade": null,
+			"estado": null,
+			"cep": null,
+			"ativo": null,
+			"bloqueado": null,
+			"dataInclusao": null,
+			"dataAtivacao": null,
+			"user": null,
+			"userAutorizador": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/qdys2tv94qpi/"
+	},
+	"1iykj409c9oip": {
+		"customId": "dsPacienteLogado",
+		"queryName": "PacienteLogado",
+		"screen": "src/main/mobileapp/www/views/logged/paciente.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Paciente",
+		"entityFullName": "app.entity.Paciente",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "Paciente",
+					"namespace": "app.entity.Paciente",
+					"alias": "p"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "p",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "p.user.id",
+						"field": "p.user.id",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":userId",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "userId",
+				"fieldValue": {
+					"blocklyClass": "blockly.UsuarioEntidade",
+					"blocklyMethod": "retornarIdUsuarioLogado",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.UsuarioEntidade",
+						"classNameNew": "UsuarioEntidade",
+						"classNameOld": "UsuarioEntidade",
+						"sourcePath": "src/main/java/blockly/UsuarioEntidade.blockly",
+						"language": "java",
+						"class": "blockly.UsuarioEntidade",
+						"methods": [
+							{
+								"name": "retornarIdUsuarioLogado",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "obterLogin",
+								"hasReturn": "true",
+								"params": []
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.UsuarioEntidade:retornarIdUsuarioLogado', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"nome": null,
+			"cpf": null,
+			"dataNascimento": null,
+			"telefone1": null,
+			"telefone2": null,
+			"endereco": null,
+			"bairro": null,
+			"numero": null,
+			"complemento": null,
+			"cidade": null,
+			"estado": null,
+			"cep": null,
+			"ativo": null,
+			"bloqueado": null,
+			"dataInclusao": null,
+			"dataAtivacao": null,
+			"user": null,
+			"sexo": null,
+			"cancelado": null,
+			"agenteAutorizador": null
+		},
+		"security": {
+			"id": null,
+			"nome": null,
+			"cpf": null,
+			"dataNascimento": null,
+			"telefone1": null,
+			"telefone2": null,
+			"endereco": null,
+			"bairro": null,
+			"numero": null,
+			"complemento": null,
+			"cidade": null,
+			"estado": null,
+			"cep": null,
+			"ativo": null,
+			"bloqueado": null,
+			"dataInclusao": null,
+			"dataAtivacao": null,
+			"user": null,
+			"sexo": null,
+			"cancelado": null,
+			"agenteAutorizador": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/1iykj409c9oip/"
+	},
+	"t49ibqb2t2rb": {
+		"customId": "dsUsuarioConvenio",
+		"queryName": "UsuarioConvenio",
+		"screen": "src/main/webapp/views/logged/usuarioconvenio.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "User",
+		"entityFullName": "app.entity.User",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "User",
+					"namespace": "app.entity.User",
+					"alias": "u"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "u",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "u.convenio.id",
+						"field": "u.convenio.id",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":convenioId",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "convenioId",
+				"fieldValue": {
+					"blocklyClass": "blockly.UsuarioConvenio",
+					"blocklyMethod": "RetornarConvenioLogado",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.UsuarioConvenio",
+						"classNameNew": "UsuarioConvenio",
+						"classNameOld": "UsuarioConvenio",
+						"sourcePath": "src/main/java/blockly/UsuarioConvenio.blockly",
+						"language": "java",
+						"class": "blockly.UsuarioConvenio",
+						"methods": [
+							{
+								"name": "Inserir",
+								"hasReturn": "true",
+								"params": [
+									"dados<app.entity.User>"
+								]
+							},
+							{
+								"name": "retornaRole",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "RetornaEntidadeComConvenio",
+								"hasReturn": "true",
+								"params": [
+									"dados<app.entity.User>"
+								]
+							},
+							{
+								"name": "excluirRole",
+								"hasReturn": "false",
+								"params": [
+									"user"
+								]
+							},
+							{
+								"name": "inserirRole",
+								"hasReturn": "true",
+								"params": [
+									"Dados<app.entity.User>"
+								]
+							},
+							{
+								"name": "Obter",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "retornaConvenio",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "RetornarConvenioLogado",
+								"hasReturn": "true",
+								"params": []
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.UsuarioConvenio:RetornarConvenioLogado', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": [
+				"Authenticated"
+			],
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": false,
+			"PUTAuthorities": null,
+			"DELETE": false,
+			"DELETEAuthorities": null,
+			"FILTER": false,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": {
+				"blocklyClass": "blockly.UsuarioConvenio",
+				"blocklyMethod": "RetornaEntidadeComEmail",
+				"blocklyLanguage": "java",
+				"blocklyJson": {
+					"namespace": "blockly.UsuarioConvenio",
+					"classNameNew": "UsuarioConvenio",
+					"classNameOld": "UsuarioConvenio",
+					"sourcePath": "src/main/java/blockly/UsuarioConvenio.blockly",
+					"language": "java",
+					"class": "blockly.UsuarioConvenio",
+					"methods": [
+						{
+							"name": "excluirRole",
+							"hasReturn": "false",
+							"params": [
+								"user"
+							]
+						},
+						{
+							"name": "inserirRole",
+							"hasReturn": "true",
+							"params": [
+								"Dados<app.entity.User>"
+							]
+						},
+						{
+							"name": "RetornaEntidadeComEmail",
+							"hasReturn": "true",
+							"params": [
+								"dados<app.entity.User>"
+							]
+						},
+						{
+							"name": "RetornarConvenioLogado",
+							"hasReturn": "true",
+							"params": []
+						}
+					]
+				},
+				"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.UsuarioConvenio:RetornaEntidadeComEmail', null, null)"
+			},
+			"beforeUpdate": null,
+			"beforeDelete": {
+				"blocklyClass": "blockly.UsuarioConvenio",
+				"blocklyMethod": "excluirRole",
+				"blocklyLanguage": "java",
+				"blocklyJson": {
+					"namespace": "blockly.UsuarioConvenio",
+					"classNameNew": "UsuarioConvenio",
+					"classNameOld": "UsuarioConvenio",
+					"sourcePath": "src/main/java/blockly/UsuarioConvenio.blockly",
+					"language": "java",
+					"class": "blockly.UsuarioConvenio",
+					"methods": [
+						{
+							"name": "Inserir",
+							"hasReturn": "true",
+							"params": [
+								"dados<app.entity.User>"
+							]
+						},
+						{
+							"name": "retornaRole",
+							"hasReturn": "true",
+							"params": []
+						},
+						{
+							"name": "RetornaEntidadeComConvenio",
+							"hasReturn": "true",
+							"params": [
+								"dados<app.entity.User>"
+							]
+						},
+						{
+							"name": "excluirRole",
+							"hasReturn": "false",
+							"params": [
+								"user"
+							]
+						},
+						{
+							"name": "inserirRole",
+							"hasReturn": "true",
+							"params": [
+								"Dados<app.entity.User>"
+							]
+						},
+						{
+							"name": "Obter",
+							"hasReturn": "true",
+							"params": []
+						},
+						{
+							"name": "retornaConvenio",
+							"hasReturn": "true",
+							"params": []
+						},
+						{
+							"name": "RetornarConvenioLogado",
+							"hasReturn": "true",
+							"params": []
+						}
+					]
+				},
+				"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.UsuarioConvenio:excluirRole', null, null)"
+			},
+			"afterInsert": {
+				"blocklyClass": "blockly.UsuarioConvenio",
+				"blocklyMethod": "inserirRole",
+				"blocklyLanguage": "java",
+				"blocklyJson": {
+					"namespace": "blockly.UsuarioConvenio",
+					"classNameNew": "UsuarioConvenio",
+					"classNameOld": "UsuarioConvenio",
+					"sourcePath": "src/main/java/blockly/UsuarioConvenio.blockly",
+					"language": "java",
+					"class": "blockly.UsuarioConvenio",
+					"methods": [
+						{
+							"name": "Inserir",
+							"hasReturn": "true",
+							"params": [
+								"dados<app.entity.User>"
+							]
+						},
+						{
+							"name": "retornaRole",
+							"hasReturn": "true",
+							"params": []
+						},
+						{
+							"name": "RetornaEntidadeComConvenio",
+							"hasReturn": "true",
+							"params": [
+								"dados<app.entity.User>"
+							]
+						},
+						{
+							"name": "excluirRole",
+							"hasReturn": "false",
+							"params": [
+								"user"
+							]
+						},
+						{
+							"name": "inserirRole",
+							"hasReturn": "true",
+							"params": [
+								"Dados<app.entity.User>"
+							]
+						},
+						{
+							"name": "Obter",
+							"hasReturn": "true",
+							"params": []
+						},
+						{
+							"name": "retornaConvenio",
+							"hasReturn": "true",
+							"params": []
+						},
+						{
+							"name": "RetornarConvenioLogado",
+							"hasReturn": "true",
+							"params": []
+						}
+					]
+				},
+				"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.UsuarioConvenio:inserirRole', null, null)"
+			},
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null,
+			"estabelecimentoDeSaude": null,
+			"bloqueado": "Não",
+			"convenio": {
+				"blocklyClass": "blockly.UsuarioConvenio",
+				"blocklyMethod": "RetornarConvenioLogado",
+				"blocklyLanguage": "java",
+				"blocklyJson": {
+					"namespace": "blockly.UsuarioConvenio",
+					"classNameNew": "UsuarioConvenio",
+					"classNameOld": "UsuarioConvenio",
+					"sourcePath": "src/main/java/blockly/UsuarioConvenio.blockly",
+					"language": "java",
+					"class": "blockly.UsuarioConvenio",
+					"methods": [
+						{
+							"name": "Inserir",
+							"hasReturn": "true",
+							"params": [
+								"dados<app.entity.User>"
+							]
+						},
+						{
+							"name": "retornaRole",
+							"hasReturn": "true",
+							"params": []
+						},
+						{
+							"name": "RetornaEntidadeComConvenio",
+							"hasReturn": "true",
+							"params": [
+								"dados<app.entity.User>"
+							]
+						},
+						{
+							"name": "excluirRole",
+							"hasReturn": "false",
+							"params": [
+								"user"
+							]
+						},
+						{
+							"name": "inserirRole",
+							"hasReturn": "true",
+							"params": [
+								"Dados<app.entity.User>"
+							]
+						},
+						{
+							"name": "Obter",
+							"hasReturn": "true",
+							"params": []
+						},
+						{
+							"name": "retornaConvenio",
+							"hasReturn": "true",
+							"params": []
+						},
+						{
+							"name": "RetornarConvenioLogado",
+							"hasReturn": "true",
+							"params": []
+						}
+					]
+				},
+				"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.UsuarioConvenio:RetornarConvenioLogado', null, null)",
+				"blocklyGETMethod": null,
+				"blocklyPOSTMethod": null,
+				"blocklyPUTMethod": null,
+				"blocklyDELETEMethod": null,
+				"blocklyFILTERMethod": null
+			},
+			"habilitaAgenteRegistro": null
+		},
+		"security": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null,
+			"estabelecimentoDeSaude": null,
+			"bloqueado": null,
+			"convenio": null,
+			"habilitaAgenteRegistro": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/t49ibqb2t2rb/"
+	},
+	"t4vno1xtukip": {
+		"customId": "dsUsuarioEstabelecimento",
+		"queryName": "UsuarioEstabelecimento",
+		"screen": "src/main/webapp/views/logged/agentee.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "User",
+		"entityFullName": "app.entity.User",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "User",
+					"namespace": "app.entity.User",
+					"alias": "u"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "u",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "u.estabelecimentoDeSaude.id",
+						"field": "u.estabelecimentoDeSaude.id",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":estabelecimentoDeSaudeId",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "estabelecimentoDeSaudeId",
+				"fieldValue": {
+					"blocklyClass": "blockly.AgenteRegistroEstabelecimento",
+					"blocklyMethod": "RetornarEstabelecimentoLogado",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.AgenteRegistroEstabelecimento",
+						"classNameNew": "AgenteRegistroEstabelecimento",
+						"classNameOld": "AgenteRegistroEstabelecimento",
+						"sourcePath": "src/main/java/blockly/AgenteRegistroEstabelecimento.blockly",
+						"language": "java",
+						"class": "blockly.AgenteRegistroEstabelecimento",
+						"methods": [
+							{
+								"name": "RetornarEstabelecimentoLogado",
+								"hasReturn": "true",
+								"params": []
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.AgenteRegistroEstabelecimento:RetornarEstabelecimentoLogado', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": false,
+			"PUTAuthorities": null,
+			"DELETE": false,
+			"DELETEAuthorities": null,
+			"FILTER": false,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": {
+				"blocklyClass": "blockly.UsuarioEstabelecimento",
+				"blocklyMethod": "retornarEstabelecimentoComEmail",
+				"blocklyLanguage": "java",
+				"blocklyJson": {
+					"namespace": "blockly.UsuarioEstabelecimento",
+					"classNameNew": "UsuarioEstabelecimento",
+					"classNameOld": "UsuarioEstabelecimento",
+					"sourcePath": "src/main/java/blockly/UsuarioEstabelecimento.blockly",
+					"language": "java",
+					"class": "blockly.UsuarioEstabelecimento",
+					"methods": [
+						{
+							"name": "retornarEstabelecimentoComEmail",
+							"hasReturn": "true",
+							"params": [
+								"dados<app.entity.User>"
+							]
+						},
+						{
+							"name": "RetornarEstabelecimentoLogado",
+							"hasReturn": "true",
+							"params": []
+						},
+						{
+							"name": "excluirRole",
+							"hasReturn": "false",
+							"params": [
+								"user"
+							]
+						},
+						{
+							"name": "inserirRole",
+							"hasReturn": "true",
+							"params": [
+								"dados<app.entity.User>"
+							]
+						}
+					]
+				},
+				"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.UsuarioEstabelecimento:retornarEstabelecimentoComEmail', null, null)"
+			},
+			"beforeUpdate": null,
+			"beforeDelete": {
+				"blocklyClass": "blockly.UsuarioEstabelecimento",
+				"blocklyMethod": "excluirRole",
+				"blocklyLanguage": "java",
+				"blocklyJson": {
+					"namespace": "blockly.UsuarioEstabelecimento",
+					"classNameNew": "UsuarioEstabelecimento",
+					"classNameOld": "UsuarioEstabelecimento",
+					"sourcePath": "src/main/java/blockly/UsuarioEstabelecimento.blockly",
+					"language": "java",
+					"class": "blockly.UsuarioEstabelecimento",
+					"methods": [
+						{
+							"name": "retornarEstabelecimentoComEmail",
+							"hasReturn": "true",
+							"params": [
+								"dados<app.entity.User>"
+							]
+						},
+						{
+							"name": "RetornarEstabelecimentoLogado",
+							"hasReturn": "true",
+							"params": []
+						},
+						{
+							"name": "excluirRole",
+							"hasReturn": "false",
+							"params": [
+								"user"
+							]
+						},
+						{
+							"name": "inserirRole",
+							"hasReturn": "true",
+							"params": [
+								"dados<app.entity.User>"
+							]
+						}
+					]
+				},
+				"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.UsuarioEstabelecimento:excluirRole', null, null)"
+			},
+			"afterInsert": {
+				"blocklyClass": "blockly.UsuarioEstabelecimento",
+				"blocklyMethod": "inserirRole",
+				"blocklyLanguage": "java",
+				"blocklyJson": {
+					"namespace": "blockly.UsuarioEstabelecimento",
+					"classNameNew": "UsuarioEstabelecimento",
+					"classNameOld": "UsuarioEstabelecimento",
+					"sourcePath": "src/main/java/blockly/UsuarioEstabelecimento.blockly",
+					"language": "java",
+					"class": "blockly.UsuarioEstabelecimento",
+					"methods": [
+						{
+							"name": "retornarEstabelecimentoComEmail",
+							"hasReturn": "true",
+							"params": [
+								"dados<app.entity.User>"
+							]
+						},
+						{
+							"name": "RetornarEstabelecimentoLogado",
+							"hasReturn": "true",
+							"params": []
+						},
+						{
+							"name": "excluirRole",
+							"hasReturn": "false",
+							"params": [
+								"user"
+							]
+						},
+						{
+							"name": "inserirRole",
+							"hasReturn": "true",
+							"params": [
+								"dados<app.entity.User>"
+							]
+						}
+					]
+				},
+				"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.UsuarioEstabelecimento:inserirRole', null, null)"
+			},
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null,
+			"estabelecimentoDeSaude": {
+				"blocklyClass": "blockly.UsuarioEstabelecimento",
+				"blocklyMethod": "RetornarEstabelecimentoLogado",
+				"blocklyLanguage": "java",
+				"blocklyJson": {
+					"namespace": "blockly.UsuarioEstabelecimento",
+					"classNameNew": "UsuarioEstabelecimento",
+					"classNameOld": "UsuarioEstabelecimento",
+					"sourcePath": "src/main/java/blockly/UsuarioEstabelecimento.blockly",
+					"language": "java",
+					"class": "blockly.UsuarioEstabelecimento",
+					"methods": [
+						{
+							"name": "retornarEstabelecimentoComEmail",
+							"hasReturn": "true",
+							"params": [
+								"dados<app.entity.User>"
+							]
+						},
+						{
+							"name": "RetornarEstabelecimentoLogado",
+							"hasReturn": "true",
+							"params": []
+						},
+						{
+							"name": "excluirRole",
+							"hasReturn": "false",
+							"params": [
+								"user"
+							]
+						},
+						{
+							"name": "inserirRole",
+							"hasReturn": "true",
+							"params": [
+								"dados<app.entity.User>"
+							]
+						}
+					]
+				},
+				"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.UsuarioEstabelecimento:RetornarEstabelecimentoLogado', null, null)",
+				"blocklyGETMethod": null,
+				"blocklyPOSTMethod": null,
+				"blocklyPUTMethod": null,
+				"blocklyDELETEMethod": null,
+				"blocklyFILTERMethod": null
+			},
+			"bloqueado": "Não",
+			"convenio": null,
+			"habilitaAgenteRegistro": null
+		},
+		"security": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null,
+			"estabelecimentoDeSaude": null,
+			"bloqueado": null,
+			"convenio": null,
+			"habilitaAgenteRegistro": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/t4vno1xtukip/"
+	},
+	"u855xq21g20n": {
+		"customId": "dsAgenteRegistroConvenio",
+		"queryName": "AgentesPorConvenio",
+		"screen": "src/main/webapp/views/logged/agenteregistroc.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Agente",
+		"entityFullName": "app.entity.Agente",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "Agente",
+					"namespace": "app.entity.Agente",
+					"alias": "a"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "a",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "a.idSolicitante",
+						"field": "a.idSolicitante",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":idSolicitante",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "idSolicitante",
+				"fieldValue": ""
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": {
+				"blocklyClass": "blockly.AgenteRegistroConvenio",
+				"blocklyMethod": "ObterConvenioId",
+				"blocklyLanguage": "java",
+				"blocklyJson": {
+					"namespace": "blockly.AgenteRegistroConvenio",
+					"classNameNew": "AgenteRegistroConvenio",
+					"classNameOld": "AgenteRegistroConvenio",
+					"sourcePath": "src/main/java/blockly/AgenteRegistroConvenio.blockly",
+					"language": "java",
+					"class": "blockly.AgenteRegistroConvenio",
+					"methods": [
+						{
+							"name": "ObterConvenioId",
+							"hasReturn": "true",
+							"params": [
+								"dados<app.entity.AgenteRegistro>"
+							]
+						}
+					]
+				},
+				"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.AgenteRegistroConvenio:ObterConvenioId', null, null)"
+			},
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"cpf": null,
+			"user": null,
+			"cnpjSolicitante": null,
+			"rg": null,
+			"idSolicitante": null,
+			"ativo": null,
+			"dataSolicitacao": null,
+			"dataAtivacao": null,
+			"dataRemocao": null,
+			"nomeSolicitante": null,
+			"dataNascimento": null,
+			"sexo": null,
+			"orgaoEmissor": null,
+			"telefone": null,
+			"solicitacaoAtendida": null,
+			"tipoSolicitante": null
+		},
+		"security": {
+			"id": null,
+			"cpf": null,
+			"user": null,
+			"cnpjSolicitante": null,
+			"rg": null,
+			"idSolicitante": null,
+			"ativo": null,
+			"dataSolicitacao": null,
+			"dataAtivacao": null,
+			"dataRemocao": null,
+			"nomeSolicitante": null,
+			"dataNascimento": null,
+			"sexo": null,
+			"orgaoEmissor": null,
+			"telefone": null,
+			"solicitacaoAtendida": null,
+			"tipoSolicitante": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/u855xq21g20n/"
+	},
+	"to52sk6xomzn": {
+		"customId": "dsUsuarioAgenteConvenio",
+		"queryName": "UsuariosConvenio",
+		"screen": "src/main/webapp/views/logged/agentec.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "User",
+		"entityFullName": "app.entity.User",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "User",
+					"namespace": "app.entity.User",
+					"alias": "u"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "u",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "u.convenio.id",
+						"field": "u.convenio.id",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":convenioId",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "convenioId",
+				"fieldValue": {
+					"blocklyClass": "blockly.UsuarioConvenio",
+					"blocklyMethod": "RetornarConvenioLogado",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.UsuarioConvenio",
+						"classNameNew": "UsuarioConvenio",
+						"classNameOld": "UsuarioConvenio",
+						"sourcePath": "src/main/java/blockly/UsuarioConvenio.blockly",
+						"language": "java",
+						"class": "blockly.UsuarioConvenio",
+						"methods": [
+							{
+								"name": "excluirRole",
+								"hasReturn": "false",
+								"params": [
+									"user"
+								]
+							},
+							{
+								"name": "inserirRole",
+								"hasReturn": "true",
+								"params": [
+									"Dados<app.entity.User>"
+								]
+							},
+							{
+								"name": "RetornaEntidadeComEmail",
+								"hasReturn": "true",
+								"params": [
+									"dados<app.entity.User>"
+								]
+							},
+							{
+								"name": "RetornarConvenioLogado",
+								"hasReturn": "true",
+								"params": []
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.UsuarioConvenio:RetornarConvenioLogado', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null,
+			"estabelecimentoDeSaude": null,
+			"bloqueado": null,
+			"convenio": null,
+			"habilitaAgenteRegistro": null
+		},
+		"security": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null,
+			"estabelecimentoDeSaude": null,
+			"bloqueado": null,
+			"convenio": null,
+			"habilitaAgenteRegistro": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/to52sk6xomzn/"
+	},
+	"urp3tl6cpwmd": {
+		"customId": "dsAgenteConvenio",
+		"queryName": "AgentePorConvenio",
+		"screen": "src/main/webapp/views/logged/agentec.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Agente",
+		"entityFullName": "app.entity.Agente",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "Agente",
+					"namespace": "app.entity.Agente",
+					"alias": "a"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "a",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "a.idSolicitante",
+						"field": "a.idSolicitante",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":idSolicitante",
+						"valueIsField": false
+					},
+					{
+						"id": "a.ativo",
+						"field": "a.ativo",
+						"type": "string",
+						"input": "text",
+						"operator": "not_equal",
+						"value": ":ativo",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "idSolicitante",
+				"fieldValue": {
+					"blocklyClass": "blockly.UsuarioConvenio",
+					"blocklyMethod": "RetornarConvenioLogado",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.UsuarioConvenio",
+						"classNameNew": "UsuarioConvenio",
+						"classNameOld": "UsuarioConvenio",
+						"sourcePath": "src/main/java/blockly/UsuarioConvenio.blockly",
+						"language": "java",
+						"class": "blockly.UsuarioConvenio",
+						"methods": [
+							{
+								"name": "excluirRole",
+								"hasReturn": "false",
+								"params": [
+									"user"
+								]
+							},
+							{
+								"name": "inserirRole",
+								"hasReturn": "true",
+								"params": [
+									"Dados<app.entity.User>"
+								]
+							},
+							{
+								"name": "RetornaEntidadeComEmail",
+								"hasReturn": "true",
+								"params": [
+									"dados<app.entity.User>"
+								]
+							},
+							{
+								"name": "RetornarConvenioLogado",
+								"hasReturn": "true",
+								"params": []
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.UsuarioConvenio:RetornarConvenioLogado', null, null)"
+				}
+			},
+			{
+				"fieldName": "ativo",
+				"fieldValue": "\"Sim\""
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": [
+				"Authenticated"
+			],
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": {
+				"blocklyClass": "blockly.AgenteRegistroConvenio",
+				"blocklyMethod": "ObterConvenioId",
+				"blocklyLanguage": "java",
+				"blocklyJson": {
+					"namespace": "blockly.AgenteRegistroConvenio",
+					"classNameNew": "AgenteRegistroConvenio",
+					"classNameOld": "AgenteRegistroConvenio",
+					"sourcePath": "src/main/java/blockly/AgenteRegistroConvenio.blockly",
+					"language": "java",
+					"class": "blockly.AgenteRegistroConvenio",
+					"methods": [
+						{
+							"name": "retornarUsuario",
+							"hasReturn": "true",
+							"params": []
+						},
+						{
+							"name": "ObterConvenioId",
+							"hasReturn": "true",
+							"params": [
+								"dados<app.entity.Agente>"
+							]
+						}
+					]
+				},
+				"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.AgenteRegistroConvenio:ObterConvenioId', null, null)"
+			},
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"cpf": null,
+			"user": {
+				"blocklyClass": "blockly.AgenteRegistroConvenio",
+				"blocklyMethod": "retornarUsuario",
+				"blocklyLanguage": "java",
+				"blocklyJson": {
+					"namespace": "blockly.AgenteRegistroConvenio",
+					"classNameNew": "AgenteRegistroConvenio",
+					"classNameOld": "AgenteRegistroConvenio",
+					"sourcePath": "src/main/java/blockly/AgenteRegistroConvenio.blockly",
+					"language": "java",
+					"class": "blockly.AgenteRegistroConvenio",
+					"methods": [
+						{
+							"name": "retornarUsuario",
+							"hasReturn": "true",
+							"params": []
+						},
+						{
+							"name": "ObterConvenioId",
+							"hasReturn": "true",
+							"params": [
+								"dados<app.entity.Agente>"
+							]
+						}
+					]
+				},
+				"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.AgenteRegistroConvenio:retornarUsuario', null, null)",
+				"blocklyGETMethod": null,
+				"blocklyPOSTMethod": null,
+				"blocklyPUTMethod": null,
+				"blocklyDELETEMethod": null,
+				"blocklyFILTERMethod": null
+			},
+			"cnpjSolicitante": null,
+			"rg": null,
+			"idSolicitante": null,
+			"dataSolicitacao": null,
+			"dataAtivacao": null,
+			"dataRemocao": null,
+			"nomeSolicitante": null,
+			"dataNascimento": null,
+			"sexo": null,
+			"orgaoEmissor": null,
+			"telefone": null,
+			"solicitacaoAtendida": null,
+			"tipoSolicitante": null,
+			"ativo": null,
+			"usuarioAprovador": null
+		},
+		"security": {
+			"id": null,
+			"cpf": null,
+			"user": null,
+			"cnpjSolicitante": null,
+			"rg": null,
+			"idSolicitante": null,
+			"dataSolicitacao": null,
+			"dataAtivacao": null,
+			"dataRemocao": null,
+			"nomeSolicitante": null,
+			"dataNascimento": null,
+			"sexo": null,
+			"orgaoEmissor": null,
+			"telefone": null,
+			"solicitacaoAtendida": null,
+			"tipoSolicitante": null,
+			"ativo": null,
+			"usuarioAprovador": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/urp3tl6cpwmd/\"Sim\"/"
+	},
+	"ublujrx0m7uf": {
+		"customId": "dsAgenteEstabelecimento",
+		"queryName": "AgenteUsuarioEstabelecimento",
+		"screen": "src/main/webapp/views/logged/agentee.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "User",
+		"entityFullName": "app.entity.User",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "User",
+					"namespace": "app.entity.User",
+					"alias": "u"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "u",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "u.estabelecimentoDeSaude.id",
+						"field": "u.estabelecimentoDeSaude.id",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":estabelecimentoDeSaudeId",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "estabelecimentoDeSaudeId",
+				"fieldValue": {
+					"blocklyClass": "blockly.AgenteRegistroEstabelecimento",
+					"blocklyMethod": "RetornarEstabelecimentoLogado",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.AgenteRegistroEstabelecimento",
+						"classNameNew": "AgenteRegistroEstabelecimento",
+						"classNameOld": "AgenteRegistroEstabelecimento",
+						"sourcePath": "src/main/java/blockly/AgenteRegistroEstabelecimento.blockly",
+						"language": "java",
+						"class": "blockly.AgenteRegistroEstabelecimento",
+						"methods": [
+							{
+								"name": "RetornarEstabelecimentoLogado",
+								"hasReturn": "true",
+								"params": []
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.AgenteRegistroEstabelecimento:RetornarEstabelecimentoLogado', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null,
+			"estabelecimentoDeSaude": null,
+			"bloqueado": null,
+			"convenio": null,
+			"habilitaAgenteRegistro": null
+		},
+		"security": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null,
+			"estabelecimentoDeSaude": null,
+			"bloqueado": null,
+			"convenio": null,
+			"habilitaAgenteRegistro": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/ublujrx0m7uf/"
+	},
+	"r1akk0rw5kdd": {
+		"customId": "dsAgentePorEstabelecimento",
+		"queryName": "AgentePorEstabelecimento",
+		"screen": "src/main/webapp/views/logged/solicitaragente_estabelecimento.view.html",
+		"sourceType": "blockly",
+		"blockly": {
+			"blocklyClass": "blockly.AgenteRegistroEstabelecimento",
+			"blocklyMethod": "inserir",
+			"blocklyLanguage": "java",
+			"blocklyJson": {
+				"namespace": "blockly.AgenteRegistroEstabelecimento",
+				"classNameNew": "AgenteRegistroEstabelecimento",
+				"classNameOld": "AgenteRegistroEstabelecimento",
+				"sourcePath": "src/main/java/blockly/AgenteRegistroEstabelecimento.blockly",
+				"language": "java",
+				"class": "blockly.AgenteRegistroEstabelecimento",
+				"methods": [
+					{
+						"name": "RetornarEstabelecimentoLogado",
+						"hasReturn": "true",
+						"params": []
+					},
+					{
+						"name": "listar",
+						"hasReturn": "true",
+						"params": []
+					},
+					{
+						"name": "obterEstabelecimentoId",
+						"hasReturn": "true",
+						"params": [
+							"Dados<app.entity.Agente>"
+						]
+					},
+					{
+						"name": "remover",
+						"hasReturn": "false",
+						"params": [
+							"agenteId"
+						]
+					},
+					{
+						"name": "inserir",
+						"hasReturn": "true",
+						"params": [
+							"Dados<app.entity.Agente>"
+						]
+					}
+				]
+			},
+			"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.AgenteRegistroEstabelecimento:inserir', null, null)",
+			"blocklyGETMethod": "listar",
+			"blocklyPOSTMethod": "inserir",
+			"blocklyPUTMethod": "inserir",
+			"blocklyDELETEMethod": "remover",
+			"blocklyFILTERMethod": "inserir"
+		},
+		"entitySimpleName": null,
+		"entityFullName": null,
+		"query": "",
+		"queryParamsValues": [
+			{
+				"fieldName": "Dados<app.entity.Agente>",
+				"fieldValue": ""
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": false,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": false,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": {
+				"blocklyClass": "blockly.AgenteRegistroEstabelecimento",
+				"blocklyMethod": "obterEstabelecimentoId",
+				"blocklyLanguage": "java",
+				"blocklyJson": {
+					"namespace": "blockly.AgenteRegistroEstabelecimento",
+					"classNameNew": "AgenteRegistroEstabelecimento",
+					"classNameOld": "AgenteRegistroEstabelecimento",
+					"sourcePath": "src/main/java/blockly/AgenteRegistroEstabelecimento.blockly",
+					"language": "java",
+					"class": "blockly.AgenteRegistroEstabelecimento",
+					"methods": [
+						{
+							"name": "RetornarEstabelecimentoLogado",
+							"hasReturn": "true",
+							"params": []
+						},
+						{
+							"name": "obterEstabelecimentoId",
+							"hasReturn": "true",
+							"params": [
+								"dados<app.entity.Agente>"
+							]
+						}
+					]
+				},
+				"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.AgenteRegistroEstabelecimento:obterEstabelecimentoId', null, null)"
+			},
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {},
+		"security": {},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/r1akk0rw5kdd/"
+	},
+	"s15mszoj9nhs": {
+		"customId": "dsSolicitacaoAgente",
+		"queryName": "SolicitacaoAgente",
+		"screen": "src/main/webapp/views/admin/solicitacaoagente.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Agente",
+		"entityFullName": "app.entity.Agente",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "Agente",
+					"namespace": "app.entity.Agente",
+					"alias": "a"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "a",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "a.solicitacaoAtendida",
+						"field": "a.solicitacaoAtendida",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":solicitacaoAtendida",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "solicitacaoAtendida",
+				"fieldValue": {
+					"blocklyClass": "blockly.SolicitacaoAgenteAdmin",
+					"blocklyMethod": "retornarCondicao",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.SolicitacaoAgenteAdmin",
+						"classNameNew": "SolicitacaoAgenteAdmin",
+						"classNameOld": "SolicitacaoAgenteAdmin",
+						"sourcePath": "src/main/java/blockly/SolicitacaoAgenteAdmin.blockly",
+						"language": "java",
+						"class": "blockly.SolicitacaoAgenteAdmin",
+						"methods": [
+							{
+								"name": "retornarCondicao",
+								"hasReturn": "true",
+								"params": [
+									"Dados"
+								]
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.SolicitacaoAgenteAdmin:retornarCondicao', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"cpf": null,
+			"user": null,
+			"cnpjSolicitante": null,
+			"rg": null,
+			"idSolicitante": null,
+			"dataSolicitacao": null,
+			"dataAtivacao": null,
+			"dataRemocao": null,
+			"nomeSolicitante": null,
+			"dataNascimento": null,
+			"sexo": null,
+			"orgaoEmissor": null,
+			"telefone": null,
+			"solicitacaoAtendida": null,
+			"tipoSolicitante": null,
+			"ativo": null,
+			"usuarioAprovador": null
+		},
+		"security": {
+			"id": null,
+			"cpf": null,
+			"user": null,
+			"cnpjSolicitante": null,
+			"rg": null,
+			"idSolicitante": null,
+			"dataSolicitacao": null,
+			"dataAtivacao": null,
+			"dataRemocao": null,
+			"nomeSolicitante": null,
+			"dataNascimento": null,
+			"sexo": null,
+			"orgaoEmissor": null,
+			"telefone": null,
+			"solicitacaoAtendida": null,
+			"tipoSolicitante": null,
+			"ativo": null,
+			"usuarioAprovador": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/s15mszoj9nhs/"
+	},
+	"1jy2opim77hic": {
+		"customId": "dsSolicitarAgenteConvenio",
+		"queryName": "SolicitacoesAgenteConvenio",
+		"screen": "src/main/webapp/views/logged/solicitaragente_convenio.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Agente",
+		"entityFullName": "app.entity.Agente",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "Agente",
+					"namespace": "app.entity.Agente",
+					"alias": "a"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "a",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "a.ativo",
+						"field": "a.ativo",
+						"type": "string",
+						"input": "text",
+						"operator": "not_equal",
+						"value": ":ativo",
+						"valueIsField": false
+					},
+					{
+						"id": "a.idSolicitante",
+						"field": "a.idSolicitante",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":idSolicitante",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "ativo",
+				"fieldValue": "Sim"
+			},
+			{
+				"fieldName": "idSolicitante",
+				"fieldValue": {
+					"blocklyClass": "blockly.UsuarioConvenio",
+					"blocklyMethod": "RetornarConvenioLogado",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.UsuarioConvenio",
+						"classNameNew": "UsuarioConvenio",
+						"classNameOld": "UsuarioConvenio",
+						"sourcePath": "src/main/java/blockly/UsuarioConvenio.blockly",
+						"language": "java",
+						"class": "blockly.UsuarioConvenio",
+						"methods": [
+							{
+								"name": "excluirRole",
+								"hasReturn": "false",
+								"params": [
+									"user"
+								]
+							},
+							{
+								"name": "inserirRole",
+								"hasReturn": "true",
+								"params": [
+									"Dados<app.entity.User>"
+								]
+							},
+							{
+								"name": "RetornaEntidadeComEmail",
+								"hasReturn": "true",
+								"params": [
+									"dados<app.entity.User>"
+								]
+							},
+							{
+								"name": "RetornarConvenioLogado",
+								"hasReturn": "true",
+								"params": []
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.UsuarioConvenio:RetornarConvenioLogado', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"cpf": null,
+			"user": null,
+			"cnpjSolicitante": null,
+			"rg": null,
+			"idSolicitante": null,
+			"dataSolicitacao": null,
+			"dataAtivacao": null,
+			"dataRemocao": null,
+			"nomeSolicitante": null,
+			"dataNascimento": null,
+			"sexo": null,
+			"orgaoEmissor": null,
+			"telefone": null,
+			"solicitacaoAtendida": null,
+			"tipoSolicitante": null,
+			"ativo": null
+		},
+		"security": {
+			"id": null,
+			"cpf": null,
+			"user": null,
+			"cnpjSolicitante": null,
+			"rg": null,
+			"idSolicitante": null,
+			"dataSolicitacao": null,
+			"dataAtivacao": null,
+			"dataRemocao": null,
+			"nomeSolicitante": null,
+			"dataNascimento": null,
+			"sexo": null,
+			"orgaoEmissor": null,
+			"telefone": null,
+			"solicitacaoAtendida": null,
+			"tipoSolicitante": null,
+			"ativo": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/1jy2opim77hic/Sim/"
+	},
+	"1ib5yv6o7wze9": {
+		"customId": "dsComboUser",
+		"queryName": "ComboUser",
+		"screen": "src/main/webapp/views/logged/solicitaragente_convenio.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "User",
+		"entityFullName": "app.entity.User",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "User",
+					"namespace": "app.entity.User",
+					"alias": "u"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "u",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "u.convenio.id",
+						"field": "u.convenio.id",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":convenioId",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "convenioId",
+				"fieldValue": {
+					"blocklyClass": "blockly.AgenteRegistroConvenio",
+					"blocklyMethod": "RetornarConvenioLogado",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.AgenteRegistroConvenio",
+						"classNameNew": "AgenteRegistroConvenio",
+						"classNameOld": "AgenteRegistroConvenio",
+						"sourcePath": "src/main/java/blockly/AgenteRegistroConvenio.blockly",
+						"language": "java",
+						"class": "blockly.AgenteRegistroConvenio",
+						"methods": [
+							{
+								"name": "ObterConvenioId",
+								"hasReturn": "true",
+								"params": [
+									"dados<app.entity.Agente>"
+								]
+							},
+							{
+								"name": "RetornarConvenioLogado",
+								"hasReturn": "true",
+								"params": []
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.AgenteRegistroConvenio:RetornarConvenioLogado', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null,
+			"estabelecimentoDeSaude": null,
+			"bloqueado": null,
+			"convenio": null,
+			"habilitaAgenteRegistro": null
+		},
+		"security": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null,
+			"estabelecimentoDeSaude": null,
+			"bloqueado": null,
+			"convenio": null,
+			"habilitaAgenteRegistro": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/1ib5yv6o7wze9/"
+	},
+	"urp6jgrc53l2": {
+		"customId": "dsAgentesRegistroConvenio",
+		"queryName": "AgenteRegistroConvenio",
+		"screen": "src/main/webapp/views/logged/solicitaragente_convenio.view.html",
+		"sourceType": "blockly",
+		"blockly": {
+			"blocklyClass": "blockly.AgenteRegistroConvenio",
+			"blocklyMethod": "inserir",
+			"blocklyLanguage": "java",
+			"blocklyJson": {
+				"namespace": "blockly.AgenteRegistroConvenio",
+				"classNameNew": "AgenteRegistroConvenio",
+				"classNameOld": "AgenteRegistroConvenio",
+				"sourcePath": "src/main/java/blockly/AgenteRegistroConvenio.blockly",
+				"language": "java",
+				"class": "blockly.AgenteRegistroConvenio",
+				"methods": [
+					{
+						"name": "ObterConvenioId",
+						"hasReturn": "true",
+						"params": [
+							"dados<app.entity.Agente>"
+						]
+					},
+					{
+						"name": "inserir",
+						"hasReturn": "true",
+						"params": [
+							"dados<app.entity.Agente>"
+						]
+					},
+					{
+						"name": "listar",
+						"hasReturn": "true",
+						"params": []
+					},
+					{
+						"name": "remover",
+						"hasReturn": "false",
+						"params": [
+							"agenteId"
+						]
+					},
+					{
+						"name": "RetornarConvenioLogado",
+						"hasReturn": "true",
+						"params": []
+					}
+				]
+			},
+			"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.AgenteRegistroConvenio:inserir', null, null)",
+			"blocklyGETMethod": "listar",
+			"blocklyPOSTMethod": "inserir",
+			"blocklyPUTMethod": "inserir",
+			"blocklyDELETEMethod": "remover",
+			"blocklyFILTERMethod": "inserir"
+		},
+		"entitySimpleName": null,
+		"entityFullName": null,
+		"query": "",
+		"queryParamsValues": [
+			{
+				"fieldName": "dados<app.entity.Agente>",
+				"fieldValue": ""
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": false,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": false,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": {
+				"blocklyClass": "blockly.AgenteRegistroConvenio",
+				"blocklyMethod": "ObterConvenioId",
+				"blocklyLanguage": "java",
+				"blocklyJson": {
+					"namespace": "blockly.AgenteRegistroConvenio",
+					"classNameNew": "AgenteRegistroConvenio",
+					"classNameOld": "AgenteRegistroConvenio",
+					"sourcePath": "src/main/java/blockly/AgenteRegistroConvenio.blockly",
+					"language": "java",
+					"class": "blockly.AgenteRegistroConvenio",
+					"methods": [
+						{
+							"name": "retornarCondicao",
+							"hasReturn": "true",
+							"params": [
+								"Dados"
+							]
+						},
+						{
+							"name": "ObterConvenioId",
+							"hasReturn": "true",
+							"params": [
+								"dados<app.entity.Agente>"
+							]
+						},
+						{
+							"name": "verificarAgente",
+							"hasReturn": "false",
+							"params": [
+								"agente<app.entity.Agente>"
+							]
+						},
+						{
+							"name": "RetornarConvenioLogado",
+							"hasReturn": "true",
+							"params": []
+						}
+					]
+				},
+				"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.AgenteRegistroConvenio:ObterConvenioId', null, null)"
+			},
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {},
+		"security": {},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/urp6jgrc53l2/"
+	},
+	"to7cn302biuq": {
+		"customId": "dsComboUserEstabelecimento",
+		"queryName": "ComboUserEstabelecimento",
+		"screen": "src/main/webapp/views/logged/solicitaragente_estabelecimento.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "User",
+		"entityFullName": "app.entity.User",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "User",
+					"namespace": "app.entity.User",
+					"alias": "u"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "u",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "u.estabelecimentoDeSaude.id",
+						"field": "u.estabelecimentoDeSaude.id",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":estabelecimentoDeSaudeId",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "estabelecimentoDeSaudeId",
+				"fieldValue": {
+					"blocklyClass": "blockly.AgenteRegistroEstabelecimento",
+					"blocklyMethod": "RetornarEstabelecimentoLogado",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.AgenteRegistroEstabelecimento",
+						"classNameNew": "AgenteRegistroEstabelecimento",
+						"classNameOld": "AgenteRegistroEstabelecimento",
+						"sourcePath": "src/main/java/blockly/AgenteRegistroEstabelecimento.blockly",
+						"language": "java",
+						"class": "blockly.AgenteRegistroEstabelecimento",
+						"methods": [
+							{
+								"name": "RetornarEstabelecimentoLogado",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "obterEstabelecimentoId",
+								"hasReturn": "true",
+								"params": [
+									"dados<app.entity.Agente>"
+								]
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.AgenteRegistroEstabelecimento:RetornarEstabelecimentoLogado', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null,
+			"estabelecimentoDeSaude": null,
+			"bloqueado": null,
+			"convenio": null,
+			"habilitaAgenteRegistro": null
+		},
+		"security": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null,
+			"estabelecimentoDeSaude": null,
+			"bloqueado": null,
+			"convenio": null,
+			"habilitaAgenteRegistro": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/to7cn302biuq/"
+	},
+	"s4p3kwffk5sy": {
+		"customId": "dsAgentesRegistroAutorizados",
+		"queryName": "AgentesRegistroAutorizados",
+		"screen": "src/main/webapp/views/admin/agentesregistro.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Agente",
+		"entityFullName": "app.entity.Agente",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "Agente",
+					"namespace": "app.entity.Agente",
+					"alias": "a"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "a",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "a.ativo",
+						"field": "a.ativo",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":ativo",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "ativo",
+				"fieldValue": {
+					"blocklyClass": "blockly.AgentesRegistroAutorizados",
+					"blocklyMethod": "retornarCondicao",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.AgentesRegistroAutorizados",
+						"classNameNew": "AgentesRegistroAutorizados",
+						"classNameOld": "AgentesRegistroAutorizados",
+						"sourcePath": "src/main/java/blockly/AgentesRegistroAutorizados.blockly",
+						"language": "java",
+						"class": "blockly.AgentesRegistroAutorizados",
+						"methods": [
+							{
+								"name": "retornarCondicao",
+								"hasReturn": "true",
+								"params": [
+									"Dados"
+								]
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.AgentesRegistroAutorizados:retornarCondicao', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"cpf": null,
+			"user": null,
+			"cnpjSolicitante": null,
+			"rg": null,
+			"idSolicitante": null,
+			"dataSolicitacao": null,
+			"dataAtivacao": null,
+			"dataRemocao": null,
+			"nomeSolicitante": null,
+			"dataNascimento": null,
+			"sexo": null,
+			"orgaoEmissor": null,
+			"telefone": null,
+			"solicitacaoAtendida": null,
+			"tipoSolicitante": null,
+			"ativo": null,
+			"usuarioAprovador": null
+		},
+		"security": {
+			"id": null,
+			"cpf": null,
+			"user": null,
+			"cnpjSolicitante": null,
+			"rg": null,
+			"idSolicitante": null,
+			"dataSolicitacao": null,
+			"dataAtivacao": null,
+			"dataRemocao": null,
+			"nomeSolicitante": null,
+			"dataNascimento": null,
+			"sexo": null,
+			"orgaoEmissor": null,
+			"telefone": null,
+			"solicitacaoAtendida": null,
+			"tipoSolicitante": null,
+			"ativo": null,
+			"usuarioAprovador": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/s4p3kwffk5sy/"
+	},
+	"toalyf0u03sj": {
+		"customId": "dsAgentesConvenioAutorizados",
+		"queryName": "AgentesConvenioAutorizados",
+		"screen": "src/main/webapp/views/logged/agentec.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Agente",
+		"entityFullName": "app.entity.Agente",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "Agente",
+					"namespace": "app.entity.Agente",
+					"alias": "a"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "a",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "a.idSolicitante",
+						"field": "a.idSolicitante",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":idSolicitante",
+						"valueIsField": false
+					},
+					{
+						"id": "a.ativo",
+						"field": "a.ativo",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":ativo",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "idSolicitante",
+				"fieldValue": {
+					"blocklyClass": "blockly.AgentesConvenioAutorizados",
+					"blocklyMethod": "retornarConvenioLogado",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.AgentesConvenioAutorizados",
+						"classNameNew": "AgentesConvenioAutorizados",
+						"classNameOld": "AgentesConvenioAutorizados",
+						"sourcePath": "src/main/java/blockly/AgentesConvenioAutorizados.blockly",
+						"language": "java",
+						"class": "blockly.AgentesConvenioAutorizados",
+						"methods": [
+							{
+								"name": "retornarConvenioLogado",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "retornarCondicao",
+								"hasReturn": "true",
+								"params": [
+									"Dados"
+								]
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.AgentesConvenioAutorizados:retornarConvenioLogado', null, null)"
+				}
+			},
+			{
+				"fieldName": "ativo",
+				"fieldValue": {
+					"blocklyClass": "blockly.AgentesConvenioAutorizados",
+					"blocklyMethod": "retornarCondicao",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.AgentesConvenioAutorizados",
+						"classNameNew": "AgentesConvenioAutorizados",
+						"classNameOld": "AgentesConvenioAutorizados",
+						"sourcePath": "src/main/java/blockly/AgentesConvenioAutorizados.blockly",
+						"language": "java",
+						"class": "blockly.AgentesConvenioAutorizados",
+						"methods": [
+							{
+								"name": "retornarCondicao",
+								"hasReturn": "true",
+								"params": [
+									"Dados"
+								]
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.AgentesConvenioAutorizados:retornarCondicao', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"cpf": null,
+			"user": null,
+			"cnpjSolicitante": null,
+			"rg": null,
+			"idSolicitante": null,
+			"dataSolicitacao": null,
+			"dataAtivacao": null,
+			"dataRemocao": null,
+			"nomeSolicitante": null,
+			"dataNascimento": null,
+			"sexo": null,
+			"orgaoEmissor": null,
+			"telefone": null,
+			"solicitacaoAtendida": null,
+			"tipoSolicitante": null,
+			"ativo": null,
+			"usuarioAprovador": null
+		},
+		"security": {
+			"id": null,
+			"cpf": null,
+			"user": null,
+			"cnpjSolicitante": null,
+			"rg": null,
+			"idSolicitante": null,
+			"dataSolicitacao": null,
+			"dataAtivacao": null,
+			"dataRemocao": null,
+			"nomeSolicitante": null,
+			"dataNascimento": null,
+			"sexo": null,
+			"orgaoEmissor": null,
+			"telefone": null,
+			"solicitacaoAtendida": null,
+			"tipoSolicitante": null,
+			"ativo": null,
+			"usuarioAprovador": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/toalyf0u03sj/"
+	},
+	"ubgb01wityed": {
+		"customId": "dsAgenteEstabelecimentoAutorizado",
+		"queryName": "AgenteEstabelecimentoAutorizado",
+		"screen": "src/main/webapp/views/logged/agentee.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Agente",
+		"entityFullName": "app.entity.Agente",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "Agente",
+					"namespace": "app.entity.Agente",
+					"alias": "a"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "a",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "a.idSolicitante",
+						"field": "a.idSolicitante",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":idSolicitante",
+						"valueIsField": false
+					},
+					{
+						"id": "a.ativo",
+						"field": "a.ativo",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":ativo",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "idSolicitante",
+				"fieldValue": {
+					"blocklyClass": "blockly.AgenteEstabelecimentoAutorizado",
+					"blocklyMethod": "retornarEstabelecimentoLogado",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.AgenteEstabelecimentoAutorizado",
+						"classNameNew": "AgenteEstabelecimentoAutorizado",
+						"classNameOld": "AgenteEstabelecimentoAutorizado",
+						"sourcePath": "src/main/java/blockly/AgenteEstabelecimentoAutorizado.blockly",
+						"language": "java",
+						"class": "blockly.AgenteEstabelecimentoAutorizado",
+						"methods": [
+							{
+								"name": "retornarEstabelecimentoLogado",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "retornarCondicao",
+								"hasReturn": "true",
+								"params": [
+									"Dados"
+								]
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.AgenteEstabelecimentoAutorizado:retornarEstabelecimentoLogado', null, null)"
+				}
+			},
+			{
+				"fieldName": "ativo",
+				"fieldValue": {
+					"blocklyClass": "blockly.AgenteEstabelecimentoAutorizado",
+					"blocklyMethod": "retornarCondicao",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.AgenteEstabelecimentoAutorizado",
+						"classNameNew": "AgenteEstabelecimentoAutorizado",
+						"classNameOld": "AgenteEstabelecimentoAutorizado",
+						"sourcePath": "src/main/java/blockly/AgenteEstabelecimentoAutorizado.blockly",
+						"language": "java",
+						"class": "blockly.AgenteEstabelecimentoAutorizado",
+						"methods": [
+							{
+								"name": "retornarCondicao",
+								"hasReturn": "true",
+								"params": [
+									"Dados"
+								]
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.AgenteEstabelecimentoAutorizado:retornarCondicao', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"cpf": null,
+			"user": null,
+			"cnpjSolicitante": null,
+			"rg": null,
+			"idSolicitante": null,
+			"dataSolicitacao": null,
+			"dataAtivacao": null,
+			"dataRemocao": null,
+			"nomeSolicitante": null,
+			"dataNascimento": null,
+			"sexo": null,
+			"orgaoEmissor": null,
+			"telefone": null,
+			"solicitacaoAtendida": null,
+			"tipoSolicitante": null,
+			"ativo": null,
+			"usuarioAprovador": null
+		},
+		"security": {
+			"id": null,
+			"cpf": null,
+			"user": null,
+			"cnpjSolicitante": null,
+			"rg": null,
+			"idSolicitante": null,
+			"dataSolicitacao": null,
+			"dataAtivacao": null,
+			"dataRemocao": null,
+			"nomeSolicitante": null,
+			"dataNascimento": null,
+			"sexo": null,
+			"orgaoEmissor": null,
+			"telefone": null,
+			"solicitacaoAtendida": null,
+			"tipoSolicitante": null,
+			"ativo": null,
+			"usuarioAprovador": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/ubgb01wityed/"
+	},
+	"t81bzb2sxk4y": {
+		"customId": "dsMeusExames",
+		"queryName": "MeusExames",
+		"screen": "src/main/mobileapp/www/views/logged/meusexames.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Resultado",
+		"entityFullName": "app.entity.Resultado",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "Resultado",
+					"namespace": "app.entity.Resultado",
+					"alias": "r"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "r",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "r.cpfPaciente",
+						"field": "r.cpfPaciente",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":cpfPaciente",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "cpfPaciente",
+				"fieldValue": {
+					"blocklyClass": "blockly.PacienteEntidade",
+					"blocklyMethod": "obterCpfPaciente",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.PacienteEntidade",
+						"classNameNew": "PacienteEntidade",
+						"classNameOld": "PacienteEntidade",
+						"sourcePath": "src/main/java/blockly/PacienteEntidade.blockly",
+						"language": "java",
+						"class": "blockly.PacienteEntidade",
+						"methods": [
+							{
+								"name": "InserirPaciente",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "obterCpfPaciente",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "retornarIdPacienteLogado",
+								"hasReturn": "true",
+								"params": []
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.PacienteEntidade:obterCpfPaciente', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"cpfPaciente": null,
+			"estabelecimentoDeSaude": null,
+			"dataImportacao": null,
+			"nomeExame": null,
+			"dataEmissao": null,
+			"horaEmissao": null,
+			"materialExame": null,
+			"nota": null,
+			"nomePaciente": null,
+			"dataNascimento": null,
+			"valorReferencia": null,
+			"valorResultado": null,
+			"metodo": null,
+			"comentario": null,
+			"conclusao": null,
+			"metodoExame": null,
+			"medico": null
+		},
+		"security": {
+			"id": null,
+			"cpfPaciente": null,
+			"estabelecimentoDeSaude": null,
+			"dataImportacao": null,
+			"nomeExame": null,
+			"dataEmissao": null,
+			"horaEmissao": null,
+			"materialExame": null,
+			"nota": null,
+			"nomePaciente": null,
+			"dataNascimento": null,
+			"valorReferencia": null,
+			"valorResultado": null,
+			"metodo": null,
+			"comentario": null,
+			"conclusao": null,
+			"metodoExame": null,
+			"medico": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/t81bzb2sxk4y/"
+	},
+	"1jer0lat5nb5k": {
+		"customId": "dsAutorizacaoExames",
+		"queryName": "AutorizacaoExames",
+		"screen": "src/main/mobileapp/www/views/logged/testeautorizacao.view.html",
+		"sourceType": "blockly",
+		"blockly": {
+			"blocklyClass": "blockly.AutorizacaoAcessoExame",
+			"blocklyMethod": "retornarIdProfissionalLogado",
+			"blocklyLanguage": "java",
+			"blocklyJson": {
+				"namespace": "blockly.AutorizacaoAcessoExame",
+				"classNameNew": "AutorizacaoAcessoExame",
+				"classNameOld": "AutorizacaoAcessoExame",
+				"sourcePath": "src/main/java/blockly/AutorizacaoAcessoExame.blockly",
+				"language": "java",
+				"class": "blockly.AutorizacaoAcessoExame",
+				"methods": [
+					{
+						"name": "listar",
+						"hasReturn": "true",
+						"params": []
+					},
+					{
+						"name": "filtrar",
+						"hasReturn": "true",
+						"params": []
+					},
+					{
+						"name": "inserir",
+						"hasReturn": "true",
+						"params": []
+					},
+					{
+						"name": "retornarIdProfissionalLogado",
+						"hasReturn": "true",
+						"params": []
+					}
+				]
+			},
+			"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.AutorizacaoAcessoExame:retornarIdProfissionalLogado', null, null)",
+			"blocklyGETMethod": "listar",
+			"blocklyPOSTMethod": "inserir",
+			"blocklyPUTMethod": "retornarIdProfissionalLogado",
+			"blocklyDELETEMethod": "retornarIdProfissionalLogado",
+			"blocklyFILTERMethod": "filtrar"
+		},
+		"entitySimpleName": null,
+		"entityFullName": null,
+		"query": "",
+		"queryParamsValues": [],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": false,
+			"PUTAuthorities": null,
+			"DELETE": false,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {},
+		"security": {},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/1jer0lat5nb5k/"
+	},
+	"1hbjaq9yweddd": {
+		"customId": "dsAutorizacaoAcessoExame",
+		"queryName": "AutorizacaoAcessoExame",
+		"screen": "src/main/mobileapp/www/views/logged/solicitarautorizacao.view.html",
+		"sourceType": "blockly",
+		"blockly": {
+			"blocklyClass": "blockly.AutorizacaoAcessoExame",
+			"blocklyMethod": "inserir",
+			"blocklyLanguage": "java",
+			"blocklyJson": {
+				"namespace": "blockly.AutorizacaoAcessoExame",
+				"classNameNew": "AutorizacaoAcessoExame",
+				"classNameOld": "AutorizacaoAcessoExame",
+				"sourcePath": "src/main/java/blockly/AutorizacaoAcessoExame.blockly",
+				"language": "java",
+				"class": "blockly.AutorizacaoAcessoExame",
+				"methods": [
+					{
+						"name": "inserir",
+						"hasReturn": "true",
+						"params": [
+							"cpf"
+						]
+					},
+					{
+						"name": "listar",
+						"hasReturn": "true",
+						"params": []
+					},
+					{
+						"name": "filtrar",
+						"hasReturn": "true",
+						"params": []
+					},
+					{
+						"name": "beforeInsert",
+						"hasReturn": "true",
+						"params": [
+							"dados<app.entity.AutorizacaoAcessoExame>"
+						]
+					},
+					{
+						"name": "retornarIdProfissionalLogado",
+						"hasReturn": "true",
+						"params": []
+					}
+				]
+			},
+			"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.AutorizacaoAcessoExame:inserir', null, null)",
+			"blocklyGETMethod": "listar",
+			"blocklyPOSTMethod": "inserir",
+			"blocklyPUTMethod": "inserir",
+			"blocklyDELETEMethod": "inserir",
+			"blocklyFILTERMethod": "filtrar"
+		},
+		"entitySimpleName": null,
+		"entityFullName": null,
+		"query": "",
+		"queryParamsValues": [
+			{
+				"fieldName": "cpf",
+				"fieldValue": "rowData.cpf"
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": false,
+			"PUTAuthorities": null,
+			"DELETE": false,
+			"DELETEAuthorities": null,
+			"FILTER": false,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {},
+		"security": {},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/1hbjaq9yweddd/{{rowData.cpf}}/"
+	},
+	"1k25ljp3aq8v8": {
+		"customId": "dsSolicitacaoExames",
+		"queryName": "SolicitacaoExames",
+		"screen": "src/main/mobileapp/www/views/logged/solicitarautorizacao.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "AutorizacaoAcessoExame",
+		"entityFullName": "app.entity.AutorizacaoAcessoExame",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "AutorizacaoAcessoExame",
+					"namespace": "app.entity.AutorizacaoAcessoExame",
+					"alias": "a"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "a",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "a.profissional.id",
+						"field": "a.profissional.id",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":profissionalId",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "profissionalId",
+				"fieldValue": {
+					"blocklyClass": "blockly.AutorizacaoAcessoExame",
+					"blocklyMethod": "retornarIdProfissionalLogado",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.AutorizacaoAcessoExame",
+						"classNameNew": "AutorizacaoAcessoExame",
+						"classNameOld": "AutorizacaoAcessoExame",
+						"sourcePath": "src/main/java/blockly/AutorizacaoAcessoExame.blockly",
+						"language": "java",
+						"class": "blockly.AutorizacaoAcessoExame",
+						"methods": [
+							{
+								"name": "inserir",
+								"hasReturn": "true",
+								"params": [
+									"cpf"
+								]
+							},
+							{
+								"name": "listar",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "filtrar",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "beforeInsert",
+								"hasReturn": "true",
+								"params": [
+									"dados<app.entity.AutorizacaoAcessoExame>"
+								]
+							},
+							{
+								"name": "retornarIdProfissionalLogado",
+								"hasReturn": "true",
+								"params": []
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.AutorizacaoAcessoExame:retornarIdProfissionalLogado', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"paciente": null,
+			"profissional": null,
+			"ativo": null,
+			"autorizado": null,
+			"todosExames": null,
+			"dataExpiracao": null,
+			"dataAutorizacao": null,
+			"dataSolicitacao": null
+		},
+		"security": {
+			"id": null,
+			"paciente": null,
+			"profissional": null,
+			"ativo": null,
+			"autorizado": null,
+			"todosExames": null,
+			"dataExpiracao": null,
+			"dataAutorizacao": null,
+			"dataSolicitacao": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/1k25ljp3aq8v8/"
+	}
+}

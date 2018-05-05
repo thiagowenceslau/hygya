@@ -1,0 +1,295 @@
+<h3>Convênio</h3>
+
+<!-- div row para pesquisa -->
+<!--<div class="row">-->
+
+    <div ng-hide="Convenio.inserting || Convenio.editing" data-component="crn-datasource-filter" id="crn-datasource-filter-general" class="">
+        <div class="form-group">
+            <label for="textinput-filter" class="">{{"template.crud.search" | translate}}</label>
+            <input type="text" ng-model="vars.search" cronapp-filter="nome;cnPJ;" cronapp-filter-operator="" cronapp-filter-caseinsensitive="false" cronapp-filter-autopost="true" crn-datasource="Convenio" class="form-control" value="" placeholder="{{'template.crud.search' | translate}}">
+        </div>
+    </div>
+
+<div data-component="crn-button" id="crn-button-564202" class="">
+    <button class="btn btn-primary" type="submit" onclick="" data-component="crn-button" ng-click="Convenio.startInserting()" ng-hide="Convenio.inserting || Convenio.editing"><i class="fa fa-user"></i> <span class="">{{"template.crud.new" | translate}}</span></button>
+</div>
+<!-- fim div row para pesquisa -->
+<!--</div>-->
+
+<datasource filter="" name="Convenio" entity="api/cronapi/query/rhg4fvd1alo6/" keys="id" rows-per-page="100" delete-message="Deseja remover?" class=""></datasource>
+<div class="component-holder" data-component="crn-grid" id="crn-grid-Convenio">
+    <div crn-datasource="Convenio" class="" ng-hide="Convenio.editing || Convenio.inserting">
+        <table class="table  table-bordered table-hover table-striped">
+            <thead>
+            <tr class="table-header">
+                <th class="">
+                    <div class="">Nome</div>
+                </th>
+                <th class="">
+                    <div class="">Razão Social</div>
+                </th>
+                <th class="">
+                    <div class="">CNPJ</div>
+                </th>
+                <th class="">
+                    <div class="">Cidade</div>
+                </th>
+                <th class="">
+                    <div class="">Estado</div>
+                </th>
+                <th class="">
+                    <div class="">{{"template.crud.actions" | translate}}</div>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="table-content" ng-repeat="rowData in datasource.data">
+                <td class="">
+                    <div class="">
+                                {{rowData.nome  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.razaoSocial  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.cnPJ  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.cidade  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.estado  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                        <button class="btn btn-default btn-sm" data-component="crn-button" type="submit" ng-click="datasource.startEditing(rowData)"><i class="fa fa-edit"></i></button>
+                        <button class="btn btn-default btn-sm" data-component="crn-button" type="submit" ng-click="datasource.remove(rowData)"><i class="fa fa-times"></i></button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="table-footer-controls">
+            <button class="btn btn-default btn-block btn-clicked" data-component="crn-button" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()">{{"template.crud.load_more" | translate}}...</button>
+        </div>
+    </div>
+</div>
+<div data-component="crn-form" id="crn-form-form-Convenio">
+    <div class="form" ng-show="Convenio.editing || Convenio.inserting">
+        <form crn-datasource="Convenio" class="">
+            <div class="tool-bar" ng-hide="datasource.editing || datasource.inserting">
+                <button class="btn btn-primary" data-component="crn-button" ng-click="datasource.startInserting()"><i class="glyphicon glyphicon-plus-sign"></i></button>
+                <button class="btn btn-success" data-component="crn-button" ng-click="datasource.startEditing()"><i class="glyphicon glyphicon-edit"></i></button>
+                <button class="btn btn-primary" data-component="crn-button" ng-disabled="!datasource.hasPrevious()" ng-click="datasource.previous()"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                <button class="btn btn-primary" data-component="crn-button" ng-disabled="!datasource.hasNext()" ng-click="datasource.next()"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                <button class="btn btn-primary" data-component="crn-button" ng-click="datasource.remove()"><i class="glyphicon glyphicon-trash"></i></button>
+            </div>
+            <div class="active-bar" ng-hide="!datasource.editing &amp;&amp; !datasource.inserting">
+                <button class="btn btn-success" data-component="crn-button" ng-click="datasource.post()"><i class="glyphicon glyphicon-ok"></i></button>
+                <button class="btn btn-danger" data-component="crn-button" ng-click="datasource.cancel()"><i class="glyphicon glyphicon-remove"></i></button>
+            </div>
+            <br>
+            <fieldset ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting">
+
+                <div data-component="crn-textinput" id="crn-textinput-nome" class="col-md-6">
+                    <div class="form-group">
+                        <label for="textinput-nome" class="">Nome</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input maxlength="120" type="text" ng-model="Convenio.active.nome" class="form-control" id="textinput-nome" placeholder="Nome" mask="" mask-placeholder="" ng-required="true">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-razaoSocial" class="col-md-6">
+                    <div class="form-group">
+                        <label for="textinput-razaoSocial" class="">Razão Social</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input maxlength="160" type="text" ng-model="Convenio.active.razaoSocial" class="form-control" id="textinput-razaoSocial" placeholder="Razão Social" mask="" mask-placeholder="" ng-required="true">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-cnPJ" class="col-md-6">
+                    <div class="form-group">
+                        <label for="textinput-cnPJ" class="">CNPJ</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input maxlength="20" type="text" ng-model="Convenio.active.cnPJ" class="form-control" id="textinput-cnPJ" placeholder="CNPJ" mask="99.999.999/9999-99;0" mask-placeholder="" ng-required="true">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div><div data-component="crn-textinput" id="crn-textinput-registroANS" class="col-md-6">
+                    <div class="form-group">
+                        <label for="textinput-registroANS" class="">Registro ANS</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input maxlength="30" type="text" ng-model="Convenio.active.registroANS" class="form-control" id="textinput-registroANS" placeholder="Registro ANS" mask="" mask-placeholder="" ng-required="true">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                
+
+                <div data-component="crn-textinput" id="crn-textinput-cep" class="col-md-6">
+                    <div class="form-group">
+                        <label for="textinput-cep" class="">Cep</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input maxlength="10" type="text" ng-model="Convenio.active.cep" class="form-control" id="textinput-cep" placeholder="Cep" mask="" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-endereco" class="col-md-6">
+                    <div class="form-group">
+                        <label for="textinput-endereco" class="">Endereço</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input maxlength="120" type="text" ng-model="Convenio.active.endereco" class="form-control " id="textinput-endereco" placeholder="Endereço" mask="" mask-placeholder="" ng-required="false" ng-disabled="Convenio.inserting || Convenio.editing">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div><div class="component-holder ng-binding ng-scope col-md-12" data-component="crn-button" id="crn-button-296589"><button class="btn btn-default" type="submit" ng-click="cronapi.util.makeCallServerBlocklyAsync('blockly.BuscarCep:buscarCepConvenio', null, null)" xattr-size="" xattr-fullsize="" xattr-theme="btn-default" data-component="crn-button"><i class="glyphicon glyphicon-search"></i> <span>Buscar CEP</span></button></div>
+
+                <div data-component="crn-textinput" id="crn-textinput-bairro" class="col-md-5">
+                    <div class="form-group">
+                        <label for="textinput-bairro" class="">Bairro</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input maxlength="30" type="text" ng-model="Convenio.active.bairro" class="form-control" id="textinput-bairro" placeholder="Bairro" mask="" mask-placeholder="" ng-required="false" ng-disabled="Convenio.inserting || Convenio.editing">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-numero" class="col-md-1">
+                    <div class="form-group">
+                        <label for="textinput-numero" class="">Número</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="integer" ng-model="Convenio.active.numero" class="form-control" id="textinput-numero" placeholder="" mask="" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-complemento" class="col-md-6">
+                    <div class="form-group">
+                        <label for="textinput-complemento" class="">Complemento</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input maxlength="60" type="text" ng-model="Convenio.active.complemento" class="form-control" id="textinput-complemento" placeholder="Complemento" mask="" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-cidade" class="col-md-6">
+                    <div class="form-group">
+                        <label for="textinput-cidade" class="">Cidade</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input maxlength="60" type="text" ng-model="Convenio.active.cidade" class="form-control" id="textinput-cidade" placeholder="Cidade" mask="" mask-placeholder="" ng-required="false" ng-disabled="Convenio.inserting || Convenio.editing">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-estado" class="col-md-6">
+                    <div class="form-group">
+                        <label for="textinput-estado" class="">Estado</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input maxlength="30" type="text" ng-model="Convenio.active.estado" class="form-control" id="textinput-estado" placeholder="Estado" mask="" mask-placeholder="" ng-required="false" ng-disabled="Convenio.inserting || Convenio.editing">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-email" class="col-md-6">
+                    <div class="form-group">
+                        <label for="textinput-email" class="">E-mail</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input maxlength="120" type="text" ng-model="Convenio.active.email" class="form-control" id="textinput-email" placeholder="E-mail" mask="" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div><div data-component="crn-textinput" id="crn-textinput-email" class="col-md-6">
+                    <div class="form-group">
+                        <label for="textinput-email" class="">Senha</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input maxlength="120" type="password" ng-model="Convenio.active.user.password" class="form-control" id="textinput-senha" placeholder="Senha" mask="" mask-placeholder="" ng-required="false" ng-disabled="Convenio.editing" ng-hide="Convenio.editing">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-telefone1" class="col-md-6">
+                    <div class="form-group">
+                        <label for="textinput-telefone1" class="">Telefone Principal</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input maxlength="15" type="text" ng-model="Convenio.active.telefone1" class="form-control" id="textinput-telefone1" placeholder="Telefone Principal" mask="(99) 99999-9999;0" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-telefone2" class="col-md-6">
+                    <div class="form-group">
+                        <label for="textinput-telefone2" class="">Telefone Opcional</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input maxlength="15" type="text" ng-model="Convenio.active.telefone2" class="form-control" id="textinput-telefone2" placeholder="Telefone Opcional" mask="(99) 99999-9999;0" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-contatoResponsavel" class="col-md-6">
+                    <div class="form-group">
+                        <label for="textinput-contatoResponsavel" class="">Contato Responsável</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input maxlength="80" type="text" ng-model="Convenio.active.contatoResponsavel" class="form-control" id="textinput-contatoResponsavel" placeholder="Contato Responsável" mask="" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-tipoCobranca" class="col-md-12">
+                    <div class="form-group">
+                        <label for="textinput-tipoCobranca" class="">Tipo Cobrança</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <div class="component-holder ng-binding ng-scope" data-component="crn-combobox" id="crn-textinput-tipoCobranca" ng-model="Convenio.active.tipoCobranca"><div class="form-group"><ui-select crn-datasource="[{'key':'1','value':'Valor Fixo'},{'key':'2','value':'Valor por quantidade'}]" ng-model="vars.combobox3350" ng-required="false" ng-disabled="disabled" class="crn-select"><ui-select-match placeholder="Select..." class="">{{$select.selected.value}}</ui-select-match><ui-select-choices repeat="rowData.key as rowData in datasource.data | filter: $select.search" class=""><div class="">{{rowData.value}}</div></ui-select-choices></ui-select></div></div>
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-ativo" class="col-md-2" ng-hide="Convenio.inserting">
+                    <div class="form-group">
+                        <label for="textinput-ativo" class="">Ativo</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="checkbox" ng-model="Convenio.active.ativo" class="form-control" id="textinput-ativo" placeholder="Ativo" mask="" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div><div data-component="crn-textinput" id="crn-textinput-bloqueado" class="col-md-2" ng-hide="Convenio.inserting">
+                    <div class="form-group">
+                        <label for="textinput-bloqueado" class="">Bloqueado</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="checkbox" ng-model="Convenio.active.bloqueado" class="form-control" id="textinput-bloqueado" placeholder="Bloqueado" mask="" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                
+
+                <div data-component="crn-textinput" id="crn-textinput-dataInclusao" class="col-md-4" ng-hide="Convenio.inserting">
+                    <div class="form-group">
+                        <label for="textinput-dataInclusao" class="">Data Inclusão</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="date" ng-model="Convenio.active.dataInclusao" class="form-control" id="textinput-dataInclusao" placeholder="Data Inclusão" mask="" mask-placeholder="" ng-required="false" ng-disabled="Convenio.editing">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+                <!-- NtoN  -->
+                <!-- NtoN  end-->
+            </fieldset>
+        </form>
+        <form>
+            <fieldset>
+                <!-- OneToN -->
+                <!-- OneToOne  end -->
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+
+<!-- OneToOne modal -->
+<!-- OneToOne modal end-->

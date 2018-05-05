@@ -1,0 +1,82 @@
+<ion-view cache-view="false" view-title="Solicitar Autorização" hide-back-button="true"> 
+  <ion-nav-buttons side="right"> 
+  </ion-nav-buttons> 
+  <ion-nav-buttons side="left"> 
+  </ion-nav-buttons> 
+  <ion-content> 
+    <div ng-hide="AutorizacaoAcessoExame.inserting || AutorizacaoAcessoExame.editing" data-component="crn-datasource-filter" id="crn-datasource-filter-general" class=""> 
+      <label class="item item-input" id="cloud-search1"> <i class="icon ion-search placeholder-icon"></i> <input type="text" ng-model="vars.search" cronapp-filter="paciente.nome;paciente.cpf" cronapp-filter-operator="" cronapp-filter-autopost="true" crn-datasource="AutorizacaoAcessoExame" value="" placeholder="{{'template.crud.search' | translate}}"> </label> 
+    </div> 
+    <div class="component-holder ng-binding ng-scope ui-draggable ui-draggable-handle" data-component="crn-datasource" id="crn-datasource-906854"> 
+      <datasource name="AutorizacaoAcessoExame" entity="api/cronapi/query/1hbjaq9yweddd/" keys="id" rows-per-page="10" delete-message="Deseja remover?" class=""></datasource><div class="component-holder ng-binding ng-scope" data-component="crn-datasource" id="crn-datasource-422341"><datasource name="AutorizacaoAcessoExame" entity="api/cronapi/query/1k25ljp3aq8v8/" keys="id" rows-per-page="100" on-before-create="" on-after-create="" on-before-update="" on-after-update="" on-before-delete="" on-after-delete="" on-after-fill=""></datasource></div> 
+    </div> 
+    <div crn-datasource="AutorizacaoAcessoExame" class=""> 
+      <ion-list can-swipe="listCanSwipe"> 
+        <ion-item ng-repeat="rowData in datasource.data" class="item"> 
+          <div class="row"> 
+            <div class="col genClass9310"> 
+              <h2>{{rowData.paciente.nome}}</h2> <h2>{{rowData.paciente.cpf}}</h2> 
+              <h3> {{rowData.autorizado}}</h3> 
+               <h3>{{rowData.dataSolicitacao | date:'dd/MM/yyyy'}} </h3>
+            </div> 
+          </div> 
+        </ion-item> 
+      </ion-list> 
+    </div> 
+    <fieldset> 
+      <button class="button component-holder button-positive genClass6131" type="submit" ng-click="blockly.js.blockly.ModalSolicitarAutorizacao.exibir()" data-component="crn-button" id="crn-button-560043" xattr-fullsize="" xattr-type="" xattr-theme="button-positive"><i class="ion ion-android-add"></i> <span>Nova Solicitação</span></button>
+    </fieldset> 
+  </ion-content> 
+</ion-view> 
+<div class="modal fade genClass441" id="modal238"> 
+  <div class="modal-dialog"> 
+  <ion-scroll direction="y" style="width:auto;height:500px">
+    <div class="modal-content"> 
+      <div class="component-holder modal-header"> 
+        <button class="button component-holder genClass2367 button-clear button-assertive button-small" type="submit" ng-click="blockly.js.blockly.ModalSolicitarAutorizacao.fechar()" data-component="crn-button" id="crn-button-73963" xattr-type="button-clear" xattr-theme="button-assertive" xattr-size="button-small"><i class="ion ion-android-arrow-back"></i> <span>Voltar</span></button> 
+        <h2 xattr-position="text-center" class="text-center component-holder" data-component="crn-label" id="crn-label-683014">Nova Solicitação</h2> 
+      </div> 
+      <div class="modal-body"> 
+        <div class="list-group list-group-sm row"> 
+          <div data-component="crn-datasource-filter" id="crn-datasource-filter-general" class="col"> 
+            <label class="item item-input" id="cloud-search1"> <i class="icon ion-search placeholder-icon"></i> <input type="text" ng-model="vars.busca" cronapp-filter="nome;cpf" cronapp-filter-operator="" cronapp-filter-autopost="true" crn-datasource="Paciente" value="" placeholder="{{'template.crud.search' | translate}}"> </label> 
+          </div>
+          <div class="component-holder ng-binding ng-scope" data-component="crn-datasource" id="crn-datasource-329191"></div> 
+        </div>
+        <div class="component-holder ng-binding ng-scope" data-component="crn-datasource" id="crn-datasource-937901">
+          <datasource name="Paciente" entity="api/cronapi/crud/app.entity.Paciente" keys="id" rows-per-page="100" on-before-create="" on-after-create="" on-before-update="" on-after-update="" on-before-delete="" on-after-delete="" on-after-fill=""></datasource>
+        </div> 
+        <div crn-datasource="Paciente" class=""> 
+          <ion-list can-swipe="listCanSwipe"> 
+            <ion-item ng-repeat="rowData in datasource.data" class="item"> 
+              
+                
+                <label class="item item-input component-holder " data-component="crn-input" id="crn-input-475596">
+                    <input id="nome" type="text" placeholder="" ng-model="rowData.nome" mask="" ng-disabled="true" style="width: 300px; height: 34px;">
+                </label>
+                <div data-component="crn-form" id="crn-form-form-AutorizacaoAcessoExame">
+    <div class="form">
+        <form crn-datasource="dsAutorizacaoAcessoExame" class="">
+                <div data="" class="item item-input-inset component-holder  " data-component="crn-input-button" id="crn-input-button-385468">
+                    
+                      <input type="text" placeholder="" ng-model="rowData.cpf" mask="" ng-disabled="true" style="width: 150px; height: 34px;">
+                    
+                    <button class="button component-holder button-small button-clear button-positive " type="submit" ng-click="blockly.js.blockly.ModalSolicitarAutorizacao.solicitarAutorizacao(rowData.cpf)" data-component="crn-button" id="crn-button-1328" xattr-size="button-small" xattr-type="button-clear" xattr-theme="button-positive"> <span>Solicitar</span></button>
+                </div>
+                </form>
+                </div>
+                </div>
+              </ion-item>
+            
+          </ion-list> 
+        </div> 
+      </div> 
+      <div class="modal-footer"> 
+        <div class="list-group list-group-sm row"> 
+          
+        </div> 
+      </div> 
+    </div>
+    </ion-scroll>
+  </div> 
+</div>

@@ -1,0 +1,30 @@
+<ion-view view-title="Meus Dados"> 
+  <ion-content data-content="true" data-replace="true"> 
+    <div class="component-holder ng-binding ng-scope" data-component="crn-datasource" id="crn-datasource-279899"> 
+      <datasource name="Paciente" entity="api/cronapi/query/1iykj409c9oip/" keys="id" rows-per-page="100" on-before-create="" on-after-create="" on-before-update="" on-after-update="" on-before-delete="" on-after-delete="" on-after-fill=""></datasource> 
+      <div class="component-holder ng-binding ng-scope" data-component="crn-datasource" id="crn-datasource-885774"></div> 
+    </div> 
+    <fieldset> 
+      <div class="list"> 
+        <label for="textinput-nome" class="item item-input item-stacked-label col-xs-12"> <span class="input-label">Nome</span> <input type="text" placeholder="Nome" ng-model="Paciente.active.nome" id="textinput-nome" name="textinput-nome" required=""> </label> 
+        <label for="textinput-cpf" class="item item-input item-stacked-label  col-xs-12"> <span class="input-label">CPF</span> <input type="text" placeholder="CPF" ng-model="Paciente.active.cpf" id="textinput-cpf" name="textinput-cpf" required="" mask="999.999.999-99;0"> </label> 
+        <label for="textinput-dtNasc" class="item item-input item-stacked-label  col-xs-12"> <span class="input-label">Data de Nascimento</span> <input type="text" placeholder="" ng-model="Paciente.active.dataNascimento | date:'dd/MM/yyyy'" id="textinput-dtNasc" name="textinput-dtNasc" required=""> </label> 
+        <label class="item item-input item-select component-holder  col-xs-12" data-component="crn-select" id="crn-select-651047"> 
+          <div class="input-label">
+             Sexo 
+          </div><select ng-model="Paciente.active.sexo"><option>Masculino</option><option>Feminino</option></select></label> 
+        <label for="textinput-cep" class="item item-input item-stacked-label  col-xs-12"> <span class="input-label">CEP</span> <input type="text" placeholder="CEP" ng-model="Paciente.active.cep" id="textinput-cep" name="textinput-cep" required="" mask="99999-999;0"> </label> 
+        <button class="button component-holder col-xs-12 button-clear button-block button-positive" type="submit" ng-click="cronapi.util.makeCallServerBlocklyAsync('blockly.CepPaciente:buscarCepPaciente', null, null)" data-component="crn-button" id="crn-button-548754" xattr-type="button-clear" xattr-size="" xattr-fullsize="button-block" xattr-theme="button-positive"><i class="ion ion-android-search"></i> <span>Buscar CEP</span></button> 
+        <label for="textinput-endereco" class="item item-input item-stacked-label col-xs-12"> <span class="input-label">Endereço</span> <input type="text" placeholder="Endereço" ng-model="Paciente.active.endereco" id="textinput-endereco" name="textinput-endereco" required=""> </label> 
+        <label for="textinput-bairro" class="item item-input item-stacked-label col-xs-12"> <span class="input-label">Bairro</span> <input type="text" placeholder="Bairro" ng-model="Paciente.active.bairro" id="textinput-bairro" name="textinput-bairro" required=""> </label> 
+        <label for="textinput-complemento" class="item item-input item-stacked-label  col-xs-12"> <span class="input-label">Complemento</span> <input type="text" placeholder="Complemento" ng-model="Paciente.active.complemento" id="textinput-complemento" name="textinput-complemento" required=""> </label> 
+        <label for="textinput-numero" class="item item-input item-stacked-label  col-xs-12"> <span class="input-label">Número</span> <input type="number" placeholder="Número" ng-model="Paciente.active.numero" id="textinput-numero" name="textinput-numero" required=""> </label> 
+        <label for="textinput-cidade" class="item item-input item-stacked-label  col-xs-12"> <span class="input-label">Cidade</span> <input type="text" placeholder="Cidade" ng-model="Paciente.active.cidade" id="textinput-cidade" name="textinput-cidade" required=""> </label> 
+        <label for="textinput-estado" class="item item-input item-stacked-label  col-xs-12"> <span class="input-label">Estado</span> <input type="text" placeholder="Estado" ng-model="Paciente.active.estado" id="textinput-estado" name="textinput-estado" required=""> </label> 
+        <label for="textinput-telefone1" class="item item-input item-stacked-label col-xs-12"> <span class="input-label">Telefone Principal</span> <input type="text" placeholder="Telefone Principal" ng-model="Paciente.active.telefone1" id="textinput-telefone1" name="textinput-telefone1" required="" mask="(99) 99999-9999;0"> </label> 
+        <label for="textinput-telefone2" class="item item-input item-stacked-label col-xs-12"> <span class="input-label">Telefone</span> <input type="text" placeholder="Telefone" ng-model="Paciente.active.telefone2" id="textinput-telefone2" name="textinput-telefone2" required="" mask="(99) 99999-9999;0"> </label> 
+        <button class="button component-holder col-xs-12 button-block button-balanced" type="submit" ng-click="cronapi.util.makeCallServerBlocklyAsync('blockly.PacienteEntidadeMobile:atualizar', null, null)" data-component="crn-button" id="crn-button-797722" xattr-fullsize="button-block" xattr-type="" xattr-theme="button-balanced"><i class="ion ion-android-done-all"></i> <span>Salvar</span></button> 
+      </div> 
+    </fieldset> 
+  </ion-content> 
+</ion-view>

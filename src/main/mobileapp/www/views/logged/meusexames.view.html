@@ -1,0 +1,114 @@
+<ion-view cache-view="false" view-title="Meus Exames"> 
+<ion-nav-back-button> 
+        </ion-nav-back-button> 
+  <ion-nav-buttons side="right"> 
+  </ion-nav-buttons> 
+  <ion-nav-buttons side="left"> 
+  </ion-nav-buttons> 
+  <ion-content> 
+    <div data-component="crn-datasource-filter" id="crn-datasource-filter-general" class=""> 
+      <label class="item item-input" id="cloud-search1"> <i class="icon ion-search placeholder-icon"></i> <input type="text" ng-model="vars.search" cronapp-filter="[Resultado.nomeExame]" cronapp-filter-operator="" cronapp-filter-autopost="true" crn-datasource="Resultado" value="" placeholder="{search}" ____________cronapp-filter="[Resultado.nomeExame]" _______________cronapp-filter="[Resultado.nomeExame]" ____________________________________placeholder="{{'template.crud.search' | translate}}" __________________cronapp-filter="{{Resultado.active.nomeExame}}" ______cronapp-filter="[Resultado.nomeExame]" ____________placeholder="{search}" ___placeholder="{search}" __________________placeholder="{search}"> </label> 
+    </div> 
+    <div class="component-holder ng-binding ng-scope ui-draggable ui-draggable-handle" data-component="crn-datasource" id="crn-datasource-906854"> 
+      <datasource name="Resultado" entity="api/cronapi/query/t81bzb2sxk4y/" keys="id" rows-per-page="10" delete-message="Deseja remover?" class=""></datasource> 
+    </div> 
+    <div crn-datasource="Resultado" class=""> 
+      <ion-list can-swipe="listCanSwipe"> 
+        <ion-item ng-repeat="rowData in datasource.data" class="item" ng-click="datasource.startEditing(rowData)">
+          <ion-item class="item dark component-holder  col-xs-12" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-248810"> 
+            <div class="row"> 
+              <div class="col col-xs-10"> 
+                <h2>{{rowData.nomeExame}}</h2> 
+                {{rowData.estabelecimentoDeSaude.nome}} 
+                <br> 
+                {{rowData.dataEmissao | date:'dd/MM/yyyy'}} 
+              </div> 
+              <div class="col col-xs-2"> 
+                <button class="button button-dark component-holder button-clear" type="submit" ng-click="blockly.js.blockly.ModalMeusExames.exibir()" data-component="crn-button" id="crn-button-144412" xattr-type="button-clear"><i class="ion ion-android-document"></i></button> 
+              </div> 
+            </div> 
+          </ion-item> 
+        </ion-item> 
+      </ion-list> 
+    </div> 
+  </ion-content> 
+</ion-view> 
+
+<!-- modal begin -->
+<div class="modal fade genClass8370" id="modal12384">
+ <div class="modal-dialog">
+     <ion-scroll zooming="false" direction="y" style="width:auto;height:500px">
+   <div class="modal-content">
+     <div class="component-holder modal-header">
+       <div class="list-group list-group-sm col">
+         <div data-container="true" data-replace="true">
+            
+             <!-- emissor begin -->
+            <label for="textinput-emissor" class="item item-input item-stacked-label">
+              <span class="input-label">Emitido por:</span>
+              <input type="text" ng-model="Resultado.active.estabelecimentoDeSaude.nome" id="textinput-emissor" name="textinput-emissor" placeholder="" required="required" ng-disabled="true">
+            </label>
+            <!-- dtEmissao begin -->
+            <label for="textinput-dtEmissao" class="item item-input item-stacked-label">
+            <span class="input-label">Data da Emissão:</span>
+            <input type="text" placeholder="" ng-model="Resultado.active.dataEmissao | date:'dd/MM/yyyy'" id="textinput-dtEmissao" name="textinput-dtEmissao" required="required" ng-disabled="true">
+            </label>
+            
+            <h2 xattr-position="text-center" class="text-center component-holder" data-component="crn-label" id="crn-label-883918">{{Resultado.active.nomeExame}}</h2> 
+          
+         </div>
+       
+       </div>
+      </div>
+      <div class="modal-body">
+       <div class="list-group list-group-sm col">
+         <div data-container="true" data-replace="true">
+             <!-- material begin -->
+            <label for="textinput-material" class="item item-input item-stacked-label">
+            <span class="input-label">Material:</span>
+            <input type="text" placeholder="Ausente" ng-model="Resultado.active.materialExame" id="textinput-material" name="textinput-material" required="required" ng-disabled="true">
+            </label>
+            <!-- metodo begin -->
+            <label for="textinput-metodo" class="item item-input item-stacked-label">
+            <span class="input-label">Método:</span>
+            <input type="text" placeholder="Ausente" ng-model="Resultado.active.metodo" id="textinput-metodo" name="textinput-metodo" required="required" ng-disabled="true">
+            </label>
+            <!-- referencia begin -->
+            <label for="textinput-referencia" class="item item-input item-stacked-label">
+            <span class="input-label">Valor de Referência:</span>
+            <input type="text" placeholder="Ausente" ng-model="Resultado.active.valorReferencia" id="textinput-referencia" name="textinput-referencia" required="required" ng-disabled="true">
+            </label>
+            <!-- encontrado begin -->
+            <label for="textinput-encontrado" class="item item-input item-stacked-label">
+              <span class="input-label">Valor Encontrado:</span>
+              <input type="text" ng-model="Resultado.active.valorResultado" id="textinput-encontrado" name="textinput-encontrado" placeholder="Ausente" required="required" ng-disabled="true">
+            </label>
+            <!-- comentario begin -->
+            <label for="textinput-comentario" class="item item-input item-stacked-label">
+            <span class="input-label">Comentário:</span>
+            <input type="text" placeholder="Ausente" ng-model="Resultado.active.comentario" id="textinput-comentario" name="textinput-comentario" required="required" ng-disabled="true">
+            </label>
+            <!-- nota begin -->
+            <label for="textinput-nota" class="item item-input item-stacked-label">
+              <span class="input-label">Nota:</span>
+              <input type="text" placeholder="Ausente" ng-model="Resultado.active.nota" id="textinput-nota" name="textinput-nota" required="required" ng-disabled="true">
+            </label>
+            <!-- conclusao begin -->
+            <label for="textinput-conclusao" class="item item-input item-stacked-label">
+            <span class="input-label">Conclusão:</span>
+            <input type="text" placeholder="Ausente" ng-model="Resultado.active.conclusao" id="textinput-conclusao" name="textinput-conclusao" required="required" ng-disabled="true">
+            </label>
+            
+         </div>
+       </div>
+     </div>
+     <div class="modal-footer">
+       <div class="list-group list-group-sm row">
+         
+       <button class="button component-holder button-block button-clear button-assertive" type="submit" ng-click="blockly.js.blockly.ModalMeusExames.fechar()" data-component="crn-button" id="crn-button-380429" xattr-fullsize="button-block" xattr-type="button-clear" xattr-theme="button-assertive"><i class="ion ion-arrow-left-a"></i> <span>Voltar</span></button></div>
+     </div>
+   </div>
+   
+   </ion-scroll>
+ </div>
+</div>

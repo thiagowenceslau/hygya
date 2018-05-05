@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly formTarget="src/main/webapp/views/logged/usuarioconvenio.view.html" resourceType="JAVA" ruleDescription="UsuarioConvenio" ruleName="UsuarioConvenio" ruleSynchronous="false" ruleTimeout="300" ruleType="I">
+  <metadata scale="1" scrollx="160.14219172297413" scrolly="-427.5000000000008" target="@=s`b5)wX+$i!y%qypBg"/>
+  <block colour="#995ba5" id="1R}Nr-$.K:Jt1V#8S=$|" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="8" y="-82">
+    <mutation>
+      <arg name="user"/>
+    </mutation>
+    <field name="NAME">excluirRole</field>
+    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <statement name="STACK">
+      <block colour="#db802b" dependencyby="1R}Nr-$.K:Jt1V#8S=$|" id="7%JNh-*Mb:5a9]1}6O4T" multilayer="false" namespace="cronapi.database.Operations.remove" origintype="procedures_sql_delete_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3ERemover%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20remover%20registro%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Tabela%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Entidade%20:%20Objeto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.database.Operations.remove%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.database.Operations.remove%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_delete_callnoreturn">
+        <mutation data="%7B%22queryBuilderJson%22:%7B%22isValid%22:true,%22isEmpty%22:false,%22operationType%22:%22field%22,%22type%22:%22delete%22,%22rulesEntity%22:%5B%7B%22entity%22:%22Role%22,%22namespace%22:%22app.entity.Role%22,%22alias%22:%22%22%7D%5D,%22rulesSelect%22:%5B%5D,%22rulesGroupBy%22:%5B%5D,%22rulesHaving%22:%5B%5D,%22rulesOrderBy%22:%5B%5D,%22rules%22:%7B%22condition%22:%22AND%22,%22rules%22:%5B%7B%22id%22:%22user%22,%22field%22:%22user%22,%22type%22:%22string%22,%22input%22:%22text%22,%22operator%22:%22equal%22,%22value%22:%22:user%22,%22valueIsField%22:false%7D%5D,%22not%22:false,%22valid%22:true%7D,%22isRawSql%22:false,%22multiTenant%22:true,%22paginatorAutomatic%22:false%7D,%22entity%22:%22Role%22,%22entityFullName%22:%22app.entity.Role%22,%22filter%22:%22delete%20from%20Role%20where%20user%20=%20:user%22,%22type%22:%22F%22,%22params%22:%22%5B%5C%22user%5C%22%5D%22%7D" name="{{cronapi.database.Operations.remove}}">
+          <arg name="user"/>
+        </mutation>
+        <value name="ARG0">
+          <block colour="#a55b80" dependencyby="1R}Nr-$.K:Jt1V#8S=$|" id="!=@#XdctGd^pOr{!DML=" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+            <field name="VAR">user</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block colour="#995ba5" id="8i:O`o1w~l@$eZGh`=K2" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="28" y="-62">
+    <mutation>
+      <arg name="Dados&lt;app.entity.User&gt;"/>
+    </mutation>
+    <field name="NAME">inserirRole</field>
+    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <statement name="STACK">
+      <block colour="#db802b" dependencyby="8i:O`o1w~l@$eZGh`=K2" id="r|sk}TBog9!*(#Kvd7]$" multilayer="false" namespace="cronapi.database.Operations.insert" origintype="procedures_sql_insert_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EInserir%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20cria%20um%20novo%20registro%20no%20banco%20de%20dados%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Tabela%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Par%C3%A2metros%20:%20Lista%3C/span%3E%3Cdiv%3E%20Par%C3%A2metros%20a%20serem%20passados%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.database.Operations.insert%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.database.Operations.insert%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_insert_callnoreturn">
+        <mutation data="%7B%22queryBuilderJson%22:%7B%22isValid%22:true,%22isEmpty%22:false,%22operationType%22:%22field%22,%22type%22:%22insert%22,%22rulesEntity%22:%5B%7B%22entity%22:%22Role%22,%22namespace%22:%22app.entity.Role%22,%22alias%22:%22%22%7D%5D,%22rulesSelect%22:%5B%7B%22func%22:%22%22,%22operator%22:%22%22,%22field%22:%22id%22,%22value%22:%22%22,%22type%22:%22string%22%7D,%7B%22func%22:%22%22,%22operator%22:%22%22,%22field%22:%22user%22,%22value%22:%22%22,%22type%22:%22string%22%7D%5D,%22rulesGroupBy%22:%5B%5D,%22rulesHaving%22:%5B%5D,%22rulesOrderBy%22:%5B%5D,%22isRawSql%22:false,%22multiTenant%22:true,%22paginatorAutomatic%22:false%7D,%22entity%22:%22Role%22,%22entityFullName%22:%22app.entity.Role%22,%22type%22:%22F%22,%22params%22:%22%5B%5C%22id%5C%22,%5C%22user%5C%22%5D%22%7D" name="{{cronapi.database.Operations.insert}}">
+          <arg name="id"/>
+          <arg name="user"/>
+        </mutation>
+        <value name="ARG0">
+          <block colour="#5ba593" dependencyby="8i:O`o1w~l@$eZGh`=K2" id="OEr[AzasPWg,^8vV^pOy" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+            <field name="TEXT">Convenio Operador</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block colour="#a55b80" dependencyby="8i:O`o1w~l@$eZGh`=K2" id="p%+P`@V}TLaw3kw49#!r" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+            <field name="VAR">Dados&lt;app.entity.User&gt;</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block colour="#a55b80" dependencyby="8i:O`o1w~l@$eZGh`=K2" id="]Fk?j@t};N2tIK}@3i^g" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+        <field name="VAR">Dados&lt;app.entity.User&gt;</field>
+      </block>
+    </value>
+  </block>
+  <block colour="#995ba5" id="b3M/)f6bYhi4]A/!:*jD" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="28" y="-61">
+    <mutation>
+      <arg name="dados&lt;app.entity.User&gt;"/>
+    </mutation>
+    <field name="NAME">RetornaEntidadeComEmail</field>
+    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <statement name="STACK">
+      <block colour="#a55b80" dependencyby="b3M/)f6bYhi4]A/!:*jD" id="Y@-@~Igoo2kc^5XV4B~S" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+        <field name="VAR">login</field>
+        <value name="VALUE">
+          <block colour="#487f7f" dependencyby="b3M/)f6bYhi4]A/!:*jD" id="#KZ}cy%5KF0ZyL)ye/9(" multilayer="false" namespace="cronapi.util.Operations.getCurrentUserName" origintype="procedures_callreturn" output="true" returntype="ObjectType.STRING" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20login%20do%20usu%C3%A1rio%20logado%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20o%20login%20do%20usu%C3%A1rio%20logado.%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Texto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.util.Operations.getCurrentUserName%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.util.Operations.getCurrentUserName%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+            <mutation name="{{cronapi.util.Operations.getCurrentUserName}}" return-raw-type="cronapi.Var"/>
+          </block>
+        </value>
+        <next>
+          <block colour="#a55b80" dependencyby="b3M/)f6bYhi4]A/!:*jD" id="kn?LVh`C+=1,BC2uu5nr" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+            <field name="VAR">email</field>
+            <value name="VALUE">
+              <block colour="#404340" dependencyby="b3M/)f6bYhi4]A/!:*jD" id="~EN%=PDG])K/gGk#3V/+" multilayer="false" namespace="cronapi.object.Operations.getObjectField" origintype="procedures_get_field" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20campo%20do%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20campo%20do%20Objeto%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%20:%20Objeto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Caminho%20a%20percorrer%20:%20Texto%3C/span%3E%3Cdiv%3E%20Exemplo:%20estado%5B3%5D.uf%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.object.Operations.getObjectField%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.object.Operations.getObjectField%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_get_field">
+                <mutation name="{{cronapi.object.Operations.getObjectField}}">
+                  <arg name="Objeto"/>
+                  <arg name="Caminho a percorrer"/>
+                </mutation>
+                <value name="PARAM0">
+                  <block colour="#a55b80" dependencyby="b3M/)f6bYhi4]A/!:*jD" id="/}?jghu8uVxbq,2{d@a." origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                    <field name="VAR">Dados&lt;app.entity.User&gt;</field>
+                  </block>
+                </value>
+                <value name="PARAM1">
+                  <block colour="#404340" dependencyby="b3M/)f6bYhi4]A/!:*jD" id="Uk$+$5sjcl870!l9dmf1" origintype="procedures_get_field_object" output="true" type="procedures_get_field_object">
+                    <mutation name="" return-raw-type="undefined"/>
+                    <field name="SELECT">login</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block colour="#404340" dependencyby="b3M/)f6bYhi4]A/!:*jD" id="j%h}qK,lXQe!.Q]4j]|." multilayer="false" namespace="cronapi.object.Operations.setObjectField" origintype="procedures_set_field" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EDefine%20valor%20do%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20definir%20campo%20do%20objeto%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%20:%20Objeto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Caminho%20a%20percorrer%20:%20Texto%3C/span%3E%3Cdiv%3E%20Exemplo:%20estado%5B3%5D.uf%3C/div%3E%3Cspan%3E%20-%20Valor%20a%20ser%20definido%20no%20objeto%20:%20Objeto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.object.Operations.setObjectField%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.object.Operations.setObjectField%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_set_field">
+                <mutation name="{{cronapi.object.Operations.setObjectField}}">
+                  <arg name="Objeto"/>
+                  <arg name="Caminho a percorrer"/>
+                  <arg name="Valor a ser definido no objeto"/>
+                </mutation>
+                <value name="PARAM0">
+                  <block colour="#a55b80" dependencyby="b3M/)f6bYhi4]A/!:*jD" id="^.Bz1|:+q07z=|O)9=@:" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                    <field name="VAR">Dados&lt;app.entity.User&gt;</field>
+                  </block>
+                </value>
+                <value name="PARAM1">
+                  <block colour="#404340" dependencyby="b3M/)f6bYhi4]A/!:*jD" id=".e(m0Pvc1d8l/Anbx*26" origintype="procedures_get_field_object" output="true" type="procedures_get_field_object">
+                    <mutation name="" return-raw-type="undefined"/>
+                    <field name="SELECT">email</field>
+                  </block>
+                </value>
+                <value name="PARAM2">
+                  <block colour="#a55b80" dependencyby="b3M/)f6bYhi4]A/!:*jD" id="+F:dcrS.T(.u530wGKay" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                    <field name="VAR">email</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block colour="#a55b80" dependencyby="b3M/)f6bYhi4]A/!:*jD" id="@BC=+T,z/8.1k:#lQ@(G" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+        <field name="VAR">Dados&lt;app.entity.User&gt;</field>
+      </block>
+    </value>
+  </block>
+  <block colour="#995ba5" id="@=s`b5)wX+$i!y%qypBg" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-52" y="458">
+    <field name="NAME">RetornarConvenioLogado</field>
+    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <statement name="STACK">
+      <block colour="#a55b80" dependencyby="@=s`b5)wX+$i!y%qypBg" id="wlV$AKU/yd@H!ei:b:F," origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+        <field name="VAR">login</field>
+        <value name="VALUE">
+          <block colour="#487f7f" dependencyby="@=s`b5)wX+$i!y%qypBg" id="8]GpcTSa4gEBcI3:8W9}" multilayer="false" namespace="cronapi.util.Operations.getCurrentUserName" origintype="procedures_callreturn" output="true" returntype="ObjectType.STRING" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20login%20do%20usu%C3%A1rio%20logado%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20o%20login%20do%20usu%C3%A1rio%20logado.%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Texto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.util.Operations.getCurrentUserName%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.util.Operations.getCurrentUserName%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+            <mutation name="{{cronapi.util.Operations.getCurrentUserName}}" return-raw-type="cronapi.Var"/>
+          </block>
+        </value>
+        <next>
+          <block colour="#a55b80" dependencyby="@=s`b5)wX+$i!y%qypBg" id="[Y)iU%/fNINZA8)})(S[" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+            <field name="VAR">usuario</field>
+            <value name="VALUE">
+              <block colour="#db802b" dependencyby="@=s`b5)wX+$i!y%qypBg" id="+EiMDTb+5|@USj(5KpAW" multilayer="false" namespace="cronapi.database.Operations.query" origintype="procedures_sql_callreturn" output="true" returntype="ObjectType.DATASET" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EAbrir%20consulta%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20realizar%20consultas%20no%20banco%20de%20dados%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Entidade%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Consulta%20SQL%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Par%C3%A2metros%20para%20consulta%20:%20Lista%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tabela%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.database.Operations.query%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.database.Operations.query%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_callreturn">
+                <mutation data="%7B%22queryBuilderJson%22:%7B%22isValid%22:true,%22isEmpty%22:false,%22operationType%22:%22object%22,%22type%22:%22select%22,%22rulesEntity%22:%5B%7B%22entity%22:%22User%22,%22namespace%22:%22app.entity.User%22,%22alias%22:%22u%22%7D%5D,%22rulesSelect%22:%5B%7B%22func%22:%22get%22,%22field%22:%22u%22,%22type%22:%22string%22%7D%5D,%22rulesGroupBy%22:%5B%5D,%22rulesHaving%22:%5B%5D,%22rulesOrderBy%22:%5B%5D,%22rules%22:%7B%22condition%22:%22AND%22,%22rules%22:%5B%7B%22id%22:%22u.login%22,%22field%22:%22u.login%22,%22type%22:%22string%22,%22input%22:%22text%22,%22operator%22:%22equal%22,%22value%22:%22:login%22,%22valueIsField%22:false%7D%5D,%22not%22:false,%22valid%22:true%7D,%22isRawSql%22:false,%22multiTenant%22:true,%22paginatorAutomatic%22:false%7D,%22entity%22:%22User%22,%22entityFullName%22:%22app.entity.User%22,%22filter%22:%22select%20u%20from%20User%20u%20where%20u.login%20=%20:login%22,%22params%22:%22%5B%5C%22login%5C%22%5D%22%7D" name="{{cronapi.database.Operations.query}}">
+                  <arg name="login"/>
+                </mutation>
+                <value name="ARG0">
+                  <block colour="#a55b80" dependencyby="@=s`b5)wX+$i!y%qypBg" id="88r8/=fh$6L^rK4UUjv#" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                    <field name="VAR">login</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block colour="#a55b80" dependencyby="@=s`b5)wX+$i!y%qypBg" id="p1d;m`[xX9(.IxJ7p%cz" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+                <field name="VAR">convenioId</field>
+                <value name="VALUE">
+                  <block colour="#db802b" dependencyby="@=s`b5)wX+$i!y%qypBg" id="1O%tjlT!ue8EvjU3Wf%m" multilayer="false" namespace="cronapi.database.Operations.getField" origintype="procedures_get_field" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20campo%20do%20registro%20do%20cursor%20atual%20da%20fonte%20de%20dados%20%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Objeto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Nome%20do%20campo%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.database.Operations.getField%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.database.Operations.getField%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_get_field">
+                    <mutation name="{{cronapi.database.Operations.getField}}">
+                      <arg name="Fonte de dados"/>
+                      <arg name="Nome do campo"/>
+                    </mutation>
+                    <value name="PARAM0">
+                      <block colour="#a55b80" dependencyby="@=s`b5)wX+$i!y%qypBg" id="Gx2o].V3iLri=4N@(*[@" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">usuario</field>
+                      </block>
+                    </value>
+                    <value name="PARAM1">
+                      <block colour="#db802b" dependencyby="@=s`b5)wX+$i!y%qypBg" id="^}Ii,t_6=^nWu7o`0)N[" origintype="procedures_get_field_datasource" output="true" type="procedures_get_field_datasource">
+                        <mutation name="">
+                          <arg label="u" value="this[0]"/>
+                          <arg label="u.id" value="this[0].id"/>
+                          <arg label="u.email" value="this[0].email"/>
+                          <arg label="u.name" value="this[0].name"/>
+                          <arg label="u.login" value="this[0].login"/>
+                          <arg label="u.picture" value="this[0].picture"/>
+                          <arg label="u.password" value="this[0].password"/>
+                          <arg label="u.theme" value="this[0].theme"/>
+                          <arg label="u.convenio" value="this[0].convenio"/>
+                          <arg label="u.estabelecimentoDeSaude" value="this[0].estabelecimentoDeSaude"/>
+                          <arg label="u.bloqueado" value="this[0].bloqueado"/>
+                          <arg label="u.convenio.id" value="this[0].convenio.id"/>
+                          <arg label="u.convenio.nome" value="this[0].convenio.nome"/>
+                          <arg label="u.convenio.razaoSocial" value="this[0].convenio.razaoSocial"/>
+                          <arg label="u.convenio.cnPJ" value="this[0].convenio.cnPJ"/>
+                          <arg label="u.convenio.registroANS" value="this[0].convenio.registroANS"/>
+                          <arg label="u.convenio.cep" value="this[0].convenio.cep"/>
+                          <arg label="u.convenio.endereco" value="this[0].convenio.endereco"/>
+                          <arg label="u.convenio.bairro" value="this[0].convenio.bairro"/>
+                          <arg label="u.convenio.numero" value="this[0].convenio.numero"/>
+                          <arg label="u.convenio.complemento" value="this[0].convenio.complemento"/>
+                          <arg label="u.convenio.cidade" value="this[0].convenio.cidade"/>
+                          <arg label="u.convenio.estado" value="this[0].convenio.estado"/>
+                          <arg label="u.convenio.email" value="this[0].convenio.email"/>
+                          <arg label="u.convenio.telefone1" value="this[0].convenio.telefone1"/>
+                          <arg label="u.convenio.telefone2" value="this[0].convenio.telefone2"/>
+                          <arg label="u.convenio.contatoResponsavel" value="this[0].convenio.contatoResponsavel"/>
+                          <arg label="u.convenio.tipoCobranca" value="this[0].convenio.tipoCobranca"/>
+                          <arg label="u.convenio.ativo" value="this[0].convenio.ativo"/>
+                          <arg label="u.convenio.dataInclusao" value="this[0].convenio.dataInclusao"/>
+                          <arg label="u.estabelecimentoDeSaude.id" value="this[0].estabelecimentoDeSaude.id"/>
+                          <arg label="u.estabelecimentoDeSaude.nome" value="this[0].estabelecimentoDeSaude.nome"/>
+                          <arg label="u.estabelecimentoDeSaude.cnPJ" value="this[0].estabelecimentoDeSaude.cnPJ"/>
+                          <arg label="u.estabelecimentoDeSaude.razaoSocial" value="this[0].estabelecimentoDeSaude.razaoSocial"/>
+                          <arg label="u.estabelecimentoDeSaude.cnES" value="this[0].estabelecimentoDeSaude.cnES"/>
+                          <arg label="u.estabelecimentoDeSaude.endereco" value="this[0].estabelecimentoDeSaude.endereco"/>
+                          <arg label="u.estabelecimentoDeSaude.bairro" value="this[0].estabelecimentoDeSaude.bairro"/>
+                          <arg label="u.estabelecimentoDeSaude.numero" value="this[0].estabelecimentoDeSaude.numero"/>
+                          <arg label="u.estabelecimentoDeSaude.complemento" value="this[0].estabelecimentoDeSaude.complemento"/>
+                          <arg label="u.estabelecimentoDeSaude.cidade" value="this[0].estabelecimentoDeSaude.cidade"/>
+                          <arg label="u.estabelecimentoDeSaude.estado" value="this[0].estabelecimentoDeSaude.estado"/>
+                          <arg label="u.estabelecimentoDeSaude.ceP" value="this[0].estabelecimentoDeSaude.ceP"/>
+                          <arg label="u.estabelecimentoDeSaude.contatoResponsavel" value="this[0].estabelecimentoDeSaude.contatoResponsavel"/>
+                          <arg label="u.estabelecimentoDeSaude.telefone1" value="this[0].estabelecimentoDeSaude.telefone1"/>
+                          <arg label="u.estabelecimentoDeSaude.telefone2" value="this[0].estabelecimentoDeSaude.telefone2"/>
+                          <arg label="u.estabelecimentoDeSaude.email" value="this[0].estabelecimentoDeSaude.email"/>
+                          <arg label="u.estabelecimentoDeSaude.ativo" value="this[0].estabelecimentoDeSaude.ativo"/>
+                          <arg label="u.estabelecimentoDeSaude.bloqueado" value="this[0].estabelecimentoDeSaude.bloqueado"/>
+                          <arg label="u.estabelecimentoDeSaude.dataInclusao" value="this[0].estabelecimentoDeSaude.dataInclusao"/>
+                        </mutation>
+                        <field name="SELECT">this[0].convenio.id</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block colour="#a55b80" dependencyby="@=s`b5)wX+$i!y%qypBg" id="jU`2Akn++kE!jwuk+}0o" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+        <field name="VAR">convenioId</field>
+      </block>
+    </value>
+  </block>
+  <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="NW%-7sHs7HW@~37eM.Xv" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set" x="849" y="454">
+    <field name="VAR">email</field>
+    <value name="VALUE">
+      <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="7{Uq}fK3*iQpfY:ky#67" multilayer="false" namespace="cronapi.screen.Operations.getValueOfField" origintype="procedures_callreturn" output="true" returntype="ObjectType.JSON" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20valor%20do%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20valor%20do%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Campo%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Json%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.Operations.getValueOfField%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.Operations.getValueOfField%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+        <mutation name="{{cronapi.screen.Operations.getValueOfField}}" return-raw-type="cronapi.Var">
+          <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Campo"/>
+        </mutation>
+        <value name="ARG0">
+          <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="R@mq^Za}2{mk3I2-n_kH" origintype="form_fieldscreen_callreturn" output="true" type="form_fieldscreen_callreturn">
+            <field name="SELECT">User.active.email</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="9ANyp;UmG])(/Hv=.qS8" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+        <field name="VAR">login</field>
+        <value name="VALUE">
+          <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="?XlEo^8-/iyq%9TbDu+*" multilayer="false" namespace="cronapi.screen.Operations.getValueOfField" origintype="procedures_callreturn" output="true" returntype="ObjectType.JSON" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20valor%20do%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20valor%20do%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Campo%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Json%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.Operations.getValueOfField%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.Operations.getValueOfField%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+            <mutation name="{{cronapi.screen.Operations.getValueOfField}}" return-raw-type="cronapi.Var">
+              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Campo"/>
+            </mutation>
+            <value name="ARG0">
+              <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="v9nM?[pP{L4=UAyH8waD" origintype="form_fieldscreen_callreturn" output="true" type="form_fieldscreen_callreturn">
+                <field name="SELECT">User.active.login</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="l%rpGJ(@_KX}K/QLqYR_" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+            <field name="VAR">nome</field>
+            <value name="VALUE">
+              <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="PWmHho5o=TRDdIRnqQUm" multilayer="false" namespace="cronapi.screen.Operations.getValueOfField" origintype="procedures_callreturn" output="true" returntype="ObjectType.JSON" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20valor%20do%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20valor%20do%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Campo%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Json%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.Operations.getValueOfField%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.Operations.getValueOfField%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                <mutation name="{{cronapi.screen.Operations.getValueOfField}}" return-raw-type="cronapi.Var">
+                  <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Campo"/>
+                </mutation>
+                <value name="ARG0">
+                  <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="X5B7y=KY4!@n7r@`iQ78" origintype="form_fieldscreen_callreturn" output="true" type="form_fieldscreen_callreturn">
+                    <field name="SELECT">User.active.name</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="rQsB7Q!dO%?c6dOZdgOi" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+                <field name="VAR">senha</field>
+                <value name="VALUE">
+                  <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="(cT(8wNO:KV,glSrf!X(" multilayer="false" namespace="cronapi.screen.Operations.getValueOfField" origintype="procedures_callreturn" output="true" returntype="ObjectType.JSON" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20valor%20do%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20valor%20do%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Campo%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Json%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.Operations.getValueOfField%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.Operations.getValueOfField%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                    <mutation name="{{cronapi.screen.Operations.getValueOfField}}" return-raw-type="cronapi.Var">
+                      <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Campo"/>
+                    </mutation>
+                    <value name="ARG0">
+                      <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="yz%XUD}%0@W`Dj?bJBL$" origintype="form_fieldscreen_callreturn" output="true" type="form_fieldscreen_callreturn">
+                        <field name="SELECT">vars.txtSenha</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="hktU6|%eOX@eF4ai4e#/" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+                    <field name="VAR">userId</field>
+                    <value name="VALUE">
+                      <block colour="#487f7f" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="/gFebD_PmyS{@+V5|`v(" multilayer="false" namespace="cronapi.util.Operations.generateUUID" origintype="procedures_callreturn" output="true" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3ECria%20identificador%20universal%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20cria%20um%20identificador%20universal%20(UUID)%20e%20retorna%20como%20texto%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Sem%20retorno%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.util.Operations.generateUUID%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.util.Operations.generateUUID%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                        <mutation name="{{cronapi.util.Operations.generateUUID}}" return-raw-type="cronapi.Var"/>
+                      </block>
+                    </value>
+                    <next>
+                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="@Km8%SE5|niqL8~ULnR3" origintype="exception_trycatch" output="false" tooltip="Tratamento de exceção" type="exception_trycatch">
+                        <mutation catch="1"/>
+                        <statement name="TRY">
+                          <block colour="#db802b" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="$WIsrFke0Y;_PWza,GL[" multilayer="false" namespace="cronapi.database.Operations.insert" origintype="procedures_sql_insert_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EInserir%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20cria%20um%20novo%20registro%20no%20banco%20de%20dados%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Tabela%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Par%C3%A2metros%20:%20Lista%3C/span%3E%3Cdiv%3E%20Par%C3%A2metros%20a%20serem%20passados%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.database.Operations.insert%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.database.Operations.insert%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_insert_callnoreturn">
+                            <mutation data="%7B%22queryBuilderJson%22:%7B%22isValid%22:true,%22isEmpty%22:false,%22operationType%22:%22field%22,%22type%22:%22insert%22,%22rulesEntity%22:%5B%7B%22entity%22:%22User%22,%22namespace%22:%22app.entity.User%22,%22alias%22:%22%22%7D%5D,%22rulesSelect%22:%5B%7B%22func%22:%22%22,%22operator%22:%22%22,%22field%22:%22email%22,%22value%22:%22%22,%22type%22:%22string%22%7D,%7B%22func%22:%22%22,%22operator%22:%22%22,%22field%22:%22id%22,%22value%22:%22%22,%22type%22:%22string%22%7D,%7B%22func%22:%22%22,%22operator%22:%22%22,%22field%22:%22login%22,%22value%22:%22%22,%22type%22:%22string%22%7D,%7B%22func%22:%22%22,%22operator%22:%22%22,%22field%22:%22name%22,%22value%22:%22%22,%22type%22:%22string%22%7D,%7B%22func%22:%22%22,%22operator%22:%22%22,%22field%22:%22password%22,%22value%22:%22%22,%22type%22:%22string%22%7D,%7B%22func%22:%22%22,%22operator%22:%22%22,%22field%22:%22convenio%22,%22value%22:%22%22,%22type%22:%22string%22%7D,%7B%22func%22:%22%22,%22operator%22:%22%22,%22field%22:%22bloqueado%22,%22value%22:%22%22,%22type%22:%22boolean%22%7D%5D,%22rulesGroupBy%22:%5B%5D,%22rulesHaving%22:%5B%5D,%22rulesOrderBy%22:%5B%5D,%22isRawSql%22:false,%22multiTenant%22:true,%22paginatorAutomatic%22:false%7D,%22entity%22:%22User%22,%22entityFullName%22:%22app.entity.User%22,%22type%22:%22F%22,%22params%22:%22%5B%5C%22password%5C%22,%5C%22name%5C%22,%5C%22convenio%5C%22,%5C%22bloqueado%5C%22,%5C%22id%5C%22,%5C%22login%5C%22,%5C%22email%5C%22%5D%22%7D" name="{{cronapi.database.Operations.insert}}">
+                              <arg name="password"/>
+                              <arg name="name"/>
+                              <arg name="convenio"/>
+                              <arg name="bloqueado"/>
+                              <arg name="id"/>
+                              <arg name="login"/>
+                              <arg name="email"/>
+                            </mutation>
+                            <value name="ARG0">
+                              <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="%o89iPO`.Ifhga6$O`:P" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                <field name="VAR">senha</field>
+                              </block>
+                            </value>
+                            <value name="ARG1">
+                              <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="3Ivt;{,E3ZdsnL9]54Yq" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                <field name="VAR">nome</field>
+                              </block>
+                            </value>
+                            <value name="ARG3">
+                              <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="=5(o73QHLTEY?O7bmBb." origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                <field name="TEXT">false</field>
+                              </block>
+                            </value>
+                            <value name="ARG4">
+                              <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="ZO:=5o9Ww/g_4vY2$R`j" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                <field name="VAR">userId</field>
+                              </block>
+                            </value>
+                            <value name="ARG5">
+                              <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=")KEG=G8xZzXV:,U|hy}_" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                <field name="VAR">login</field>
+                              </block>
+                            </value>
+                            <value name="ARG6">
+                              <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Ir$W/r1FTQX_FJKkl2#)" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                <field name="VAR">email</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block colour="#db802b" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="l}r#%ahb3ki3U:Zj}}BN" multilayer="false" namespace="cronapi.database.Operations.insert" origintype="procedures_sql_insert_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EInserir%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20cria%20um%20novo%20registro%20no%20banco%20de%20dados%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Tabela%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Par%C3%A2metros%20:%20Lista%3C/span%3E%3Cdiv%3E%20Par%C3%A2metros%20a%20serem%20passados%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.database.Operations.insert%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.database.Operations.insert%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_insert_callnoreturn">
+                                <mutation data="%7B%22queryBuilderJson%22:%7B%22isValid%22:true,%22isEmpty%22:false,%22operationType%22:%22field%22,%22type%22:%22insert%22,%22rulesEntity%22:%5B%7B%22entity%22:%22Role%22,%22namespace%22:%22app.entity.Role%22,%22alias%22:%22%22%7D%5D,%22rulesSelect%22:%5B%7B%22func%22:%22%22,%22operator%22:%22%22,%22field%22:%22id%22,%22value%22:%22%22,%22type%22:%22string%22%7D,%7B%22func%22:%22%22,%22operator%22:%22%22,%22field%22:%22user%22,%22value%22:%22%22,%22type%22:%22string%22%7D%5D,%22rulesGroupBy%22:%5B%5D,%22rulesHaving%22:%5B%5D,%22rulesOrderBy%22:%5B%5D,%22isRawSql%22:false,%22multiTenant%22:true,%22paginatorAutomatic%22:false%7D,%22entity%22:%22Role%22,%22entityFullName%22:%22app.entity.Role%22,%22type%22:%22F%22,%22params%22:%22%5B%5C%22id%5C%22,%5C%22user%5C%22%5D%22%7D" name="{{cronapi.database.Operations.insert}}">
+                                  <arg name="id"/>
+                                  <arg name="user"/>
+                                </mutation>
+                                <value name="ARG0">
+                                  <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="eJ|Wx_+AEVWvJ$k[oKl-" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                    <field name="TEXT">Convenio Operador</field>
+                                  </block>
+                                </value>
+                                <value name="ARG1">
+                                  <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=",Jr@f0d%)vJp2A,U[kSZ" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                    <field name="VAR">userId</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="MB60V[L1|RjmRLcv;~pT" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                                    <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                                    <field name="SELECT">success</field>
+                                    <value name="MESSAGE">
+                                      <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="#su`8^(]D^IG8k/mRy-," origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                        <field name="TEXT">Operador cadastrado com sucesso!</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <value name="EXCEPTION1">
+                          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="FWU=.97X.h_@f=:{[SeG" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                            <field name="VAR">exception</field>
+                          </block>
+                        </value>
+                        <statement name="CATCH1">
+                          <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="9!%jfRBfS2@`kJAi(__K" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                            <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                            <field name="SELECT">error</field>
+                            <value name="MESSAGE">
+                              <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="ve,wh6{8vpBmXY@u_1+)" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                <field name="TEXT"/>
+                              </shadow>
+                              <block colour="#5ba58c" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="=KNuw.~)CSD%l0FGxo+{" origintype="text_join" output="true" tooltip="Criar um pedaço de texto juntando qualquer número de itens." type="text_join">
+                                <mutation items="2"/>
+                                <value name="ADD0">
+                                  <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="E(lSFv{F7:qb~HqC5jbh" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                    <field name="TEXT">Erro ao realizar a operação: </field>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="4rnsZx4=8G^ZjngaF/dq" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                    <field name="VAR">exception</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</blockly>

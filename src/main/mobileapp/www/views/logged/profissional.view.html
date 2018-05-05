@@ -1,0 +1,89 @@
+<ion-view view-title="Meus dados"> 
+	
+	<ion-content data-content="true" data-replace="true">
+	    <datasource name="Profissional" entity="api/cronapi/query/qdys2tv94qpi/" keys="id" rows-per-page="100" on-before-create="" on-after-create="" on-before-update="" on-after-update="" on-before-delete="" on-after-delete="" on-after-fill=""></datasource>
+	      <fieldset>
+          <div class="list">
+            <!-- nome begin -->
+            <label for="textinput-nome" class="item item-input item-stacked-label">
+            <span class="input-label">Nome</span>
+            <input type="text" placeholder="Nome" ng-model="Profissional.active.nome" id="textinput-nome" name="textinput-nome" required="required">
+            </label>
+            <!-- cpF begin -->
+            <label for="textinput-cpF" class="item item-input item-stacked-label">
+            <span class="input-label">CPF</span>
+            <input type="text" placeholder="CPF" ng-model="Profissional.active.cpF" id="textinput-cpF" name="textinput-cpF" required="required" mask="999.999.999-99;0">
+            </label>
+            <!-- numCRM begin -->
+            <label for="textinput-numCRM" class="item item-input item-stacked-label">
+              <span class="input-label">Num CRM</span>
+              <input type="number" ng-model="Profissional.active.numCRM" class="" id="textinput-numCRM" name="textinput-numCRM" placeholder="Num CRM" required="required">
+            </label>
+            <!-- crM begin -->
+            <label for="textinput-crM" class="item item-input item-stacked-label">
+            <span class="input-label">CRM</span>
+            <input type="text" placeholder="CRM" ng-model="Profissional.active.crM" id="textinput-crM" name="textinput-crM" required="required">
+            </label>
+            <!-- dataNascimento begin -->
+            <label for="textinput-dataNascimento" class="item item-input item-stacked-label">
+              <span class="input-label">Data de  Nascimento</span>
+              <input type="text" placeholder="Data de  Nascimento" ng-model="Profissional.active.dataNascimento | date:'dd/MM/yyyy'" id="textinput-dataNascimento" name="textinput-dataNascimento" required="required">
+            </label>
+            <!-- sexo begin -->
+            <label for="textinput-sexo" class="item item-input item-stacked-label">
+            
+            <label class="item item-input item-select component-holder" data-component="crn-select" id="cmbSexo" ng-model="Profissional.active.sexo"><div class="input-label">Sexo</div><select><option>Feminino</option><option selected="selected">Masculino</option></select></label>
+            </label>
+            <!-- telefone1 begin -->
+            <label for="textinput-telefone1" class="item item-input item-stacked-label">
+            <span class="input-label">Telefone Principal</span>
+            <input type="text" placeholder="Telefone Principal" ng-model="Profissional.active.telefone1" id="textinput-telefone1" name="textinput-telefone1" required="required" mask="(99) 99999-9999;0">
+            </label>
+            <!-- telefone2 begin -->
+            <label for="textinput-telefone2" class="item item-input item-stacked-label">
+            <span class="input-label">Telefone Opcional</span>
+            <input type="text" placeholder="Telefone Opcional" ng-model="Profissional.active.telefone2" id="textinput-telefone2" name="textinput-telefone2" required="required" mask="(99) 99999-9999;0">
+            </label>
+            <!-- cep begin -->
+            <label for="textinput-cep" class="item item-input item-stacked-label">
+            <span class="input-label">Cep</span>
+            <input type="text" placeholder="Cep" ng-model="Profissional.active.cep" id="textinput-cep" name="textinput-cep" mask="99999-999;0">
+            </label>
+            
+            <button class="button component-holder button-block button-clear button-positive" type="submit" ng-click="cronapi.util.makeCallServerBlocklyAsync('blockly.DadosProfissionalLogadoTela:buscarCep', null, null)" data-component="crn-button" id="crn-button-58445" xattr-fullsize="button-block" xattr-type="button-clear" xattr-theme="button-positive"><i class="ion ion-android-search"></i> <span>Buscar CEP</span></button><label for="textinput-endereco" class="item item-input item-stacked-label">
+            
+            <!-- endereco begin -->
+            <span class="input-label">Endereço</span>
+            <input type="text" placeholder="Endereço" ng-model="Profissional.active.endereco" id="textinput-endereco" name="textinput-endereco">
+            </label>
+            <!-- bairro begin -->
+            <label for="textinput-bairro" class="item item-input item-stacked-label">
+            <span class="input-label">Bairro</span>
+            <input type="text" placeholder="Bairro" ng-model="Profissional.active.bairro" id="textinput-bairro" name="textinput-bairro">
+            </label>
+            <!-- numero begin -->
+            <label for="textinput-numero" class="item item-input item-stacked-label">
+              <span class="input-label">Número</span>
+              <input type="number" ng-model="Profissional.active.numero" class="" id="textinput-numero" name="textinput-numero" placeholder="Número">
+            </label>
+            <!-- complemento begin -->
+            <label for="textinput-complemento" class="item item-input item-stacked-label">
+            <span class="input-label">Complemento</span>
+            <input type="text" placeholder="Complemento" ng-model="Profissional.active.complemento" id="textinput-complemento" name="textinput-complemento">
+            </label>
+            <!-- cidade begin -->
+            <label for="textinput-cidade" class="item item-input item-stacked-label">
+            <span class="input-label">Cidade</span>
+            <input type="text" placeholder="Cidade" ng-model="Profissional.active.cidade" id="textinput-cidade" name="textinput-cidade">
+            </label>
+            <!-- estado begin -->
+            <label for="textinput-estado" class="item item-input item-stacked-label">
+            <span class="input-label">Estado</span>
+            <input type="text" placeholder="Estado" ng-model="Profissional.active.estado" id="textinput-estado" name="textinput-estado" ng-readonly="true">
+            </label><button class="button component-holder button-block button-balanced" type="submit" ng-click="cronapi.util.makeCallServerBlocklyAsync('blockly.DadosProfissionalLogadoTela:atualizar', null, null)" data-component="crn-button" id="crn-button-13507" xattr-fullsize="button-block" xattr-theme="button-balanced"><i class="ion ion-android-done-all"></i> <span>Salvar</span></button>
+            
+            
+          </div>
+        </fieldset>
+	</ion-content>
+</ion-view>

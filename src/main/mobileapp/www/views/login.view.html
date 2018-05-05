@@ -1,0 +1,141 @@
+<ion-view cache-view="false" view-title="{{'Login.view.Login' | translate}}"> 
+  <ion-content> 
+    <div class="bar bar-header bar-stable" data-container="true"> 
+    <h1 class="title">{{'Login.view.Login' | translate}}</h1> 
+  </div> 
+    <div class="list" data-container="true" style="padding-top: 60px;"> 
+      <div class="col text-center"> 
+         <img src="img/logo_topo.png"> 
+      </div> 
+    </div> 
+    <form class="form-validation" autocomplete="off" name="form" ng-submit="login()" role="form"> 
+      <div class="list list-inset" data-container="true"> 
+        <label class="item item-input"> <i class="icon ion-person placeholder-icon"></i> <input type="text" class="form-control" ng-model="user.username" id="username" placeholder="{{'Login.view.Username' | translate}}"> </label> 
+        <label class="item item-input"> <i class="icon ion-asterisk placeholder-icon"></i> <input type="password" class="form-control" ng-model="user.password" id="password" placeholder="{{'Login.view.Password' | translate}}"> </label> 
+        <label class="item"> <button type="submit" class="button button-block button-positive" ng-disabled="form.$invalid || vm.dataLoading" id="btnLogin">{{"Login.view.Login" | translate}}</button> </label> 
+        <label class="item"> 
+          <div ng-show="message.error" class="help-block">
+             {{message.error}} 
+          </div> </label> 
+         
+      </div> 
+    </form> 
+    <h3 xattr-position="text-center" class="text-center component-holder col-xs-12" data-component="crn-label" id="crn-label-892876">Não é cadastrado?</h3> 
+      <button class="button component-holder button-block button-calm button-clear col-xs-12" ng-click="blockly.js.blockly.ModalLogin.exibirModalPaciente()" data-component="crn-button" id="crn-button-756158" xattr-fullsize="button-block" xattr-theme="button-calm" xattr-type="button-clear"><i class="ion ion-android-person" type="button"></i> <span>Sou um paciente</span></button> 
+      <button class="button component-holder button-block button-clear button-royal col-xs-12" type="submit" ng-click="blockly.js.blockly.ModalLogin.exibirModalProfissional()" data-component="crn-button" id="crn-button-337894" xattr-fullsize="button-block" xattr-type="button-clear" xattr-theme="button-royal"><i class="ion ion-medkit"></i> <span>Sou um profissional da saúde</span></button>
+
+  </ion-content> 
+</ion-view>
+
+<div class="modal fade genClassProfi" id="modalProfissional"> 
+  <div class="modal-dialog"> 
+  <ion-scroll zooming="true" direction="y" style="width:auto;height:500px">
+    <div class="modal-content"> 
+      <div class="component-holder modal-header"> 
+        <h3 xattr-position="text-center" class="text-center component-holder" data-component="crn-label" id="crn-label-93815">Cadastro de Profissional</h3> 
+      </div> 
+      <div class="modal-body"> 
+        <ion-item class="item dark component-holder col-xs-12" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-584894">
+           Nome: 
+          <label class="item item-input component-holder" data-component="crn-input" id="crn-input-nome"><input id="nome" type="text" placeholder="Nome Completo" ng-model="vars.txtNome" mask=""></label> 
+        </ion-item> 
+        <ion-item class="item dark component-holder col-xs-12" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-584894">
+           CPF: 
+          <label class="item item-input component-holder" data-component="crn-input" id="crn-input-cpf"><input id="cpf" type="text" placeholder="CPF" ng-model="vars.txtCpf" mask="999.999.999-99;0"></label> 
+        </ion-item> 
+        <ion-item class="item dark component-holder  col-xs-12" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-584894">
+           Número do CRM: 
+          <label class="item item-input component-holder" data-component="crn-input" id="crn-input-numCrm"><input id="numCrm" type="text" placeholder="Número do CRM" ng-model="vars.numCrm" mask=""></label> 
+        </ion-item> 
+        <ion-item class="item dark component-holder  col-xs-12" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-584894">
+           CRM: 
+          <label class="item item-input component-holder" data-component="crn-input" id="crn-input-crm"><input id="crm" type="text" placeholder="CRM" ng-model="vars.txtCrm" mask=""></label> 
+        </ion-item> 
+        <ion-item class="item dark component-holder  col-xs-12" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-584894">
+           Data de Nascimento: 
+          <label class="item item-input component-holder" data-component="crn-input" id="crn-input-dtNasc"><input id="dtNasc" type="date" placeholder="" ng-model="vars.dtNasc" mask=""></label> 
+        </ion-item> 
+        <ion-item class="item dark component-holder  col-xs-12" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-584894">
+           Telefone: 
+          <label class="item item-input component-holder" data-component="crn-input" id="crn-input-telefone"><input id="telefone" type="text" placeholder="Telefone" ng-model="vars.txtTelefone" mask="(99) 99999-9999;0"></label> 
+        </ion-item> 
+        <ion-item class="item dark component-holder col-xs-12" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-584894">
+           Sexo: 
+          <label class="item item-input item-select component-holder" data-component="crn-select" id="crn-select-sexo"> 
+            <div class="input-label">
+               Selecione 
+            </div><select ng-model="vars.txtSexo"><option selected="">Feminino</option><option>Masculino</option></select></label> 
+        </ion-item> 
+        <ion-item class="item dark component-holder col-xs-12" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-584894">
+           Email: 
+          <label class="item item-input component-holder" data-component="crn-input" id="crn-input-email"><input id="email" type="text" placeholder="Email" ng-model="vars.txtEmail" mask=""></label> 
+        </ion-item> 
+        <ion-item class="item dark component-holder  col-xs-6" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-584894">
+           Senha: 
+          <label class="item item-input component-holder" data-component="crn-input" id="crn-input-senha"><input id="senha" type="password" placeholder="Senha" ng-model="vars.txtSenha" mask=""></label> 
+        </ion-item> 
+        <ion-item class="item dark component-holder  col-xs-6" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-584894">
+           Confirme a Senha: 
+          <label class="item item-input component-holder" data-component="crn-input" id="crn-input-confirma"><input id="confirma" type="password" placeholder="Confirme a Senha" ng-model="vars.txtConfirma" mask=""></label> 
+        </ion-item> 
+      </div> 
+      <div class="modal-footer"> 
+        <button class="button component-holder button-block button-balanced" type="submit" ng-click="cronapi.util.makeCallServerBlocklyAsync('blockly.ProfissionalEntidadeMobile:inserirUsuarioProfissional', null, null)" data-component="crn-button" id="crn-button-285963" xattr-fullsize="button-block" xattr-theme="button-balanced"><i class="ion ion-android-done-all"></i> <span>Confirmar</span></button> 
+        <button class="button component-holder button-block button-assertive" type="submit" ng-click="blockly.js.blockly.ModalLogin.fecharModalProfissional()" data-component="crn-button" id="crn-button-949955" xattr-fullsize="button-block" xattr-theme="button-assertive"><i class="ion ion-arrow-left-c"></i> <span>Voltar</span></button> 
+      </div> 
+    </div> 
+    </ion-scroll>
+  </div> 
+</div> 
+
+
+
+
+<div class="modal fade genClassModal" id="modalPaciente"> 
+  <div class="modal-dialog"> 
+  <ion-scroll zooming="true" direction="y" style="width:auto;height:500px">
+    <div class="modal-content"> 
+      <div class="component-holder modal-header"> 
+        <h3 xattr-position="text-center" class="text-center component-holder" data-component="crn-label" id="crn-label-460613">Cadastro de Paciente</h3> 
+      </div> 
+      <div class="modal-body"> 
+        <ion-item class="item dark component-holder col-xs-12" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-52679">
+           Nome: 
+          <label class="item item-input component-holder" data-component="crn-input" id="crn-input-nome"><input id="nome" type="text" placeholder="Nome Completo" ng-model="vars.nome" mask=""></label> 
+        </ion-item> 
+        <ion-item class="item dark component-holder col-xs-12" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-52679">
+           CPF: 
+          <label class="item item-input component-holder" data-component="crn-input" id="crn-input-cpf"><input id="cpf" type="text" placeholder="CPF" ng-model="vars.cpf" mask="999.999.999-99;0"></label> 
+        </ion-item> 
+        <ion-item class="item dark component-holder col-xs-12" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-52679">
+           Data de Nascimento: 
+          <label class="item item-input component-holder" data-component="crn-input" id="crn-input-dt_nascimento"><input id="dt_nascimento" type="date" placeholder="" ng-model="vars.dt_nascimento" mask=""></label> 
+        </ion-item> 
+        <ion-item class="item dark component-holder col-xs-12" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-52679">
+           Sexo: 
+          <label class="item item-input item-select component-holder" data-component="crn-select" id="crn-select-993552"> 
+            <div class="input-label">
+               Selecione 
+            </div><select ng-model="vars.sexo"><option selected="">Feminino</option><option>Masculino</option></select></label> 
+        </ion-item> 
+        <ion-item class="item dark component-holder col-xs-12" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-52679">
+           Email: 
+          <label class="item item-input component-holder" data-component="crn-input" id="crn-input-email"><input id="email" type="text" placeholder="Email" ng-model="vars.email" mask=""></label> 
+        </ion-item> 
+        <ion-item class="item dark component-holder col-xs-6" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-52679">
+           Senha: 
+          <label class="item item-input component-holder" data-component="crn-input" id="crn-input-senha"><input id="senha" type="password" placeholder="Senha" ng-model="vars.senha" mask=""></label> 
+        </ion-item> 
+        <ion-item class="item dark component-holder  col-xs-6" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-52679">
+           Confirmar Senha: 
+          <label class="item item-input component-holder" data-component="crn-input" id="crn-input-confirmar"><input id="confirmar" type="password" placeholder="Confirme a Senha" ng-model="vars.confirmar" mask=""></label> 
+        </ion-item> 
+      </div> 
+      <div class="modal-footer"> 
+        <button class="button component-holder button-block button-balanced" type="submit" ng-click="cronapi.util.makeCallServerBlocklyAsync('blockly.PacienteEntidade:InserirPaciente', null, null)" data-component="crn-button" id="crn-button-897033" xattr-fullsize="button-block" xattr-theme="button-balanced"><i class="ion ion-android-done-all"></i> <span>Confirmar</span></button> 
+        <button class="button component-holder button-block button-assertive" type="submit" ng-click="blockly.js.blockly.ModalLogin.fecharModalPaciente()" data-component="crn-button" id="crn-button-742279" xattr-fullsize="button-block" xattr-theme="button-assertive"><i class="ion ion-arrow-left-c"></i> <span>Voltar</span></button> 
+      </div> 
+    </div>
+    </ion-scroll>
+  </div> 
+</div>
