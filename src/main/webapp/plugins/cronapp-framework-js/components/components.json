@@ -175,7 +175,6 @@
     },
     {
       "name": "crn-icon",
-      "displayName": "icon",
       "text": "Icon",
       "class": "adjust-icon mdi mdi-star",
       "template": "<i class=\"fa fa-star\"/>",
@@ -691,7 +690,6 @@
       "text_pt_BR": "Grade vertical",
       "text_en_US": "Vertical Grid",
       "wrapper": false,
-      "autoWrapper": true,
       "class": "adjust-icon mdi mdi-drag-vertical",
       "template": "<div class=\"crn-layout-container\"><div class=\"row\"><div data-container=\"true\" data-replace=\"true\">Content goes here</div></div><div class=\"row\"><div data-container=\"true\" data-replace=\"true\">Content goes here</div></div></div>",
       "handleRules": {
@@ -711,7 +709,6 @@
       "text_pt_BR": "Grade horizontal",
       "text_en_US": "Horizontal Grid",
       "wrapper": false,
-      "autoWrapper": true,
       "class": "adjust-icon mdi mdi-drag-horizontal",
       "template": "<div class=\"row\">\r\n        <div class=\"column col-xs-6\" data-container=\"true\" data-replace=\"true\">Content goes here</div>\r\n        <div class=\"column col-xs-6\" data-container=\"true\" data-replace=\"true\">Content goes here</div>\r\n      </div>",
       "handleRules": {
@@ -1147,9 +1144,6 @@
           "onDisplay": "javascript:function() { return arguments[0].replace('vars.',''); }"
         }
       },
-      "type": {
-        "displayName": "Type"
-      },
       "attributesForPreview": [
         {
           "name": "xattr-fullsize",
@@ -1454,9 +1448,6 @@
       "rows": {
         "displayName": "rows"
       },
-      "rezise": {
-        "displayName": "resize"
-      },
       "groupedChildren": [
         {
           "text_pt_BR": "Rótulo",
@@ -1502,9 +1493,6 @@
 			"class": "adjust-icon mdi mdi-label-outline",
 			"templateURL": "src/main/webapp/plugins/cronapp-framework-js/dist/components/templates/textinputbutton.template.html",
 			"forcedGroupd": true,
-			"type": {
-				"displayName": "Type"
-			},
 			"properties":{
 			"ng-model": {
 				"onSave": "javascript:function() { var result = arguments[0]; if (result.indexOf('.') == -1 && result.trim().length > 0 ) { result = 'vars.'+result;  }  return result; }",

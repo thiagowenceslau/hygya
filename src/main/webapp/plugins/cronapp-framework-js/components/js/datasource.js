@@ -57,6 +57,8 @@ angular.module('datasourcejs', [])
         this.dependentBufferLazyPostData = null; //TRM
         this.lastAction = null; //TRM
         this.dependentData = null; //TRM
+		this.caseInsensitive = null;
+        this.terms = null;
         var _self = this;
         var service = null;
 
@@ -473,8 +475,8 @@ angular.module('datasourcejs', [])
          * Valid if required field is valid
          */
         this.missingRequiredField = function() {
-          return $('[required][ng-model*="' + this.name + '."]').hasClass('ng-invalid-required') || $('[required][ng-model*="' + this.name + '."]').hasClass('ng-invalid') ||
-              $('[required][ng-model*="' + this.name + '."]').hasClass('ng-empty');
+          return $('[required][ng-model*="' + this.name + '."]').hasClass('ng-invalid-required') || $('[ng-model*="' + this.name + '."]').hasClass('ng-invalid') ||
+              $('[required][ng-model*="' + this.name + '."]').hasClass('ng-empty')  || $('[valid][ng-model*="' + this.name + '."]').hasClass('ng-empty');
         }
 
         /**
@@ -680,6 +682,8 @@ angular.module('datasourcejs', [])
           if (this.onStartInserting) {
             this.onStartInserting();
           }
+          
+          this.active = { id: "-1"};
         };
 
         /**
@@ -1045,6 +1049,9 @@ angular.module('datasourcejs', [])
             this.searchTimeout = null;
           }
 
+		this.caseInsensitive = caseInsensitive;
+        this.terms = terms; 
+		  
           this.searchTimeout = setTimeout(function() {
             this.doSearch(terms, caseInsensitive);
           }.bind(this), 500);

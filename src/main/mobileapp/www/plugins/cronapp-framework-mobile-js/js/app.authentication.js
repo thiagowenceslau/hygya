@@ -11,7 +11,8 @@ var app = (function() {
     'pascalprecht.translate',
     'tmh.dynamicLocale',
     'ui-notification',
-    'ngFileUpload'
+    'ngFileUpload',
+	'angularMoment'
   ])
       .constant('LOCALES', {
         'locales': {
@@ -202,9 +203,9 @@ var app = (function() {
         }
       ])
       // General controller
-      .controller('PageController', ["$scope", "$stateParams", "Notification", "$location", "$http", "$rootScope", "$translate", function($scope, $stateParams, Notification, $location, $http, $rootScope, $translate) {
+      .controller('PageController', ["$scope", "$stateParams", "Notification", "$location", "$http", "$rootScope", "$translate","$ionicModal", function($scope, $stateParams, Notification, $location, $http, $rootScope, $translate,$ionicModal) {
 
-        app.registerEventsCronapi($scope, $translate);
+        app.registerEventsCronapi($scope, $translate,$ionicModal);
         $rootScope.http = $http;
         $scope.Notification = Notification;
 
@@ -296,7 +297,7 @@ app.bindScope = function($scope, obj) {
   return newObj;
 };
 
-app.registerEventsCronapi = function($scope, $translate) {
+app.registerEventsCronapi = function($scope, $translate, $ionicModal) {
   for (var x in app.userEvents)
     $scope[x] = app.userEvents[x].bind($scope);
 
@@ -306,6 +307,7 @@ app.registerEventsCronapi = function($scope, $translate) {
     if (cronapi) {
       $scope['cronapi'] = app.bindScope($scope, cronapi);
       $scope['cronapi'].$scope = $scope;
+	  $scope['cronapi'].$scope.$ionicModal = $ionicModal;
       $scope.safeApply = safeApply;
       if ($translate) {
         $scope['cronapi'].$translate = $translate;

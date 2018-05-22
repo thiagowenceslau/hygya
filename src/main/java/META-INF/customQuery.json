@@ -4643,5 +4643,169 @@
 			"foreignKey": null
 		},
 		"serviceUrl": "api/cronapi/query/1k25ljp3aq8v8/"
+	},
+	"s4p4tik7evxy": {
+		"customId": "dsDadosProfissionalWeb",
+		"queryName": "DadosProfissionalWeb",
+		"screen": "src/main/webapp/views/logged/profissional.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Profissional",
+		"entityFullName": "app.entity.Profissional",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "Profissional",
+					"namespace": "app.entity.Profissional",
+					"alias": "p"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "p",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "p.id",
+						"field": "p.id",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":id",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "id",
+				"fieldValue": {
+					"blocklyClass": "blockly.ProfissionalEntidadeWeb",
+					"blocklyMethod": "retornarIdProfissionalLogado",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.ProfissionalEntidadeWeb",
+						"classNameNew": "ProfissionalEntidadeWeb",
+						"classNameOld": "ProfissionalEntidadeWeb",
+						"sourcePath": "src/main/java/blockly/ProfissionalEntidadeWeb.blockly",
+						"language": "java",
+						"class": "blockly.ProfissionalEntidadeWeb",
+						"methods": [
+							{
+								"name": "retornarIdProfissionalLogado",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "atualizar",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "buscarCep",
+								"hasReturn": "true",
+								"params": []
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.ProfissionalEntidadeWeb:retornarIdProfissionalLogado', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"nome": null,
+			"cpF": null,
+			"crM": null,
+			"numCRM": null,
+			"dataNascimento": null,
+			"sexo": null,
+			"telefone1": null,
+			"telefone2": null,
+			"endereco": null,
+			"bairro": null,
+			"numero": null,
+			"complemento": null,
+			"cidade": null,
+			"estado": null,
+			"cep": null,
+			"ativo": null,
+			"bloqueado": null,
+			"dataInclusao": null,
+			"dataAtivacao": null,
+			"user": null,
+			"userAutorizador": null
+		},
+		"security": {
+			"id": null,
+			"nome": null,
+			"cpF": null,
+			"crM": null,
+			"numCRM": null,
+			"dataNascimento": null,
+			"sexo": null,
+			"telefone1": null,
+			"telefone2": null,
+			"endereco": null,
+			"bairro": null,
+			"numero": null,
+			"complemento": null,
+			"cidade": null,
+			"estado": null,
+			"cep": null,
+			"ativo": null,
+			"bloqueado": null,
+			"dataInclusao": null,
+			"dataAtivacao": null,
+			"user": null,
+			"userAutorizador": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/s4p4tik7evxy/"
 	}
 }

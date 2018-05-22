@@ -22,7 +22,7 @@
 		"src"
 	],
 	"dependencies": {
-		"cronapp-framework-js": "0.0.177",
-		"cronapi-js": "0.0.110"
+		"cronapp-framework-js": "0.0.183-d-s-b",
+		"cronapi-js": "0.0.116-d-s-b"
 	}
 }

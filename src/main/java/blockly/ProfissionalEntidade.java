@@ -24,8 +24,6 @@ public class ProfissionalEntidade {
 				idProfissional = cronapi.database.Operations.query(Var.valueOf("app.entity.Profissional"),
 						Var.valueOf("select p.id from Profissional p where p.user.login = :userLogin"),
 						Var.valueOf("userLogin", cronapi.util.Operations.getCurrentUserName()));
-				cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.notify"), Var.valueOf("success"),
-						cronapi.screen.Operations.getValueOfField(Var.valueOf("Profissional.active.complemento")));
 				cronapi.database.Operations.execute(Var.valueOf("app.entity.Profissional"),
 						Var.valueOf(
 								"update Profissional set bairro = :bairro, cep = :cep, cidade = :cidade, complemento = :complemento, cpF = :cpF, crM = :crM, dataNascimento = :dataNascimento, endereco = :endereco, estado = :estado, nome = :nome, numCRM = :numCRM, numero = :numero, sexo = :sexo, telefone1 = :telefone1 where id = :id"),
