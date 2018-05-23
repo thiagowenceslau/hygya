@@ -53,6 +53,9 @@ public class ProfissionalEntidadeWeb {
 	public static Var atualizar() throws Exception {
 		return new Callable<Var>() {
 
+			private Var usuarioLogado = Var.VAR_NULL;
+			private Var idUsuario = Var.VAR_NULL;
+
 			public Var call() throws Exception {
 				cronapi.database.Operations.execute(Var.valueOf("app.entity.Profissional"),
 						Var.valueOf(
@@ -92,6 +95,17 @@ public class ProfissionalEntidadeWeb {
 								cronapi.screen.Operations
 										.getValueOfField(Var.valueOf("Profissional.active.telefone2"))),
 						Var.valueOf("id", Var.valueOf(retornarIdProfissionalLogado())));
+				usuarioLogado = cronapi.database.Operations.query(Var.valueOf("app.entity.User"),
+						Var.valueOf("select u from User u where u.login = :login"),
+						Var.valueOf("login", cronapi.util.Operations.getCurrentUserName()));
+				idUsuario = cronapi.database.Operations.getField(usuarioLogado, Var.valueOf("this[0].id"));
+				cronapi.database.Operations.execute(Var.valueOf("app.entity.User"),
+						Var.valueOf("update User set name = :name where id = :id"),
+						Var.valueOf("name",
+								cronapi.screen.Operations.getValueOfField(Var.valueOf("Profissional.active.nome"))),
+						Var.valueOf("id", idUsuario));
+				cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.notify"), Var.valueOf("success"),
+						Var.valueOf("Cadastro Atualizado"));
 				return Var.VAR_NULL;
 			}
 		}.call();

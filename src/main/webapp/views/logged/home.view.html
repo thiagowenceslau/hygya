@@ -9,14 +9,14 @@
         <div id="navbar" class="navbar-collapse collapse"> 
           <ul class="nav navbar-nav" style="float:none"> 
             <li class="dropdown component-holder" data-component=""> <a href="#/home" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-lg fa-home"></i> <span>{{"Home.view.Home" | translate}}</span> </a> </li> 
-            <li class="dropdown component-holder" data-component="crn-menu-item" cronapp-security="visible : Administrators"> <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="glyphicon glyphicon-user"></i> <span>Cadastros</span> <span class="caret"></span> </a> 
+            <li class="dropdown component-holder" data-component="crn-menu-item" cronapp-security="visible : Administrators, enabled : Administrators"> <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="glyphicon glyphicon-user"></i> <span>Cadastros</span> <span class="caret"></span> </a> 
               <ul class="dropdown-menu" style=""> 
-                <li class=""><a href="#/home/admin/usuario" class="component-holder" data-component="crn-anchor">{{'Home.view.Users' | translate}}</a></li> 
+                <li class="active"><a href="#/home/admin/usuario" class="component-holder" data-component="crn-anchor">{{'Home.view.Users' | translate}}</a></li> 
                 <li class=""><a href="#/home/admin/convenio" class="component-holder" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor">{{'Convenio' | translate}}</a></li>
                 <li class=""><a href="#/home/admin/estabelecimentodesaude" class="component-holder" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor">{{'Estabelecimento' | translate}}</a></li>
                 <li class=""><a href="#/home/admin/profissional" class="component-holder" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor">{{'Profissional' | translate}}</a></li>
                 <li class=""><a href="#/home/admin/paciente" class="component-holder" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor">{{'Paciente' | translate}}</a></li>
-              <li><a href="#/home/logged/agenteregistroc" class="component-holder" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor">Teste</a></li></ul> </li>
+              </ul> </li>
             <li class="dropdown component-holder" data-component="crn-menu-item" cronapp-security="visible : Administrators, enabled : Administrators"> <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Agente de Registro</span> <span class="caret"></span></a> <ul class="dropdown-menu" style="">   <li class=""><a href="#/home/admin/solicitacaoagente" class="component-holder" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor">Solicitação</a></li> <li><a href="#/home/logged/agentes" class="component-holder" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor">Pesquisar</a></li><li><a href="#/home/admin/agentesregistro" class="component-holder" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor">Agentes Autorizados</a></li></ul></li><li class="dropdown component-holder" data-component="crn-menu-item" cronapp-security="visible : Administrators"> <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-bar-chart-o"></i> <span>Relatórios</span> <span class="caret"></span> </a> 
               <ul class="dropdown-menu" style=""> 
                  
@@ -29,7 +29,7 @@
               <ul class="dropdown-menu" style=""> 
                  
                 
-              <li><a href="#/home/logged/paciente" class="component-holder" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor" cronapp-security="visible : Convenio Operador;Estabelecimento Operador;Estabelecimento Administrativo;Convenio Administrativo, enabled : Convenio Operador;Estabelecimento Operador;Estabelecimento Administrativo;Convenio Administrativo">Pesquisar</a></li></ul> </li><li class="dropdown component-holder" data-component="crn-menu-item" cronapp-security="visible : Estabelecimento Administrativo"> <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-pencil-square-o"></i> <span>Resultado</span> <span class="caret"></span> </a> 
+              <li><a href="#/home/logged/paciente" class="component-holder" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor" cronapp-security="visible : Convenio Operador;Estabelecimento Operador;Estabelecimento Administrativo;Convenio Administrativo, enabled : Convenio Operador;Estabelecimento Operador;Estabelecimento Administrativo;Convenio Administrativo">Pesquisar</a></li></ul> </li><li class="dropdown component-holder" data-component="crn-menu-item" cronapp-security="visible : Estabelecimento Administrativo, enabled : Estabelecimento Administrativo"> <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-pencil-square-o"></i> <span>Resultado</span> <span class="caret"></span> </a> 
               <ul class="dropdown-menu" style=""> 
                  
                 
@@ -51,7 +51,7 @@
                 <li><a class="component-holder" data-toggle="modal" data-target="#modalPassword" data-component="crn-anchor">{{"Home.view.ChangePassword" | translate}}</a></li> 
                 <li ng-click="logout()"><a href="javascript:void(0);"><span>{{"Home.view.Logout" | translate}}</span></a></li> 
               </ul> </li> 
-          </ul> 
+          <li class="dropdown component-holder" data-component="crn-menu-item" cronapp-security="visible : Profissional, enabled : Profissional"> <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span cronapp-security="visible : Profissional, enabled : Profissional">Profissional</span> <span class="caret"></span></a> <ul class="dropdown-menu" style="">   <li><a href="#/home/logged/profissional" class="component-holder" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor" cronapp-security="visible : Profissional">Meus Dados</a></li> <li><a href="#/home/logged/solicitarautorizacao" class="component-holder" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor" cronapp-security="visible : Profissional">Solicitações</a></li></ul></li></ul> 
         </div> 
       </div> 
     </nav> 

@@ -51,6 +51,8 @@ public class AgentesRegistroAutorizados {
 				cronapi.database.Operations.execute(Var.valueOf("app.entity.User"),
 						Var.valueOf("update User set habilitaAgenteRegistro = :habilitaAgenteRegistro where id = :id"),
 						Var.valueOf("habilitaAgenteRegistro", Var.valueOf("Não")), Var.valueOf("id", agenteUserId));
+				cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.refreshDatasource"),
+						Var.valueOf("Agente"), Var.valueOf("true"));
 				cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.notify"), Var.valueOf("success"),
 						Var.valueOf("Agente Desativado!"));
 				cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.hideModal"),

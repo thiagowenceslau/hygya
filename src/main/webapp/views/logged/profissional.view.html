@@ -5,13 +5,13 @@
 <!--</div>--> 
 <datasource filter="" name="Profissional" entity="api/cronapi/query/s4p4tik7evxy/" keys="id" rows-per-page="100" delete-message="Deseja remover?" class=""></datasource> 
 <div data-component="crn-form" id="crn-form-form-Profissional"> 
-  <div class="form" ng-show="Profissional.editing || Profissional.inserting"> 
+  <div class="form"> 
     <form crn-datasource="Profissional" class=""> 
       <br> 
-      <fieldset ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting"> 
+      <fieldset> 
         <div class="component-holder ng-binding ng-scope col-md-12" data-component="crn-button" id="crn-button-635260">
           <button class="btn btn-success" type="submit" ng-click="cronapi.util.makeCallServerBlocklyAsync('blockly.ProfissionalEntidadeWeb:atualizar', null, null)" xattr-size="" xattr-fullsize="" xattr-theme="btn-success" data-component="crn-button"><i class="glyphicon glyphicon-ok"></i> <span></span></button>
-          <button class="btn component-holder btn-danger" type="submit" ng-click="" xattr-size="" xattr-fullsize="" xattr-theme="btn-danger" data-component="crn-button" id="crn-button-695723"><i class="glyphicon glyphicon-remove"></i> <span></span></button>
+          
         </div>
         <div data-component="crn-textinput" id="crn-textinput-nome" class="col-md-12"> 
           <div class="form-group"> 
@@ -77,7 +77,7 @@
             <!-- end if !model.hasCronappFramework() --> 
           </div> 
         </div> 
-        <div class="component-holder ng-binding ng-scope col-md-1" data-component="crn-textinputbutton" id="crn-textinputbutton-1011739" style="width: 996px; height: 80px;">
+        <div class="component-holder ng-binding ng-scope  col-md-12 genClass2283" data-component="crn-textinputbutton" id="crn-textinputbutton-1011739">
           <div>
             <label class="form-group" for="inputButton9814">Cep</label>
             <div class="input-group">

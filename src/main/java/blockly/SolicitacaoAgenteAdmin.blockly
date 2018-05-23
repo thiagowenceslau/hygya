@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly formTarget="src/main/webapp/views/admin/solicitacaoagente.view.html" resourceType="JAVA" ruleDescription="SolicitacaoAgenteAdmin" ruleName="SolicitacaoAgenteAdmin" ruleSynchronous="false" ruleTimeout="300" ruleType="I">
-  <metadata scale="1" scrollx="488.0000000000017" scrolly="11.000000000000398" target="{r,+A;kWkStK)_O6mt]t"/>
+  <metadata scale="1" scrollx="489.00000000000176" scrolly="11.000000000000227" target="+f|bu1%1,zO^v_B_^Ql?"/>
   <block colour="#995ba5" id="{r,+A;kWkStK)_O6mt]t" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-277" y="8">
     <mutation>
       <arg name="agente&lt;app.entity.Agente&gt;"/>
@@ -163,13 +163,23 @@
                       </block>
                     </value>
                     <next>
-                      <block colour="#5ba58c" dependencyby="{r,+A;kWkStK)_O6mt]t" id=",bJ*#S,xx|ttP}gPxJm4" origintype="text_print" output="false" tooltip="Imprime o texto, número ou valor especificado." type="text_print">
-                        <value name="TEXT">
-                          <shadow colour="#5ba593" dependencyby="{r,+A;kWkStK)_O6mt]t" id="omF`#8eF=G#==Nw`5q$A" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                            <field name="TEXT">abc</field>
-                          </shadow>
-                          <block colour="#a55b80" dependencyby="{r,+A;kWkStK)_O6mt]t" id="R6238Y$wnh4;|qL+`g|B" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
-                            <field name="VAR">agenteUserId</field>
+                      <block colour="#934848" dependencyby="{r,+A;kWkStK)_O6mt]t" id="3ju7^o9v3#Vu[a]0C|ZS" multilayer="true" namespace="cronapi.screen.refreshDatasource" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EAtualizar%20fonte%20de%20dados%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20atualiza%20uma%20fonte%20de%20dados,%20mantendo%20ou%20n%C3%A3o%20os%20filtros%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Objeto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Manter%20filtro(s)?%20%20:%20L%C3%B3gico%3C/span%3E%3Cdiv%3E%20Caso%20verdadeiro,%20mant%C3%A9m%20os%20filtros%20existentes%20na%20fonte%20de%20dados%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.refreshDatasource%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.refreshDatasource%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+                        <mutation name="{{cronapi.screen.refreshDatasource}}" return-raw-type="undefined">
+                          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Fonte de dados"/>
+                          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.BOOLEAN" name="Manter filtro(s)? "/>
+                        </mutation>
+                        <value name="ARG0">
+                          <block colour="#934848" dependencyby="{r,+A;kWkStK)_O6mt]t" id="16uWq)~9^PU4B`j9Wo57" origintype="datasource_from_screen" output="true" type="datasource_from_screen">
+                            <field name="SELECT">Agente</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block colour="#934848" dependencyby="{r,+A;kWkStK)_O6mt]t" id="n,;vcX)6%o2F+7V6_@T|" origintype="util_dropdown" output="true" type="util_dropdown">
+                            <mutation>
+                              <arg name="true" value="Verdadeiro"/>
+                              <arg name="false" value="Falso"/>
+                            </mutation>
+                            <field name="SELECT">true</field>
                           </block>
                         </value>
                         <next>
@@ -188,7 +198,7 @@
                                 </mutation>
                                 <value name="ARG0">
                                   <block colour="#934848" dependencyby="{r,+A;kWkStK)_O6mt]t" id="FjJ@|nWt(gAL8^5{y|xL" origintype="ids_from_screen" output="true" type="ids_from_screen">
-                                    <field name="SELECT">modalSolicitacao</field>
+                                    <field name="SELECT">modalSolicitar</field>
                                   </block>
                                 </value>
                               </block>
@@ -206,7 +216,7 @@
       </block>
     </statement>
   </block>
-  <block colour="#995ba5" id="+f|bu1%1,zO^v_B_^Ql?" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-142" y="113">
+  <block colour="#995ba5" id="+f|bu1%1,zO^v_B_^Ql?" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-352" y="83">
     <mutation>
       <arg name="agente&lt;app.entity.Agente&gt;"/>
     </mutation>
@@ -241,24 +251,46 @@
           </block>
         </value>
         <next>
-          <block colour="#934848" dependencyby="+f|bu1%1,zO^v_B_^Ql?" id="~tNw(V0zZ.EQa|NGvV5:" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
-            <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
-            <field name="SELECT">success</field>
-            <value name="MESSAGE">
-              <shadow colour="#5ba593" dependencyby="+f|bu1%1,zO^v_B_^Ql?" id="Si~o0ZBO:q`)#~mF$MB0" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                <field name="TEXT">Solicitação recusada!</field>
-              </shadow>
+          <block colour="#934848" dependencyby="+f|bu1%1,zO^v_B_^Ql?" id="Km^3(n,j.zDn~]86hB_6" multilayer="true" namespace="cronapi.screen.refreshDatasource" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EAtualizar%20fonte%20de%20dados%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20atualiza%20uma%20fonte%20de%20dados,%20mantendo%20ou%20n%C3%A3o%20os%20filtros%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Objeto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Manter%20filtro(s)?%20%20:%20L%C3%B3gico%3C/span%3E%3Cdiv%3E%20Caso%20verdadeiro,%20mant%C3%A9m%20os%20filtros%20existentes%20na%20fonte%20de%20dados%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.refreshDatasource%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.refreshDatasource%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+            <mutation name="{{cronapi.screen.refreshDatasource}}" return-raw-type="undefined">
+              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Fonte de dados"/>
+              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.BOOLEAN" name="Manter filtro(s)? "/>
+            </mutation>
+            <value name="ARG0">
+              <block colour="#934848" dependencyby="+f|bu1%1,zO^v_B_^Ql?" id="4}kJ{r~V?;@|bv]u/xvr" origintype="datasource_from_screen" output="true" type="datasource_from_screen">
+                <field name="SELECT">Agente</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block colour="#934848" dependencyby="+f|bu1%1,zO^v_B_^Ql?" id="Kh*l4mf{XnSHFYF004r;" origintype="util_dropdown" output="true" type="util_dropdown">
+                <mutation>
+                  <arg name="true" value="Verdadeiro"/>
+                  <arg name="false" value="Falso"/>
+                </mutation>
+                <field name="SELECT">true</field>
+              </block>
             </value>
             <next>
-              <block colour="#934848" dependencyby="+f|bu1%1,zO^v_B_^Ql?" id=":.Ku=UBPa[6**#|.QY8B" multilayer="true" namespace="cronapi.screen.hideModal" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EEsconder%20modal%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20esconde%20um%20modal%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Identificador%20:%20Objeto%3C/span%3E%3Cdiv%3E%20Identificador%20do%20componente%20a%20ser%20modificado%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.hideModal%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.hideModal%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
-                <mutation name="{{cronapi.screen.hideModal}}" return-raw-type="undefined">
-                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Identificador"/>
-                </mutation>
-                <value name="ARG0">
-                  <block colour="#934848" dependencyby="+f|bu1%1,zO^v_B_^Ql?" id="Wqa.yql1{|t,%9^6S?}U" origintype="ids_from_screen" output="true" type="ids_from_screen">
-                    <field name="SELECT">modalSolicitacao</field>
-                  </block>
+              <block colour="#934848" dependencyby="+f|bu1%1,zO^v_B_^Ql?" id="~tNw(V0zZ.EQa|NGvV5:" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                <field name="SELECT">success</field>
+                <value name="MESSAGE">
+                  <shadow colour="#5ba593" dependencyby="+f|bu1%1,zO^v_B_^Ql?" id="Si~o0ZBO:q`)#~mF$MB0" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field name="TEXT">Solicitação recusada!</field>
+                  </shadow>
                 </value>
+                <next>
+                  <block colour="#934848" dependencyby="+f|bu1%1,zO^v_B_^Ql?" id=":.Ku=UBPa[6**#|.QY8B" multilayer="true" namespace="cronapi.screen.hideModal" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EEsconder%20modal%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20esconde%20um%20modal%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Identificador%20:%20Objeto%3C/span%3E%3Cdiv%3E%20Identificador%20do%20componente%20a%20ser%20modificado%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.hideModal%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.hideModal%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+                    <mutation name="{{cronapi.screen.hideModal}}" return-raw-type="undefined">
+                      <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Identificador"/>
+                    </mutation>
+                    <value name="ARG0">
+                      <block colour="#934848" dependencyby="+f|bu1%1,zO^v_B_^Ql?" id="Wqa.yql1{|t,%9^6S?}U" origintype="ids_from_screen" output="true" type="ids_from_screen">
+                        <field name="SELECT">modalSolicitar</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
               </block>
             </next>
           </block>

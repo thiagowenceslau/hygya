@@ -1,0 +1,130 @@
+<h3>Solicitar Autorização</h3><div class="component-holder ng-binding ng-scope" data-component="crn-datasource-filter" id="crn-datasource-filter-277672"><div class="form-group"><label for="textinput-filter" class="{{AutorizacaoAcessoExame.active.paciente}}">{{"template.crud.search" | translate}}</label><input type="text" mask="" mask-placeholder="" cronapp-filter="paciente.nome;paciente.cpf" cronapp-filter-operator="" cronapp-filter-caseinsensitive="false" cronapp-filter-autopost="true" crn-datasource="AutorizacaoAcessoExame" ng-model="vars.filter2780" class="form-control" value="" placeholder="{{'template.crud.search' | translate}}"></div></div> 
+<!-- div row para pesquisa --> 
+<!--<div class="row">--> 
+ 
+<div data-component="crn-button" id="crn-button-564202" class=""> 
+  <button class="btn btn-primary" type="submit" onclick="" data-component="crn-button" ng-click="blockly.js.blockly.ModalSolicitarAcessoExame.abrir()" ng-hide=""><i class="glyphicon glyphicon-plus"></i> <span class="">Nova Solicitação</span></button> 
+</div> 
+<!-- fim div row para pesquisa --> 
+<!--</div>--> 
+<datasource filter="" name="AutorizacaoAcessoExame" entity="api/cronapi/query/1ji4gcsdz8up1/" keys="id" rows-per-page="100" delete-message="Deseja remover?" class=""></datasource> 
+<div class="component-holder" data-component="crn-grid" id="crn-grid-AutorizacaoAcessoExame"> 
+  <div crn-datasource="AutorizacaoAcessoExame" class=""> 
+    <table class="table  table-bordered table-hover table-striped"> 
+      <thead> 
+        <tr class="table-header"> 
+          <th class="active"> 
+            <div class="">
+               Paciente 
+            </div> </th> 
+          <th class=""> 
+            <div class="">
+               CPF 
+            </div> </th> 
+          <th class=""> 
+            <div class="">
+               Autorizado 
+            </div> </th> 
+          <th class=""> 
+            <div class="">
+               Data Solicitação 
+            </div> </th> 
+        </tr> 
+      </thead> 
+      <tbody> 
+        <tr class="table-content" ng-repeat="rowData in datasource.data"> 
+          <td class=""> 
+            <div class="">
+               {{rowData.paciente.nome}} 
+            </div> </td> 
+          <td class=""> 
+            <div class="">
+               {{rowData.paciente.cpf}} 
+            </div> </td> 
+          <td class=""> 
+            <div class="">
+               {{rowData.autorizado }} 
+            </div> </td> 
+          <td class=""> 
+            <div class="">
+               {{rowData.dataSolicitacao | mask:'date'}} 
+            </div> </td> 
+        </tr> 
+      </tbody> 
+    </table> 
+    <div class="table-footer-controls"> 
+      <button class="btn btn-default btn-block btn-clicked" data-component="crn-button" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()">{{"template.crud.load_more" | translate}}...</button> 
+    </div> 
+  </div> 
+</div> 
+<!-- OneToOne modal --> 
+<div class="modal fade" id="modalNova"> 
+  <div class="modal-dialog"> 
+    <div class="component-holder ng-binding ng-scope" data-component="crn-panel" id="crn-panel-581878"> 
+      <div class="panel panel-primary" xattr-theme="panel-primary" data-container="true"> 
+        <div class="panel-heading" data-container="true"> 
+          <div class="panel-title"> 
+            <div class="button genClass263"> 
+              <button class="btn component-holder btn-danger btn-sm" type="submit" ng-click="blockly.js.blockly.ModalSolicitarAcessoExame.fechar()" xattr-size="btn-sm" xattr-fullsize="" xattr-theme="btn-danger" data-component="crn-button" id="crn-button-894687"><i class="glyphicon glyphicon-remove"></i> <span></span></button> 
+            </div> 
+            <div class="lead text-center component-holder" data-component="crn-title" xattr-position="text-center">
+               Nova Solicitação 
+            </div> 
+          </div> 
+        </div> 
+        <form id="nova"> 
+          <div class="panel-body" data-container="true"> 
+            <div class="component-holder ng-binding ng-scope" data-component="crn-datasource-filter" id="crn-datasource-filter-442761">
+              <div class="form-group">
+                <label for="textinput-filter" class="{{Paciente.active.id}}">{{"template.crud.search" | translate}}</label>
+                <input type="text" mask="" mask-placeholder="" cronapp-filter="nome;cpf" cronapp-filter-operator="" cronapp-filter-caseinsensitive="false" cronapp-filter-autopost="true" crn-datasource="Paciente" ng-model="vars.filter5656" class="form-control" value="" placeholder="{{'template.crud.search' | translate}}">
+              </div>
+            </div>
+            <datasource name="Paciente" entity="api/cronapi/crud/app.entity.Paciente" keys="id" rows-per-page="100" on-before-create="" on-after-create="" on-before-update="" on-after-update="" on-before-delete="" on-after-delete="" on-after-fill="" data-component="crn-datasource" class="component-holder" id="crn-datasource-540279" filter=""></datasource>
+            <div class="component-holder ng-binding ng-scope" data-component="crn-grid" id="crn-grid-674334">
+              <div crn-datasource="Paciente">
+                <table class="table table-bordered table-hover">
+                  <thead>
+                    <tr class="table-header">
+                      <th class="">
+                        <div data-container="true">
+                          Paciente
+                        </div></th>
+                      <th>
+                        <div data-container="true">
+                          CPF
+                        </div></th>
+                      <th class="active">
+                        <div data-container="true"></div></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="table-content" ng-repeat="rowData in datasource.data">
+                      <td class="">
+                        <div data-container="true">
+                          {{rowData.nome}}
+                        </div></td>
+                      <td>
+                        <div data-container="true">
+                          {{rowData.cpf}}
+                        </div></td>
+                      <td class="active">
+                        <div data-container="true">
+                          <button class="btn component-holder btn-link btn-block" type="submit" ng-click="blockly.js.blockly.ModalSolicitarAcessoExame.solicitarAcesso(rowData.cpf)" xattr-size="" xattr-fullsize="btn-block" xattr-theme="btn-link" data-component="crn-button" id="crn-button-538560"> <span>Solicitar</span></button>
+                        </div></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="table-footer-controls">
+                  <button class="btn btn-default btn-block btn-clicked" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()">Load more...</button>
+                </div>
+              </div>
+            </div>
+          </div> 
+          <div class="panel-footer genClass263" data-container="true"> 
+          </div> 
+        </form> 
+      </div> 
+    </div> 
+  </div> 
+</div>

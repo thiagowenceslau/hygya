@@ -78,18 +78,22 @@
 <!-- OneToOne modal end-->
 <div class="modal fade" id="modalAutorizados"> 
   <div class="modal-dialog"> 
-    <div class="modal-content"> 
-      <div class="component-holder modal-header col-md-12"> 
-        <div class="list-group list-group-sm row"> 
-          <div data-container="true" data-replace="false">
-            <h1 class="lead text-center component-holder" xattr-position="text-center" data-component="crn-title" id="crn-title-119771">Dados do Agente</h1>
+    <div class="component-holder ng-binding ng-scope" data-component="crn-panel" id="crn-panel-701160"> 
+      <div class="panel panel-primary" xattr-theme="panel-primary" data-container="true"> 
+        <div class="panel-heading" data-container="true"> 
+          <div class="button genClass8098">
+            <button class="btn component-holder btn-danger btn-sm" type="submit" ng-click="blockly.js.blockly.ModalAgentesRegistro.fechar()" xattr-size="btn-sm" xattr-fullsize="" xattr-theme="btn-danger" data-component="crn-button" id="crn-button-484461"><i class="glyphicon glyphicon-remove"></i> <span></span></button><div class="lead text-center component-holder" data-component="crn-title" xattr-position="text-center">
+              <h1 class="lead text-center component-holder" xattr-position="text-center" data-component="crn-title" id="crn-title-997978">Dados do Agente</h1></div>
+          <div class="panel-title"> 
+             
+            </div> 
           </div> 
         </div> 
-      </div> 
-      <div class="modal-body col-md-12"> 
-        <div class="list-group list-group-sm row"> 
-          <div data-container="true" data-replace="false">
-            <div class="component-holder ng-binding ng-scope col-md-12" data-component="crn-textinput" id="crn-textinput-nome">
+        <form id="auto">
+        <div class="panel-body" data-container="true"> 
+          
+		  
+		  <div class="component-holder ng-binding ng-scope col-md-12" data-component="crn-textinput" id="crn-textinput-nome">
               <div class="form-group">
                 <label for="nome">Usuário Solicitante</label>
                 <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="Agente.active.user.name" class="form-control" id="nome" placeholder="" ng-disabled="true">
@@ -167,16 +171,19 @@
                 <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="Agente.active.ativo" class="form-control" id="ativo" placeholder="" ng-disabled="true">
               </div>
             </div>
-          </div> 
-        </div> 
-      </div> 
-      <div class="modal-footer"> 
-        <div class="list-group list-group-sm row"> 
-          <div data-container="true" data-replace="false"></div> 
+		</div>
+		
+        <div class="panel-footer" data-container="true"> 
+            <div class="button genClass8098">
+			
+          <button class="btn component-holder btn-warning" type="submit" ng-click="cronapi.util.makeCallServerBlocklyAsync('blockly.AgentesRegistroAutorizados:desativarAgente', null, null, Agente.active.id)" xattr-size="" xattr-fullsize="" xattr-theme="btn-warning" data-component="crn-button" id="crn-button-973484"><i class="glyphicon glyphicon-remove"></i> <span>Desativar</span></button>
+         
+		  
+		  </div>
         </div>
-        <button class="btn component-holder btn-warning" type="submit" ng-click="cronapi.util.makeCallServerBlocklyAsync('blockly.AgentesRegistroAutorizados:desativarAgente', null, null, Agente.active.id)" xattr-size="" xattr-fullsize="" xattr-theme="btn-warning" data-component="crn-button" id="crn-button-973484"><i class="glyphicon glyphicon-remove"></i> <span>Desativar</span></button>
-        <button class="btn component-holder btn-danger" type="submit" ng-click="blockly.js.blockly.ModalAgentesRegistro.fechar()" xattr-size="" xattr-fullsize="" xattr-theme="btn-danger" data-component="crn-button" id="crn-button-484461"><i class="glyphicon glyphicon-chevron-left"></i> <span>Voltar</span></button> 
-      </div> 
+        
+      </form> 
+      
     </div> 
   </div> 
-</div>
+</div></div>

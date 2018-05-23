@@ -4426,18 +4426,6 @@
 						"params": []
 					},
 					{
-						"name": "filtrar",
-						"hasReturn": "true",
-						"params": []
-					},
-					{
-						"name": "beforeInsert",
-						"hasReturn": "true",
-						"params": [
-							"dados<app.entity.AutorizacaoAcessoExame>"
-						]
-					},
-					{
 						"name": "retornarIdProfissionalLogado",
 						"hasReturn": "true",
 						"params": []
@@ -4457,7 +4445,7 @@
 		"queryParamsValues": [
 			{
 				"fieldName": "cpf",
-				"fieldValue": "rowData.cpf"
+				"fieldValue": "{{rowData.cpf}}"
 			}
 		],
 		"verbs": {
@@ -4807,5 +4795,140 @@
 			"foreignKey": null
 		},
 		"serviceUrl": "api/cronapi/query/s4p4tik7evxy/"
+	},
+	"1ji4gcsdz8up1": {
+		"customId": "dsAutorizacaoAcessoExameWeb",
+		"queryName": "AutorizacaoAcessoExameWeb",
+		"screen": "src/main/webapp/views/logged/solicitarautorizacao.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "AutorizacaoAcessoExame",
+		"entityFullName": "app.entity.AutorizacaoAcessoExame",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "AutorizacaoAcessoExame",
+					"namespace": "app.entity.AutorizacaoAcessoExame",
+					"alias": "a"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "a",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "a.profissional.id",
+						"field": "a.profissional.id",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":profissionalId",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "profissionalId",
+				"fieldValue": {
+					"blocklyClass": "blockly.AutorizacaoAcessoExameWeb",
+					"blocklyMethod": "retornarIdProfissionalLogado",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.AutorizacaoAcessoExameWeb",
+						"classNameNew": "AutorizacaoAcessoExameWeb",
+						"classNameOld": "AutorizacaoAcessoExameWeb",
+						"sourcePath": "src/main/java/blockly/AutorizacaoAcessoExameWeb.blockly",
+						"language": "java",
+						"class": "blockly.AutorizacaoAcessoExameWeb",
+						"methods": [
+							{
+								"name": "solicitarAcesso",
+								"hasReturn": "true",
+								"params": [
+									"cpf"
+								]
+							},
+							{
+								"name": "retornarIdProfissionalLogado",
+								"hasReturn": "true",
+								"params": []
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.AutorizacaoAcessoExameWeb:retornarIdProfissionalLogado', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"paciente": null,
+			"profissional": null,
+			"ativo": null,
+			"autorizado": null,
+			"todosExames": null,
+			"dataExpiracao": null,
+			"dataAutorizacao": null,
+			"dataSolicitacao": null
+		},
+		"security": {
+			"id": null,
+			"paciente": null,
+			"profissional": null,
+			"ativo": null,
+			"autorizado": null,
+			"todosExames": null,
+			"dataExpiracao": null,
+			"dataAutorizacao": null,
+			"dataSolicitacao": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/1ji4gcsdz8up1/"
 	}
 }

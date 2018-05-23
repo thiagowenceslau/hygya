@@ -7,6 +7,13 @@ window.blockly.js.blockly.ModalSolicitacaoAgente = window.blockly.js.blockly.Mod
 /**
  * Descreva esta função...
  */
+window.blockly.js.blockly.ModalSolicitacaoAgente.fechar = function() {
+	this.cronapi.screen.hideModal("modalSolicitar");
+}
+
+/**
+ * Descreva esta função...
+ */
 window.blockly.js.blockly.ModalSolicitacaoAgente.exibir = function() {
-	this.cronapi.screen.showModal("modalSolicitacao");
+	this.cronapi.screen.showModal("modalSolicitar");
 }

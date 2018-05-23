@@ -28,10 +28,12 @@ public class DesativarAgente {
 						Var.valueOf("update User set habilitaAgenteRegistro = :habilitaAgenteRegistro where id = :id"),
 						Var.valueOf("habilitaAgenteRegistro", Var.valueOf("Não")),
 						Var.valueOf("id", Var.valueOf(retornarUserId(dados))));
+				cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.refreshDatasource"),
+						Var.valueOf("Agente"), Var.valueOf("true"));
 				cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.notify"), Var.valueOf("success"),
 						Var.valueOf("Agente Desativado"));
 				cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.hideModal"),
-						Var.valueOf("modalAgentes"));
+						Var.valueOf("modalAgente"));
 				return Var.VAR_NULL;
 			}
 		}.call();
@@ -57,10 +59,12 @@ public class DesativarAgente {
 						Var.valueOf("update User set habilitaAgenteRegistro = :habilitaAgenteRegistro where id = :id"),
 						Var.valueOf("habilitaAgenteRegistro", Var.valueOf("Sim")),
 						Var.valueOf("id", Var.valueOf(retornarUserId(dados))));
+				cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.refreshDatasource"),
+						Var.valueOf("Agente"), Var.valueOf("true"));
 				cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.notify"), Var.valueOf("success"),
 						Var.valueOf("Agente Ativado"));
 				cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.hideModal"),
-						Var.valueOf("modalAgentes"));
+						Var.valueOf("modalAgente"));
 				return Var.VAR_NULL;
 			}
 		}.call();

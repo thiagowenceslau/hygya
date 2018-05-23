@@ -55,11 +55,12 @@ public class SolicitacaoAgenteAdmin {
 				cronapi.database.Operations.execute(Var.valueOf("app.entity.User"),
 						Var.valueOf("update User set habilitaAgenteRegistro = :habilitaAgenteRegistro where id = :id"),
 						Var.valueOf("habilitaAgenteRegistro", Var.valueOf("Sim")), Var.valueOf("id", agenteUserId));
-				System.out.println(agenteUserId.getObjectAsString());
+				cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.refreshDatasource"),
+						Var.valueOf("Agente"), Var.valueOf("true"));
 				cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.notify"), Var.valueOf("success"),
 						Var.valueOf("Agente Ativado com Sucesso!"));
 				cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.hideModal"),
-						Var.valueOf("modalSolicitacao"));
+						Var.valueOf("modalSolicitar"));
 				return Var.VAR_NULL;
 			}
 		}.call();
@@ -80,10 +81,12 @@ public class SolicitacaoAgenteAdmin {
 						Var.valueOf("solicitacaoAtendida", Var.valueOf("Sim")),
 						Var.valueOf("usuarioAprovador", Var.valueOf(retornarIdUsuarioLogado())),
 						Var.valueOf("ativo", Var.valueOf("Recusado")), Var.valueOf("id", agente));
+				cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.refreshDatasource"),
+						Var.valueOf("Agente"), Var.valueOf("true"));
 				cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.notify"), Var.valueOf("success"),
 						Var.valueOf("Solicitação recusada!"));
 				cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.hideModal"),
-						Var.valueOf("modalSolicitacao"));
+						Var.valueOf("modalSolicitar"));
 				return Var.VAR_NULL;
 			}
 		}.call();
