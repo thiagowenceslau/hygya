@@ -7,11 +7,14 @@ window.blockly.js.blockly.PesquisarPaciente = window.blockly.js.blockly.Pesquisa
 /**
  * Descreva esta função...
  */
-window.blockly.js.blockly.PesquisarPaciente.exibirModal = function() {
-	this.cronapi.util
-			.callServerBlocklyNoReturn('blockly.AtivarPaciente:validar');
-	if (this.cronapi.screen.getValueOfField("Paciente.active.ativo") == true) {
-		this.cronapi.screen.hideComponent("crn-button-ativar");
+window.blockly.js.blockly.PesquisarPaciente.exibirModal = function(dados) {
+
+	var item, ativo, dados;
+	ativo = this.cronapi.object.getProperty(dados, 'ativo');
+	if (ativo == 'Sim') {
+		this.cronapi.screen.hideComponent("ativar");
+	} else {
+		this.cronapi.screen.showComponent("ativar");
 	}
 	this.cronapi.screen.showModal("modalPesquisarPaciente");
 }
@@ -20,5 +23,7 @@ window.blockly.js.blockly.PesquisarPaciente.exibirModal = function() {
  * Descreva esta função...
  */
 window.blockly.js.blockly.PesquisarPaciente.esconderModal = function() {
+
+	var item, ativo, dados;
 	this.cronapi.screen.hideModal("modalPesquisarPaciente");
 }
