@@ -1,0 +1,80 @@
+<h3>Exames Paciente</h3> 
+<!-- div row para pesquisa --> 
+<!--<div class="row">--> 
+<!-- fim div row para pesquisa --> 
+<!--</div>--> 
+<datasource filter="" name="ExameAutorizado" entity="api/cronapi/crud/app.entity.ExameAutorizado" keys="id" rows-per-page="100" delete-message="Deseja remover?" class=""></datasource> 
+<div class="component-holder" data-component="crn-grid" id="crn-grid-ExameAutorizado"> 
+  <div crn-datasource="ExameAutorizado" class="" ng-hide="ExameAutorizado.editing || ExameAutorizado.inserting"> 
+    <table class="table  table-bordered table-hover table-striped"> 
+      <thead style=""> 
+        <tr class="table-header" style=""> 
+          <th class=""> 
+            <div class="">
+               Exame 
+            </div> </th> 
+          <th> 
+            <div data-container="true">
+               Data de Emissão 
+            </div></th> 
+          <th class=""> 
+            <div class=""></div> </th> 
+        </tr> 
+      </thead> 
+      <tbody style=""> 
+        <tr class="table-content" ng-repeat="rowData in datasource.data" style=""> 
+          <td class=""> 
+            <div class="">
+               {{Resultado.active.nomeExame}} 
+            </div> </td> 
+          <td> 
+            <div data-container="true">
+               {{Resultado.active.dataEmissao}} 
+            </div></td> 
+          <td class=""> 
+            <div class=""> 
+              <button class="btn btn-default component-holder" type="submit" ng-click="blockly.js.blockly.ModalResultado.abrir()" xattr-size="" xattr-fullsize="" xattr-theme="btn-default" data-component="crn-button" id="crn-button-40688"><i class="glyphicon glyphicon-list-alt"></i> <span>Resultado</span></button> 
+            </div> </td> 
+        </tr> 
+      </tbody> 
+    </table> 
+    <div class="table-footer-controls"> 
+      <button class="btn btn-default btn-block btn-clicked" data-component="crn-button" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()">{{"template.crud.load_more" | translate}}...</button> 
+    </div> 
+  </div> 
+</div> 
+<!-- OneToOne modal --> 
+<!-- OneToOne modal end--> 
+<div class="modal fade" id="modalResultado"> 
+  <div class="modal-dialog"> 
+    <div class="component-holder ng-binding ng-scope" data-component="crn-panel" id="crn-panel-601463"> 
+      <div class="panel panel-primary" xattr-theme="panel-primary" data-container="true"> 
+        <div class="panel-heading" data-container="true"> 
+          <div class="panel-title"> 
+            <div class="lead component-holder" data-component="crn-title" xattr-position="text-center">
+               Resultado 
+            </div> 
+          </div> 
+        </div> 
+        <form id="resultado"> 
+          <div class="panel-body" data-container="true"> 
+            <h4 class="lead component-holder text-left" xattr-position="text-left" data-component="crn-subtitle" id="crn-subtitle-1047637">Nome: {{ExameAutorizado.active.resultado.nomePaciente}}</h4> 
+            <h4 class="lead component-holder text-left" xattr-position="text-left" data-component="crn-subtitle" id="crn-subtitle-1047637">Médico: {{ExameAutorizado.active.resultado.medico}}</h4> 
+            <h4 class="lead component-holder text-left" xattr-position="text-left" data-component="crn-subtitle" id="crn-subtitle-1047637">Data: {{ExameAutorizado.active.resultado.dataEmissao}}</h4>
+            <h1 class="lead text-center component-holder" xattr-position="text-center" data-component="crn-title" id="crn-title-791228">{{ExameAutorizado.active.resultado.nomeExame}}</h1>
+            <h2 class="lead component-holder text-left" xattr-position="text-left" data-component="crn-subtitle" id="crn-subtitle-137785">Método</h2> 
+            <h2 class="lead component-holder text-left" xattr-position="text-left" data-component="crn-subtitle" id="crn-subtitle-137785">{{ExameAutorizado.active.resultado.metodoExame}}</h2> 
+            <h2 class="lead component-holder text-left" xattr-position="text-left" data-component="crn-subtitle" id="crn-subtitle-137785">Análise</h2> 
+            <h2 class="lead component-holder text-left" xattr-position="text-left" data-component="crn-subtitle" id="crn-subtitle-137785">{{ExameAutorizado.active.resultado.materialExame}}</h2><h2 class="lead component-holder text-left" xattr-position="text-left" data-component="crn-subtitle" id="crn-subtitle-137785">Comentários</h2><h2 class="lead component-holder text-left" xattr-position="text-left" data-component="crn-subtitle" id="crn-subtitle-137785">{{ExameAutorizado.active.resultado.comentario}}</h2> 
+          </div> 
+          <div class="panel-footer" data-container="true"> 
+            <div class=""> 
+              <button class="btn component-holder btn-danger" type="submit" ng-click="blockly.js.blockly.ModalEtapa.fechar()" xattr-size="" xattr-fullsize="" xattr-theme="btn-danger" data-component="crn-button" id="crn-button-872742"><i class="glyphicon glyphicon-remove"></i> <span>Cancelar</span></button> 
+              <button class="btn component-holder btn-success" type="submit" ng-click="blockly.js.blockly.ModalEtapa.inserir()" xattr-size="" xattr-fullsize="" xattr-theme="btn-success" data-component="crn-button" id="crn-button-745155"><i class="glyphicon glyphicon-ok"></i> <span>Salvar</span></button> 
+            </div> 
+          </div> 
+        </form> 
+      </div> 
+    </div> 
+  </div> 
+</div>

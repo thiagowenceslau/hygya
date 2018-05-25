@@ -1,0 +1,38 @@
+<ion-view cache-view="false" view-title="Autorizar Acesso" hide-back-button="true">
+  <ion-nav-buttons side="right"> 
+    
+    
+  </ion-nav-buttons>
+  <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear ion-navicon" ng-hide="AutorizacaoAcessoExame.inserting || AutorizacaoAcessoExame.editing" menu-toggle="left"> </button>
+    
+  </ion-nav-buttons>
+  <ion-content>
+    <div ng-hide="" data-component="crn-datasource-filter" id="crn-datasource-filter-general" class="">
+      <label class="item item-input" id="cloud-search1">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" ng-model="vars.search" cronapp-filter="profissional.nome;dataSolicitacao" cronapp-filter-operator="" cronapp-filter-autopost="true" crn-datasource="AutorizacaoAcessoExame" value="" placeholder="{{'template.crud.search' | translate}}">
+      </label>
+    </div>   
+    <div class="component-holder ng-binding ng-scope ui-draggable ui-draggable-handle" data-component="crn-datasource" id="crn-datasource-906854">
+      <datasource name="AutorizacaoAcessoExame" entity="api/cronapi/query/qe4cvbkc0twh/" keys="id" rows-per-page="10" delete-message="Deseja remover?" class=""></datasource>
+    </div>
+    <div crn-datasource="AutorizacaoAcessoExame" class="">
+      <ion-list can-swipe="listCanSwipe">
+        <ion-item ng-repeat="rowData in datasource.data" class="item" ng-click="return confirm('Autoriza a vizualização desse Exame?');">
+          <div class="row">
+            <div class="col">
+              <h3>{{rowData.profissional.nome}}</h3>
+              <h4>{{rowData.dataSolicitacao | date:'dd/MM/yyyy'}}</h4>
+            </div>
+            <div class="col genClassBtnRight">
+            <button class="button component-holder button-small button-positive" type="submit" ng-click="blockly.js.blockly.AcessoExames.autorizar(rowData)" data-component="crn-button" id="crn-button-222590" xattr-fullsize="" xattr-size="button-small" xattr-theme="button-positive"><i class="ion ion-android-checkbox-outline"></i> <span>Autorizar</span></button>
+            <button class="button component-holder button-small button-assertive" type="submit" ng-click="blockly.js.blockly.AcessoExames.recusar(rowData)" data-component="crn-button" id="crn-button-931181" xattr-fullsize="" xattr-size="button-small" xattr-type="" xattr-theme="button-assertive"><i class="ion ion-close"></i> <span></span></button>
+          </div>
+          </div>
+        </ion-item>
+      </ion-list>
+    </div>
+    
+  </ion-content>
+</ion-view>

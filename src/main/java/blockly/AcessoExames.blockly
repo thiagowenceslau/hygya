@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly formTarget="" resourceType="JAVA" ruleDescription="AcessoExames" ruleName="AcessoExames" ruleSynchronous="false" ruleTimeout="" ruleType="I">
+  <metadata scale="1" scrollx="365.0000000000005" scrolly="7" target="Anb:u5+^,0vLkL9QIqn5"/>
+  <block colour="#995ba5" id="rlsgSPPv;5m^1E+1Pnzp" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-97" y="83">
+    <field name="NAME">retornaFiltro</field>
+    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <value name="RETURN">
+      <block colour="#5ba593" dependencyby="rlsgSPPv;5m^1E+1Pnzp" id="G2^9Gk[feHlDMqAYyMJq" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+        <field name="TEXT">Aguardando</field>
+      </block>
+    </value>
+  </block>
+  <block colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-32" y="135">
+    <mutation>
+      <arg name="idAutorizacao"/>
+    </mutation>
+    <field name="NAME">recusar</field>
+    <comment h="80" pinned="false" w="160">AcessoExames</comment>
+    <statement name="STACK">
+      <block colour="#db802b" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="B/kFBF)nb2BVkgtwMs)[" multilayer="false" namespace="cronapi.database.Operations.update" origintype="procedures_sql_update_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EAtualizar%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20atualiza%20um%20registro%20no%20banco%20de%20dados%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Tabela%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Entidade%20:%20Objeto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.database.Operations.update%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.database.Operations.update%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_update_callnoreturn">
+        <mutation data="%7B%22queryBuilderJson%22:%7B%22isValid%22:true,%22isEmpty%22:false,%22operationType%22:%22field%22,%22type%22:%22update%22,%22rulesEntity%22:%5B%7B%22entity%22:%22AutorizacaoAcessoExame%22,%22namespace%22:%22app.entity.AutorizacaoAcessoExame%22,%22alias%22:%22%22%7D%5D,%22rulesSelect%22:%5B%7B%22operator%22:%22equal%22,%22field%22:%22ativo%22,%22value%22:%22:ativo%22,%22type%22:%22string%22%7D,%7B%22operator%22:%22equal%22,%22field%22:%22autorizado%22,%22value%22:%22:autorizado%22,%22type%22:%22string%22%7D,%7B%22operator%22:%22equal%22,%22field%22:%22dataAutorizacao%22,%22value%22:%22:dataAutorizacao%22,%22type%22:%22date%22%7D,%7B%22operator%22:%22equal%22,%22field%22:%22dataExpiracao%22,%22value%22:%22:dataExpiracao%22,%22type%22:%22date%22%7D,%7B%22operator%22:%22equal%22,%22field%22:%22todosExames%22,%22value%22:%22:todosExames%22,%22type%22:%22boolean%22%7D%5D,%22rulesGroupBy%22:%5B%5D,%22rulesHaving%22:%5B%5D,%22rulesOrderBy%22:%5B%5D,%22rules%22:%7B%22condition%22:%22AND%22,%22rules%22:%5B%7B%22id%22:%22id%22,%22field%22:%22id%22,%22type%22:%22string%22,%22input%22:%22text%22,%22operator%22:%22equal%22,%22value%22:%22:id%22,%22valueIsField%22:false%7D%5D,%22not%22:false,%22valid%22:true%7D,%22isRawSql%22:false,%22multiTenant%22:true,%22paginatorAutomatic%22:false%7D,%22entity%22:%22AutorizacaoAcessoExame%22,%22entityFullName%22:%22app.entity.AutorizacaoAcessoExame%22,%22filter%22:%22update%20AutorizacaoAcessoExame%20set%20ativo%20=%20:ativo,%20autorizado%20=%20:autorizado,%20dataAutorizacao%20=%20:dataAutorizacao,%20dataExpiracao%20=%20:dataExpiracao,%20todosExames%20=%20:todosExames%20where%20id%20=%20:id%22,%22type%22:%22F%22,%22params%22:%22%5B%5C%22ativo%5C%22,%5C%22autorizado%5C%22,%5C%22dataAutorizacao%5C%22,%5C%22dataExpiracao%5C%22,%5C%22todosExames%5C%22,%5C%22id%5C%22%5D%22%7D" name="{{cronapi.database.Operations.update}}">
+          <arg name="ativo"/>
+          <arg name="autorizado"/>
+          <arg name="dataAutorizacao"/>
+          <arg name="dataExpiracao"/>
+          <arg name="todosExames"/>
+          <arg name="id"/>
+        </mutation>
+        <value name="ARG0">
+          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="@%-?DT/c2FX/6gAIT+^q" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+            <field name="TEXT">Não</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="jBf?Gs):d!5{p0OB{S;3" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+            <field name="TEXT">Recusado</field>
+          </block>
+        </value>
+        <value name="ARG2">
+          <block colour="#7d9137" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="TOI7#b_VKMAO91YEVc,Z" multilayer="false" namespace="cronapi.dateTime.Operations.getNow" origintype="procedures_callreturn" output="true" returntype="ObjectType.DATETIME" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20data%20e%20hora%20atual%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20data%20e%20hora%20atual%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Data%20%20%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.dateTime.Operations.getNow%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.dateTime.Operations.getNow%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+            <mutation name="{{cronapi.dateTime.Operations.getNow}}" return-raw-type="cronapi.Var"/>
+          </block>
+        </value>
+        <value name="ARG3">
+          <block colour="#7d9137" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="1i$kvx*#O*MO^L!t6p[I" multilayer="false" namespace="cronapi.dateTime.Operations.getNow" origintype="procedures_callreturn" output="true" returntype="ObjectType.DATETIME" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20data%20e%20hora%20atual%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20data%20e%20hora%20atual%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Data%20%20%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.dateTime.Operations.getNow%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.dateTime.Operations.getNow%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+            <mutation name="{{cronapi.dateTime.Operations.getNow}}" return-raw-type="cronapi.Var"/>
+          </block>
+        </value>
+        <value name="ARG4">
+          <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="{4MHvhDn+4#rAgPBAoJ#" origintype="logic_boolean" output="true" tooltip="Retorna verdadeiro ou falso." type="logic_boolean">
+            <field name="BOOL">FALSE</field>
+          </block>
+        </value>
+        <value name="ARG5">
+          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="gi?eS|q|+pPIk9|d^yE@" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+            <field name="VAR">idAutorizacao</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block colour="#995ba5" id="Qc)%jrbl7QcNN^!RK#oZ" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-52" y="143">
+    <mutation>
+      <arg name="idDados"/>
+    </mutation>
+    <field name="NAME">autorizar</field>
+    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <statement name="STACK">
+      <block colour="#db802b" dependencyby="Qc)%jrbl7QcNN^!RK#oZ" id="am}/!qgO5$GqspV^PY%`" multilayer="false" namespace="cronapi.database.Operations.update" origintype="procedures_sql_update_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EAtualizar%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20atualiza%20um%20registro%20no%20banco%20de%20dados%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Tabela%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Entidade%20:%20Objeto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.database.Operations.update%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.database.Operations.update%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_update_callnoreturn">
+        <mutation data="%7B%22queryBuilderJson%22:%7B%22isValid%22:true,%22isEmpty%22:false,%22operationType%22:%22field%22,%22type%22:%22update%22,%22rulesEntity%22:%5B%7B%22entity%22:%22AutorizacaoAcessoExame%22,%22namespace%22:%22app.entity.AutorizacaoAcessoExame%22,%22alias%22:%22%22%7D%5D,%22rulesSelect%22:%5B%7B%22operator%22:%22equal%22,%22field%22:%22ativo%22,%22value%22:%22:ativo%22,%22type%22:%22string%22%7D,%7B%22operator%22:%22equal%22,%22field%22:%22autorizado%22,%22value%22:%22:autorizado%22,%22type%22:%22string%22%7D,%7B%22operator%22:%22equal%22,%22field%22:%22dataAutorizacao%22,%22value%22:%22:dataAutorizacao%22,%22type%22:%22date%22%7D,%7B%22operator%22:%22equal%22,%22field%22:%22dataExpiracao%22,%22value%22:%22:dataExpiracao%22,%22type%22:%22date%22%7D,%7B%22operator%22:%22equal%22,%22field%22:%22todosExames%22,%22value%22:%22:todosExames%22,%22type%22:%22boolean%22%7D%5D,%22rulesGroupBy%22:%5B%5D,%22rulesHaving%22:%5B%5D,%22rulesOrderBy%22:%5B%5D,%22rules%22:%7B%22condition%22:%22AND%22,%22rules%22:%5B%7B%22id%22:%22id%22,%22field%22:%22id%22,%22type%22:%22string%22,%22input%22:%22text%22,%22operator%22:%22equal%22,%22value%22:%22:id%22,%22valueIsField%22:false%7D%5D,%22not%22:false,%22valid%22:true%7D,%22isRawSql%22:false,%22multiTenant%22:true,%22paginatorAutomatic%22:false%7D,%22entity%22:%22AutorizacaoAcessoExame%22,%22entityFullName%22:%22app.entity.AutorizacaoAcessoExame%22,%22filter%22:%22update%20AutorizacaoAcessoExame%20set%20ativo%20=%20:ativo,%20autorizado%20=%20:autorizado,%20dataAutorizacao%20=%20:dataAutorizacao,%20dataExpiracao%20=%20:dataExpiracao,%20todosExames%20=%20:todosExames%20where%20id%20=%20:id%22,%22type%22:%22F%22,%22params%22:%22%5B%5C%22ativo%5C%22,%5C%22autorizado%5C%22,%5C%22dataAutorizacao%5C%22,%5C%22dataExpiracao%5C%22,%5C%22todosExames%5C%22,%5C%22id%5C%22%5D%22%7D" name="{{cronapi.database.Operations.update}}">
+          <arg name="ativo"/>
+          <arg name="autorizado"/>
+          <arg name="dataAutorizacao"/>
+          <arg name="dataExpiracao"/>
+          <arg name="todosExames"/>
+          <arg name="id"/>
+        </mutation>
+        <value name="ARG0">
+          <block colour="#5ba593" dependencyby="Qc)%jrbl7QcNN^!RK#oZ" id="6J^NTxo9njE,7_B3xZ0@" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+            <field name="TEXT">Sim</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block colour="#5ba593" dependencyby="Qc)%jrbl7QcNN^!RK#oZ" id="v@nyVHH;F1qK}|kd:Y-j" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+            <field name="TEXT">Autorizado</field>
+          </block>
+        </value>
+        <value name="ARG2">
+          <block colour="#7d9137" dependencyby="Qc)%jrbl7QcNN^!RK#oZ" id="*4/1wtRnXh84:C`?B@hL" multilayer="false" namespace="cronapi.dateTime.Operations.getNow" origintype="procedures_callreturn" output="true" returntype="ObjectType.DATETIME" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20data%20e%20hora%20atual%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20data%20e%20hora%20atual%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Data%20%20%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.dateTime.Operations.getNow%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.dateTime.Operations.getNow%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+            <mutation name="{{cronapi.dateTime.Operations.getNow}}" return-raw-type="cronapi.Var"/>
+          </block>
+        </value>
+        <value name="ARG3">
+          <block colour="#7d9137" dependencyby="Qc)%jrbl7QcNN^!RK#oZ" id="`Oh!z~A27hR[/0@FcwwG" multilayer="false" namespace="cronapi.dateTime.Operations.incDay" origintype="procedures_callreturn" output="true" returntype="ObjectType.DATETIME" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EIncrementar%20dia%20na%20data%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20incrementar%20dia%20na%20data%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Data%20:%20Data%20%20%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Dias%20a%20incrementar%20:%20Inteiro%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Data%20%20%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.dateTime.Operations.incDay%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.dateTime.Operations.incDay%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+            <mutation name="{{cronapi.dateTime.Operations.incDay}}" return-raw-type="cronapi.Var">
+              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.DATETIME" name="Data"/>
+              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.LONG" name="Dias a incrementar"/>
+            </mutation>
+            <value name="ARG0">
+              <block colour="#7d9137" dependencyby="Qc)%jrbl7QcNN^!RK#oZ" id="b(8o/gLDlr_4cL4v1N%o" multilayer="false" namespace="cronapi.dateTime.Operations.getNow" origintype="procedures_callreturn" output="true" returntype="ObjectType.DATETIME" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20data%20e%20hora%20atual%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20data%20e%20hora%20atual%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Data%20%20%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.dateTime.Operations.getNow%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.dateTime.Operations.getNow%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                <mutation name="{{cronapi.dateTime.Operations.getNow}}" return-raw-type="cronapi.Var"/>
+              </block>
+            </value>
+            <value name="ARG1">
+              <shadow colour="#5b67a5" dependencyby="Qc)%jrbl7QcNN^!RK#oZ" id="`nbVbtx:-r$3#NMvUtD1" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                <field name="NUM">20</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <value name="ARG4">
+          <block colour="#5b80a5" dependencyby="Qc)%jrbl7QcNN^!RK#oZ" id="pnEglm37u%A_c-.eUU2a" origintype="logic_boolean" output="true" tooltip="Retorna verdadeiro ou falso." type="logic_boolean">
+            <field name="BOOL">TRUE</field>
+          </block>
+        </value>
+        <value name="ARG5">
+          <block colour="#a55b80" dependencyby="Qc)%jrbl7QcNN^!RK#oZ" id="{qN=yQ3bRXZMa:^P`CQ/" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+            <field name="VAR">idDados</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+</blockly>

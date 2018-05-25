@@ -5149,12 +5149,12 @@
       ],
       "methods": [],
       "position": {
-        "x": 442,
+        "x": 441,
         "y": 1169
       },
       "size": {
-        "width": 311.46875,
-        "height": 120.09558868408203
+        "width": 308,
+        "height": 121.17371368408203
       },
       "angle": 0,
       "multitenantContextJsonIgnore": "false",
@@ -5261,7 +5261,7 @@
           "text": "id\nautorizacaoAcessoExame\nresultado\n"
         },
         ".uml-class-attrs-value": {
-          "ref-x": 163.625,
+          "ref-x": 161,
           "font-size": 11,
           "text": "java.lang.String\nAutorizacaoAcessoExame\nResultado\n"
         },

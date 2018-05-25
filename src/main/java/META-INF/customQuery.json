@@ -4930,5 +4930,193 @@
 			"foreignKey": null
 		},
 		"serviceUrl": "api/cronapi/query/1ji4gcsdz8up1/"
+	},
+	"qe4cvbkc0twh": {
+		"customId": "dsAutorizarAcesso",
+		"queryName": "AutorizarAcesso",
+		"screen": "src/main/mobileapp/www/views/logged/autorizacaoacessoexame.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "AutorizacaoAcessoExame",
+		"entityFullName": "app.entity.AutorizacaoAcessoExame",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "AutorizacaoAcessoExame",
+					"namespace": "app.entity.AutorizacaoAcessoExame",
+					"alias": "a"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "a",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "a.autorizado",
+						"field": "a.autorizado",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":autorizado",
+						"valueIsField": false
+					},
+					{
+						"id": "a.paciente.id",
+						"field": "a.paciente.id",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":pacienteId",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "autorizado",
+				"fieldValue": {
+					"blocklyClass": "blockly.AcessoExames",
+					"blocklyMethod": "retornaFiltro",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.AcessoExames",
+						"classNameNew": "AcessoExames",
+						"classNameOld": "AcessoExames",
+						"sourcePath": "src/main/java/blockly/AcessoExames.blockly",
+						"language": "java",
+						"class": "blockly.AcessoExames",
+						"methods": [
+							{
+								"name": "retornaFiltro",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "recusar",
+								"hasReturn": "true",
+								"params": [
+									"idAutorizacao"
+								]
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.AcessoExames:retornaFiltro', null, null)"
+				}
+			},
+			{
+				"fieldName": "pacienteId",
+				"fieldValue": {
+					"blocklyClass": "blockly.RetornaIdEntidadesLogadas",
+					"blocklyMethod": "retornarIdPaciente",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.RetornaIdEntidadesLogadas",
+						"classNameNew": "RetornaIdEntidadesLogadas",
+						"classNameOld": "RetornaIdEntidadesLogadas",
+						"sourcePath": "src/main/java/blockly/RetornaIdEntidadesLogadas.blockly",
+						"language": "java",
+						"class": "blockly.RetornaIdEntidadesLogadas",
+						"methods": [
+							{
+								"name": "retornarIdConvenio",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "retornarIdEstabelecimento",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "retornarIdProfissional",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "retornarIdPaciente",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "retornarIdUsuario",
+								"hasReturn": "true",
+								"params": []
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.RetornaIdEntidadesLogadas:retornarIdPaciente', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"paciente": null,
+			"profissional": null,
+			"ativo": null,
+			"autorizado": null,
+			"todosExames": null,
+			"dataExpiracao": null,
+			"dataAutorizacao": null,
+			"dataSolicitacao": null
+		},
+		"security": {
+			"id": null,
+			"paciente": null,
+			"profissional": null,
+			"ativo": null,
+			"autorizado": null,
+			"todosExames": null,
+			"dataExpiracao": null,
+			"dataAutorizacao": null,
+			"dataSolicitacao": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/qe4cvbkc0twh/"
 	}
 }
