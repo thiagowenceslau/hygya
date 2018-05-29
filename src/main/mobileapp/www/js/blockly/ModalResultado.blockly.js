@@ -8,18 +8,12 @@ window.blockly.js.blockly.ModalResultado = window.blockly.js.blockly.ModalResult
  * Descreva esta função...
  */
 window.blockly.js.blockly.ModalResultado.fechar = function() {
-	this.cronapi.screen.hideModal("modalResultado");
-}
-
-/**
- * ModalResultado
- */
-window.blockly.js.blockly.ModalResultado.Executar = function() {
+	this.cronapi.screen.hideModal("modalTeste");
 }
 
 /**
  * Descreva esta função...
  */
 window.blockly.js.blockly.ModalResultado.abrir = function() {
-	this.cronapi.screen.showModal("modalResultado");
+	this.cronapi.screen.showModal("modalTeste");
 }

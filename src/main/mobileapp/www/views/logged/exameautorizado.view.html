@@ -1,63 +1,101 @@
-<ion-view cache-view="false" view-title="ExameAutorizado" hide-back-button="true">
+<ion-view cache-view="false" view-title="Exames Paciente" hide-back-button="true"> 
   <ion-nav-buttons side="right"> 
-    <button class="button button-stable" ng-hide="ExameAutorizado.inserting || ExameAutorizado.editing" ng-click="ExameAutorizado.startInserting()"> <i class="icon ion-plus-round"></i> </button>
-    <button class="button button-stable" ng-show="ExameAutorizado.inserting || ExameAutorizado.editing" ng-click="ExameAutorizado.post()"> <i class="icon ion-checkmark"></i> </button>
-  </ion-nav-buttons>
-  <ion-nav-buttons side="left">
-    <button class="button button-icon button-clear ion-navicon" ng-hide="ExameAutorizado.inserting || ExameAutorizado.editing" menu-toggle="left"> </button>
-    <button class="button button-stable" ng-show="ExameAutorizado.inserting || ExameAutorizado.editing" ng-click="ExameAutorizado.cancel()"> <i class="icon ion-android-arrow-back"></i> </button>
-  </ion-nav-buttons>
-  <ion-content>
-    <div ng-hide="ExameAutorizado.inserting || ExameAutorizado.editing" data-component="crn-datasource-filter" id="crn-datasource-filter-general" class="">
-      <label class="item item-input" id="cloud-search1">
-        <i class="icon ion-search placeholder-icon"></i>
-        <input type="text"  ng-model="vars.search" cronapp-filter="id;" cronapp-filter-operator="" cronapp-filter-autopost="true" crn-datasource="ExameAutorizado" value="" placeholder="{{'template.crud.search' | translate}}">
-      </label>
-    </div>   
-    <div class="component-holder ng-binding ng-scope ui-draggable ui-draggable-handle" data-component="crn-datasource" id="crn-datasource-906854">
-      <datasource  name="ExameAutorizado" entity="api/cronapi/crud/app.entity.ExameAutorizado" keys="id" rows-per-page="10" delete-message="Deseja remover?" class=""></datasource>
-    </div>
-    <div crn-datasource="ExameAutorizado" class="" ng-hide="ExameAutorizado.editing || ExameAutorizado.inserting">
-      <ion-list can-swipe="listCanSwipe">
-        <ion-item ng-repeat="rowData in datasource.data" class="item" ng-click="datasource.startEditing(rowData)">
-          <div class="row">
-            <div class="col">
-              {{rowData.resultado.cpfPaciente}}
-            </div>
-          </div>
-          <ion-option-button class="button-positive" ng-click="datasource.startEditing(rowData)">
-            <i class="icon ion-edit"></i>
-          </ion-option-button>
-          <ion-option-button class="button-assertive" ng-click="datasource.remove(rowData)">
-            &nbsp;
-            <i class="icon ion-trash-a"></i>
-          </ion-option-button>
-        </ion-item>
-      </ion-list>
-    </div>
-    <div ng-show="ExameAutorizado.editing || ExameAutorizado.inserting">
-      <form crn-datasource="ExameAutorizado">
-        <fieldset ng-disabled="!ExameAutorizado.editing &amp;&amp; !ExameAutorizado.inserting">
-          <div class="list">
-            <!-- autorizacaoAcessoExame begin -->
-            <datasource name="AutorizacaoAcessoExame" entity="api/cronapi/crud/app.entity.AutorizacaoAcessoExame" keys="id" class=""></datasource>
-            <label for="textinput-autorizacaoAcessoExame" class="item item-input item-select">
-              <span class="input-label">autorizacaoAcessoExame</span>
-              <select ng-model="ExameAutorizado.active.autorizacaoAcessoExame" class="form-control" id="textinput-autorizacaoAcessoExame" name="textinput-autorizacaoAcessoExame" ng-options="opt as opt.ativo for opt in AutorizacaoAcessoExame.data track by opt.id" >
-              <option value=''>None</option>
-              </select>
-            </label>
-            <!-- resultado begin -->
-            <datasource name="Resultado" entity="api/cronapi/crud/app.entity.Resultado" keys="id" class=""></datasource>
-            <label for="textinput-resultado" class="item item-input item-select">
-              <span class="input-label">resultado</span>
-              <select ng-model="ExameAutorizado.active.resultado" class="form-control" id="textinput-resultado" name="textinput-resultado" ng-options="opt as opt.cpfPaciente for opt in Resultado.data track by opt.id" >
-              <option value=''>None</option>
-              </select>
-            </label>
-          </div>
-        </fieldset>
-      </form>
-    </div>
-  </ion-content>
-</ion-view>
+  </ion-nav-buttons> 
+  <ion-nav-buttons side="left"> 
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="left"> </button> 
+  </ion-nav-buttons> 
+  <ion-content> 
+    <div data-component="crn-datasource-filter" id="crn-datasource-filter-general" class=""> 
+      <label class="item item-input" id="cloud-search1"> <i class="icon ion-search placeholder-icon"></i> <input type="text" ng-model="vars.search" cronapp-filter="id;" cronapp-filter-operator="" cronapp-filter-autopost="true" crn-datasource="ExameAutorizado" value="" placeholder="{{'template.crud.search' | translate}}"> </label> 
+    </div> 
+    <div class="component-holder ng-binding ng-scope ui-draggable ui-draggable-handle" data-component="crn-datasource" id="crn-datasource-906854"> 
+      <datasource name="ExameAutorizado" entity="api/cronapi/query/1jyljnm21irsl/" keys="id" rows-per-page="10" delete-message="Deseja remover?" class=""></datasource> 
+    </div> 
+    <div crn-datasource="ExameAutorizado" class=""> 
+      <ion-list can-swipe="listCanSwipe"> 
+        <ion-item ng-repeat="rowData in datasource.data" class="item"> 
+          <div class="row"> 
+            <div class="col genClass9310">
+              Exame: {{rowData.resultado.nomeExame}}
+              <br> Data: {{rowData.resultado.dataEmissao | date:'dd/MM/yyyy'}} 
+            </div><button class="button component-holder button-positive" type="submit" ng-click="blockly.js.blockly.ModalResultado.abrir()" data-component="crn-button" id="crn-button-952397" xattr-theme="button-positive" ng-paste=""><i class="ion ion-android-search"></i> <span></span></button> 
+          </div> 
+        </ion-item> 
+      </ion-list> 
+    </div> 
+  </ion-content> 
+</ion-view> 
+
+
+<!-- modal begin -->
+<div class="modal fade genClass8370" id="modalTeste">
+ <div class="modal-dialog">
+     <ion-scroll zooming="false" direction="y" style="width:auto;height:500px">
+   <div class="modal-content">
+     <div class="component-holder modal-header">
+       <div class="list-group list-group-sm col">
+         <div data-container="true" data-replace="true">
+            <h1 xattr-position="text-center" class="text-center" data-component="crn-label" id="crn-label-691025">Resultado</h1>
+             
+         </div>
+       </div>
+      </div>
+      <div class="modal-body">
+       <div class="list-group list-group-sm col">
+         <div data-container="true" data-replace="true">
+              <ion-item class="item dark component-holder col-xs-12" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-396803">
+  <h4 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-794171">Nome: {{ExameAutorizado.active.resultado.nomePaciente}}</h4>
+  <h4 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-691025">Médico: {{ExameAutorizado.active.resultado.medico}}</h4>
+  <h4 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-451145">Data: {{ExameAutorizado.active.resultado.dataEmissao | date:'dd/MM/yyyy'}}</h4>
+  </ion-item>
+             
+             <h2 xattr-position="text-center" class="text-center component-holder" data-component="crn-label" id="crn-label-883918">{{ExameAutorizado.active.resultado.nomeExame}}</h2>
+          
+  <ion-item class="item dark component-holder col-xs-12" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-396803">
+  <h3 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-794171">Método:</h3>
+  <h4 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-691025">{{ExameAutorizado.active.resultado.metodoExame}}</h4>
+  </ion-item>
+  <ion-item class="item dark component-holder col-xs-12" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-396803">
+  <h3 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-794171">Análise:</h3>
+  <h4 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-691025">{{ExameAutorizado.active.resultado.materialExame}}</h4>
+  </ion-item>
+  <ion-item class="item dark component-holder col-xs-12" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-396803">
+  <h3 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-794171">Comentários:</h3>
+  <h4 xattr-position="text-left" class="text-left" data-component="crn-label" id="quebra">{{ExameAutorizado.active.resultado.comentario}}</h4>
+  </ion-item>
+  <ion-item class="item dark component-holder col-xs-6" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-396803">
+  <h5 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-794171">Laudado por:</h5>
+  <h5 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-691025">{{ExameAutorizado.active.resultado.medico}}</h5>
+  </ion-item>
+  <ion-item class="item dark component-holder  col-xs-6" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-396803">
+  <h5 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-794171">Assinado por:</h5>
+  <h5 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-691025">{{ExameAutorizado.active.resultado.medico}}</h5>
+  </ion-item>
+  <div class="component-holder ng-binding ng-scope col-xs-12" data-component="crn-button-bar" id="crn-button-bar-493403">
+  <div class="button-bar">
+  <button class="component-holder button button-block button-assertive" data-component="crn-button" type="submit" ng-click="blockly.js.blockly.ModalResultado.fechar()" xattr-size="" xattr-type="" xattr-theme="button-assertive" xattr-fullsize="button-block">
+  <i class="icon icon-left ion ion-close"></i>
+  <span></span></button>
+  <button class="component-holder button button-block button-positive" data-component="crn-button" type="submit" ng-click="cronapi.util.makeCallServerBlocklyAsync('blockly.AcessoExames:baixarRelatorio', null, null)" xattr-size="" xattr-type="" xattr-theme="button-positive" xattr-fullsize="button-block"><i class="icon icon-left ion ion-android-download"></i><span></span></button> </div></div>
+            
+         </div>
+       </div>
+     </div>
+     <div class="modal-footer">
+       <div class="list-group list-group-sm row">
+       
+       </div>
+     </div>
+   </div>
+   
+   </ion-scroll>
+ </div>
+</div>
+
+
+<script type="text/ng-template" id="modal32812"><ion-modal-view>
+   <ion-header-bar>
+     <h1 class="title">Resultado</h1>
+   </ion-header-bar>
+  <ion-content data-content="true" data-replace="false"><ion-item class="item dark component-holder col-xs-12" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-396803"><h4 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-794171">Nome: {{ExameAutorizado.active.resultado.nomePaciente}}</h4><h2 xattr-position="text-left" class="component-holder text-left" data-component="crn-label" id="crn-label-691025">Médico: {{ExameAutorizado.active.resultado.medico}}</h2><h2 xattr-position="text-left" class="component-holder text-left" data-component="crn-label" id="crn-label-451145">Data: {{ExameAutorizado.active.resultado.dataEmissao | date:'dd/MM/yyyy'}}</h2></ion-item><ion-item class="item dark component-holder col-xs-12" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-396803"><h2 xattr-position="text-left" class="component-holder text-left" data-component="crn-label" id="crn-label-794171">Método:</h2><h2 xattr-position="text-left" class="component-holder text-left" data-component="crn-label" id="crn-label-691025">{{ExameAutorizado.active.resultado.metodoExame}}</h2></ion-item><ion-item class="item dark component-holder col-xs-12" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-396803"><h2 xattr-position="text-left" class="component-holder text-left" data-component="crn-label" id="crn-label-794171">Análise:</h2><h2 xattr-position="text-left" class="component-holder text-left" data-component="crn-label" id="crn-label-691025">{{ExameAutorizado.active.resultado.materialExame}}</h2></ion-item><ion-item class="item dark component-holder col-xs-12" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-396803"><h2 xattr-position="text-left" class="component-holder text-left" data-component="crn-label" id="crn-label-794171">Comentários:</h2><h2 xattr-position="text-left" class="component-holder text-left" data-component="crn-label" id="crn-label-691025">{{ExameAutorizado.active.resultado.comentario}}</h2></ion-item><ion-item class="item dark component-holder col-xs-6" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-396803"><h2 xattr-position="text-left" class="component-holder text-left" data-component="crn-label" id="crn-label-794171">Laudado por:</h2><h2 xattr-position="text-left" class="component-holder text-left" data-component="crn-label" id="crn-label-691025">{{ExameAutorizado.active.resultado.medico}}</h2></ion-item><ion-item class="item dark component-holder  col-xs-6" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-396803"><h2 xattr-position="text-left" class="component-holder text-left" data-component="crn-label" id="crn-label-794171">Assinado por:</h2><h2 xattr-position="text-left" class="component-holder text-left" data-component="crn-label" id="crn-label-691025">{{ExameAutorizado.active.resultado.medico}}</h2></ion-item><div class="component-holder ng-binding ng-scope col-xs-12" data-component="crn-button-bar" id="crn-button-bar-493403"><div class="button-bar"><button class="component-holder button button-block button-assertive" data-component="crn-button" type="submit" ng-click="blockly.js.blockly.ModalResultado.fechar()" xattr-size="" xattr-type="" xattr-theme="button-assertive" xattr-fullsize="button-block"><i class="icon icon-left ion ion-close"></i><span></span></button> <button class="component-holder button button-block button-positive" data-component="crn-button" type="submit" ng-click="" xattr-size="" xattr-type="" xattr-theme="button-positive" xattr-fullsize="button-block"><i class="icon icon-left ion ion-android-download"></i><span></span></button> </div></div></ion-content>
+  </ion-modal-view></script>

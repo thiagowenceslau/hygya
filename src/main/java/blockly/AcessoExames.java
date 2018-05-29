@@ -60,11 +60,67 @@ public class AcessoExames {
 	 * @return Var
 	 */
 	// Descreva esta função...
-	public static Var retornaFiltro() throws Exception {
+	public static Var baixarRelatorio() throws Exception {
+		return new Callable<Var>() {
+
+			private Var resultado = Var.VAR_NULL;
+			private Var relatorio = Var.VAR_NULL;
+
+			public Var call() throws Exception {
+				resultado = Var.valueOf(cronapi.io.Operations.fileAppReclycleDir().toString()
+						+ cronapi.io.Operations.fileSeparator().toString()
+						+ cronapi.util.Operations.generateUUID().toString() + Var.valueOf(".pdf").toString());
+				relatorio = cronapi.report.Operations.generateReport(Var.valueOf("reports/Resultado.jrxml"), resultado,
+						cronapi.list.Operations.newList());
+				cronapi.io.Operations.fileDownload(relatorio);
+				return Var.VAR_NULL;
+			}
+		}.call();
+	}
+
+	/**
+	 *
+	 * @return Var
+	 */
+	// Descreva esta função...
+	public static Var gerarRelatorio() throws Exception {
 		return new Callable<Var>() {
 
 			public Var call() throws Exception {
+				cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.util.openReport"),
+						Var.valueOf("reports/Resultado.jrxml"), cronapi.list.Operations.newList());
+				return Var.VAR_NULL;
+			}
+		}.call();
+	}
+
+	/**
+	 *
+	 * @return Var
+	 */
+	// Descreva esta função...
+	public static Var retornaFiltro() throws Exception {
+		return new Callable<Var>() {
+
+			private Var resultado = Var.VAR_NULL;
+			private Var relatorio = Var.VAR_NULL;
+
+			public Var call() throws Exception {
 				return Var.valueOf("Aguardando");
+			}
+		}.call();
+	}
+
+	/**
+	 *
+	 * @return Var
+	 */
+	// Descreva esta função...
+	public static Var retornarAutorizado() throws Exception {
+		return new Callable<Var>() {
+
+			public Var call() throws Exception {
+				return Var.valueOf("Autorizado");
 			}
 		}.call();
 	}

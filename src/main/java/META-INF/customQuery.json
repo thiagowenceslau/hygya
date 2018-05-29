@@ -5118,5 +5118,280 @@
 			"foreignKey": null
 		},
 		"serviceUrl": "api/cronapi/query/qe4cvbkc0twh/"
+	},
+	"1h7za02apb67r": {
+		"customId": "dsExameAutorizado",
+		"queryName": "ExameAutorizado",
+		"screen": "src/main/webapp/views/logged/exameautorizado.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "ExameAutorizado",
+		"entityFullName": "app.entity.ExameAutorizado",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "ExameAutorizado",
+					"namespace": "app.entity.ExameAutorizado",
+					"alias": "e"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "e",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "e.autorizacaoAcessoExame.autorizado",
+						"field": "e.autorizacaoAcessoExame.autorizado",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":autorizacaoAcessoExameAutorizado",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "autorizacaoAcessoExameAutorizado",
+				"fieldValue": {
+					"blocklyClass": "blockly.AcessoExames",
+					"blocklyMethod": "retornarAutorizado",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.AcessoExames",
+						"classNameNew": "AcessoExames",
+						"classNameOld": "AcessoExames",
+						"sourcePath": "src/main/java/blockly/AcessoExames.blockly",
+						"language": "java",
+						"class": "blockly.AcessoExames",
+						"methods": [
+							{
+								"name": "retornarAutorizado",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "retornaFiltro",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "recusar",
+								"hasReturn": "true",
+								"params": [
+									"idAutorizacao"
+								]
+							},
+							{
+								"name": "autorizar",
+								"hasReturn": "false",
+								"params": [
+									"idDados"
+								]
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.AcessoExames:retornarAutorizado', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"autorizacaoAcessoExame": null,
+			"resultado": null
+		},
+		"security": {
+			"id": null,
+			"autorizacaoAcessoExame": null,
+			"resultado": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/1h7za02apb67r/"
+	},
+	"1jyljnm21irsl": {
+		"customId": "dsAcessoExamesMobile",
+		"queryName": "AcessoExamesMobile",
+		"screen": "src/main/mobileapp/www/views/logged/exameautorizado.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "ExameAutorizado",
+		"entityFullName": "app.entity.ExameAutorizado",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "ExameAutorizado",
+					"namespace": "app.entity.ExameAutorizado",
+					"alias": "e"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "e",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "e.autorizacaoAcessoExame.autorizado",
+						"field": "e.autorizacaoAcessoExame.autorizado",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":autorizacaoAcessoExameAutorizado",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "autorizacaoAcessoExameAutorizado",
+				"fieldValue": {
+					"blocklyClass": "blockly.AcessoExames",
+					"blocklyMethod": "retornarAutorizado",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.AcessoExames",
+						"classNameNew": "AcessoExames",
+						"classNameOld": "AcessoExames",
+						"sourcePath": "src/main/java/blockly/AcessoExames.blockly",
+						"language": "java",
+						"class": "blockly.AcessoExames",
+						"methods": [
+							{
+								"name": "retornarAutorizado",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "gerarRelatorio",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "retornaFiltro",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "recusar",
+								"hasReturn": "true",
+								"params": [
+									"idAutorizacao"
+								]
+							},
+							{
+								"name": "autorizar",
+								"hasReturn": "false",
+								"params": [
+									"idDados"
+								]
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.AcessoExames:retornarAutorizado', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"autorizacaoAcessoExame": null,
+			"resultado": null
+		},
+		"security": {
+			"id": null,
+			"autorizacaoAcessoExame": null,
+			"resultado": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/1jyljnm21irsl/"
 	}
 }
