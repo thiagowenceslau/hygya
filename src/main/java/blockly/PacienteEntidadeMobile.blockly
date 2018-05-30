@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><blockly formTarget="src/main/mobileapp/www/views/logged/paciente.view.html" resourceType="JAVA" ruleDescription="PacienteEntidadeMobile" ruleName="PacienteEntidadeMobile" ruleSynchronous="false" ruleTimeout="300" ruleType="I">
-  <metadata scale="1" scrollx="361.0000000000006" scrolly="-847.9999999999998" target="Anb:u5+^,0vLkL9QIqn5"/>
+<?xml version="1.0" encoding="UTF-8"?><blockly formTarget="src/main/mobileapp/www/views/logged/dadospaciente.view.html" resourceType="JAVA" ruleDescription="PacienteEntidadeMobile" ruleName="PacienteEntidadeMobile" ruleSynchronous="false" ruleTimeout="300" ruleType="I">
+  <metadata scale="1" scrollx="361.0000000000006" scrolly="-47.9999999999996" target="Anb:u5+^,0vLkL9QIqn5"/>
   <block colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-97" y="68">
     <field name="NAME">atualizar</field>
     <comment h="80" pinned="false" w="160">PacienteEntidadeMobile</comment>
@@ -396,18 +396,6 @@
                                     <field name="TEXT">Cadastro atualizado com sucesso!</field>
                                   </shadow>
                                 </value>
-                                <next>
-                                  <block colour="#5ba58c" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="8GPLQ|F%ck$4l_V9!6$?" origintype="text_print" output="false" tooltip="Imprime o texto, número ou valor especificado." type="text_print">
-                                    <value name="TEXT">
-                                      <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Z`8=:RNw=us,8kz57UCp" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                                        <field name="TEXT">abc</field>
-                                      </shadow>
-                                      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="}J}sFC$zrsJr[A@pemNX" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
-                                        <field name="VAR">idPaciente</field>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </next>
                               </block>
                             </next>
                           </block>

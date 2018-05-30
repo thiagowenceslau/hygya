@@ -13,6 +13,7 @@
           <div class="input-label">
              Sexo 
           </div><select ng-model="Paciente.active.sexo"><option>Masculino</option><option>Feminino</option></select></label> 
+        
         <label for="textinput-cep" class="item item-input item-stacked-label  col-xs-12"> <span class="input-label">CEP</span> <input type="text" placeholder="CEP" ng-model="Paciente.active.cep" id="textinput-cep" name="textinput-cep" required="" mask="99999-999;0"> </label> 
         <button class="button component-holder col-xs-12 button-clear button-block button-positive" type="submit" ng-click="cronapi.util.makeCallServerBlocklyAsync('blockly.CepPaciente:buscarCepPaciente', null, null)" data-component="crn-button" id="crn-button-548754" xattr-type="button-clear" xattr-size="" xattr-fullsize="button-block" xattr-theme="button-positive"><i class="ion ion-android-search"></i> <span>Buscar CEP</span></button> 
         <label for="textinput-endereco" class="item item-input item-stacked-label col-xs-12"> <span class="input-label">Endereço</span> <input type="text" placeholder="Endereço" ng-model="Paciente.active.endereco" id="textinput-endereco" name="textinput-endereco" required=""> </label> 

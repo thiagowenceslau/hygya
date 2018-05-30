@@ -1,0 +1,62 @@
+<ion-view view-title="Meus Dados"> 
+  <ion-content data-content="true" data-replace="false">
+    <div class="component-holder ng-binding ng-scope" data-component="crn-datasource" id="crn-datasource-620472">
+      <datasource name="Paciente" entity="api/cronapi/query/1hbahvmrt3uci/" keys="id" rows-per-page="100" on-before-create="" on-after-create="" on-before-update="" on-after-update="" on-before-delete="" on-after-delete="" on-after-fill=""></datasource>
+    </div>
+    <ion-item class="item dark component-holder" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-129743">
+      <h2 xattr-position="text-left" class="component-holder text-left" data-component="crn-label" id="crn-label-650369">Nome :</h2>
+      <label class="item item-input component-holder" data-component="crn-input" id="crn-input-426309"><input id="textinput-id" type="text" placeholder="" ng-model="Paciente.active.nome" mask=""></label>
+    </ion-item>
+    <ion-item class="item dark component-holder" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-129743">
+      <h2 xattr-position="text-left" class="component-holder text-left" data-component="crn-label" id="crn-label-650369">CPF :</h2>
+      <label class="item item-input component-holder" data-component="crn-input" id="crn-input-426309"><input id="textinput-id" type="text" placeholder="" ng-model="Paciente.active.cpf" mask="999.999.999-99;0"></label>
+    </ion-item>
+    <ion-item class="item dark component-holder" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-129743">
+      <h2 xattr-position="text-left" class="component-holder text-left" data-component="crn-label" id="crn-label-650369">Data de Nascimento :</h2>
+      <label class="item item-input component-holder" data-component="crn-input" id="crn-input-426309"><input id="textinput-id" type="text" placeholder="" ng-model="Paciente.active.dataNascimento | date:'dd/MM/yyyy'" mask=""></label>
+    </ion-item>
+    <ion-item class="item dark component-holder" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-541853">
+      <h2 xattr-position="text-left" class="component-holder text-left" data-component="crn-label" id="crn-label-1013354">Sexo :</h2>
+      <label class="item item-input item-select component-holder" data-component="crn-select" id="crn-select-399444">
+        <div class="input-label">
+          Selecione
+        </div><select ng-model="Paciente.active.sexo"><option>Masculino</option><option selected="">Feminino</option></select></label>
+    </ion-item>
+    <ion-item class="item dark component-holder" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-774885">
+      <h2 xattr-position="text-left" class="component-holder text-left col-xs-12" data-component="crn-label" id="crn-label-739629">CEP :</h2><label class="item item-input component-holder col-xs-7" data-component="crn-input" id="crn-input-927964"><input id="textinput-id" type="text" placeholder="" ng-model="Paciente.active.cep" mask="99999-999;0"></label><button class="button component-holder col-xs-5 button-positive" type="submit" ng-click="cronapi.util.makeCallServerBlocklyAsync('blockly.CepPaciente:buscarCepPaciente', null, null)" data-component="crn-button" id="crn-button-771647" xattr-fullsize="" xattr-type="" xattr-size="" xattr-theme="button-positive"><i class="ion ion-android-search"></i> <span>Buscar Cep</span></button>
+      
+    </ion-item>
+    <ion-item class="item dark component-holder" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-129743">
+      <h2 xattr-position="text-left" class="component-holder text-left" data-component="crn-label" id="crn-label-650369">Endereço :</h2>
+      <label class="item item-input component-holder" data-component="crn-input" id="crn-input-426309"><input id="textinput-id" type="text" placeholder="" ng-model="Paciente.active.endereco" mask="" ng-readonly="true"></label>
+    </ion-item>
+    <ion-item class="item dark component-holder" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-129743">
+      <h2 xattr-position="text-left" class="component-holder text-left" data-component="crn-label" id="crn-label-650369">Bairro :</h2>
+      <label class="item item-input component-holder" data-component="crn-input" id="crn-input-426309"><input id="textinput-id" type="text" placeholder="" ng-model="Paciente.active.bairro" mask="" ng-readonly="true"></label>
+    </ion-item>
+    <ion-item class="item dark component-holder" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-129743">
+      <h2 xattr-position="text-left" class="component-holder text-left" data-component="crn-label" id="crn-label-650369">Complemento :</h2>
+      <label class="item item-input component-holder" data-component="crn-input" id="crn-input-426309"><input id="textinput-id" type="text" placeholder="" ng-model="Paciente.active.complemento" mask=""></label>
+    </ion-item>
+    <ion-item class="item dark component-holder" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-129743">
+      <h2 xattr-position="text-left" class="component-holder text-left" data-component="crn-label" id="crn-label-650369">Número :</h2>
+      <label class="item item-input component-holder" data-component="crn-input" id="crn-input-426309"><input id="textinput-id" type="text" placeholder="" ng-model="Paciente.active.numero" mask=""></label>
+    </ion-item>
+    <ion-item class="item dark component-holder" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-129743">
+      <h2 xattr-position="text-left" class="component-holder text-left" data-component="crn-label" id="crn-label-650369">Cidade :</h2>
+      <label class="item item-input component-holder" data-component="crn-input" id="crn-input-426309"><input id="textinput-id" type="text" placeholder="" ng-model="Paciente.active.cidade" mask="" ng-readonly="true"></label>
+    </ion-item>
+    <ion-item class="item dark component-holder" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-129743">
+      <h2 xattr-position="text-left" class="component-holder text-left" data-component="crn-label" id="crn-label-650369">Estado :</h2>
+      <label class="item item-input component-holder" data-component="crn-input" id="crn-input-426309"><input id="textinput-id" type="text" placeholder="" ng-model="Paciente.active.estado" mask="" ng-readonly="true"></label>
+    </ion-item>
+    <ion-item class="item dark component-holder" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-129743">
+      <h2 xattr-position="text-left" class="component-holder text-left" data-component="crn-label" id="crn-label-650369">Telefone Principal :</h2>
+      <label class="item item-input component-holder" data-component="crn-input" id="crn-input-426309"><input id="textinput-id" type="text" placeholder="" ng-model="Paciente.active.telefone1" mask="(99) 99999-9999;0"></label>
+    </ion-item>
+    <ion-item class="item dark component-holder" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-129743">
+      <h2 xattr-position="text-left" class="component-holder text-left" data-component="crn-label" id="crn-label-650369">Telefone Opcional :</h2>
+      <label class="item item-input component-holder" data-component="crn-input" id="crn-input-426309"><input id="textinput-id" type="text" placeholder="" ng-model="Paciente.active.telefone2" mask="(99) 99999-9999;0"></label>
+    </ion-item><ion-item class="item dark component-holder" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-638171"><button class="button component-holder button-block button-balanced" type="submit" ng-click="cronapi.util.makeCallServerBlocklyAsync('blockly.PacienteEntidadeMobile:atualizar', null, null)" data-component="crn-button" id="crn-button-322870" xattr-fullsize="button-block" xattr-type="" xattr-size="" xattr-theme="button-balanced"><i class="ion ion-android-done-all"></i> <span>Salvar</span></button></ion-item>
+  </ion-content> 
+</ion-view>

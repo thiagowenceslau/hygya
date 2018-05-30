@@ -5393,5 +5393,162 @@
 			"foreignKey": null
 		},
 		"serviceUrl": "api/cronapi/query/1jyljnm21irsl/"
+	},
+	"1hbahvmrt3uci": {
+		"customId": "dsDadosPaciente",
+		"queryName": "DadosPaciente",
+		"screen": "src/main/mobileapp/www/views/logged/dadospaciente.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Paciente",
+		"entityFullName": "app.entity.Paciente",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "Paciente",
+					"namespace": "app.entity.Paciente",
+					"alias": "p"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "p",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "p.user.id",
+						"field": "p.user.id",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":userId",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "userId",
+				"fieldValue": {
+					"blocklyClass": "blockly.UsuarioEntidade",
+					"blocklyMethod": "retornarIdUsuarioLogado",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.UsuarioEntidade",
+						"classNameNew": "UsuarioEntidade",
+						"classNameOld": "UsuarioEntidade",
+						"sourcePath": "src/main/java/blockly/UsuarioEntidade.blockly",
+						"language": "java",
+						"class": "blockly.UsuarioEntidade",
+						"methods": [
+							{
+								"name": "retornarIdUsuarioLogado",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "obterLogin",
+								"hasReturn": "true",
+								"params": []
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.UsuarioEntidade:retornarIdUsuarioLogado', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"nome": null,
+			"cpf": null,
+			"dataNascimento": null,
+			"telefone1": null,
+			"telefone2": null,
+			"endereco": null,
+			"bairro": null,
+			"numero": null,
+			"complemento": null,
+			"cidade": null,
+			"estado": null,
+			"cep": null,
+			"ativo": null,
+			"bloqueado": null,
+			"dataInclusao": null,
+			"dataAtivacao": null,
+			"user": null,
+			"sexo": null,
+			"cancelado": null,
+			"agenteAutorizador": null
+		},
+		"security": {
+			"id": null,
+			"nome": null,
+			"cpf": null,
+			"dataNascimento": null,
+			"telefone1": null,
+			"telefone2": null,
+			"endereco": null,
+			"bairro": null,
+			"numero": null,
+			"complemento": null,
+			"cidade": null,
+			"estado": null,
+			"cep": null,
+			"ativo": null,
+			"bloqueado": null,
+			"dataInclusao": null,
+			"dataAtivacao": null,
+			"user": null,
+			"sexo": null,
+			"cancelado": null,
+			"agenteAutorizador": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/1hbahvmrt3uci/"
 	}
 }

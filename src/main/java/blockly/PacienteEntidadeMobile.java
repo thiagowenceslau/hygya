@@ -75,7 +75,6 @@ public class PacienteEntidadeMobile {
 								Var.valueOf("id", idPaciente));
 				cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.notify"), Var.valueOf("success"),
 						Var.valueOf("Cadastro atualizado com sucesso!"));
-				System.out.println(idPaciente.getObjectAsString());
 				return Var.VAR_NULL;
 			}
 		}.call();
