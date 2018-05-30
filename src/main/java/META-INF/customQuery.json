@@ -5550,5 +5550,131 @@
 			"foreignKey": null
 		},
 		"serviceUrl": "api/cronapi/query/1hbahvmrt3uci/"
+	},
+	"qe9cgq0o55yd": {
+		"customId": "dsExamePaciente",
+		"queryName": "ExamePaciente",
+		"screen": "src/main/mobileapp/www/views/logged/examespaciente.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Resultado",
+		"entityFullName": "app.entity.Resultado",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "Resultado",
+					"namespace": "app.entity.Resultado",
+					"alias": "r"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "r",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "r.id",
+						"field": "r.id",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":id",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "id",
+				"fieldValue": "{{resultadoId}}"
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"cpfPaciente": null,
+			"estabelecimentoDeSaude": null,
+			"dataImportacao": null,
+			"nomeExame": null,
+			"dataEmissao": null,
+			"horaEmissao": null,
+			"materialExame": null,
+			"nota": null,
+			"nomePaciente": null,
+			"dataNascimento": null,
+			"valorReferencia": null,
+			"valorResultado": null,
+			"metodo": null,
+			"comentario": null,
+			"conclusao": null,
+			"metodoExame": null,
+			"medico": null
+		},
+		"security": {
+			"id": null,
+			"cpfPaciente": null,
+			"estabelecimentoDeSaude": null,
+			"dataImportacao": null,
+			"nomeExame": null,
+			"dataEmissao": null,
+			"horaEmissao": null,
+			"materialExame": null,
+			"nota": null,
+			"nomePaciente": null,
+			"dataNascimento": null,
+			"valorReferencia": null,
+			"valorResultado": null,
+			"metodo": null,
+			"comentario": null,
+			"conclusao": null,
+			"metodoExame": null,
+			"medico": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/qe9cgq0o55yd/{{resultadoId}}/"
 	}
 }
