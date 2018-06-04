@@ -57,6 +57,29 @@ public class AcessoExames {
 
 	/**
 	 *
+	 * @param idResultado
+	 */
+	// Descreva esta função...
+	public static void baixarPaciente(Var idResultado) throws Exception {
+		new Callable<Var>() {
+
+			private Var resultado = Var.VAR_NULL;
+			private Var relatorio = Var.VAR_NULL;
+
+			public Var call() throws Exception {
+				resultado = Var.valueOf(cronapi.io.Operations.fileAppReclycleDir().toString()
+						+ cronapi.io.Operations.fileSeparator().toString()
+						+ cronapi.util.Operations.generateUUID().toString() + Var.valueOf(".pdf").toString());
+				relatorio = cronapi.report.Operations.generateReport(Var.valueOf("reports/ResultadoPaciente.jrxml"),
+						resultado, cronapi.list.Operations.newList(Var.valueOf("IDRESULTADO", idResultado)));
+				cronapi.io.Operations.fileDownload(relatorio);
+				return Var.VAR_NULL;
+			}
+		}.call();
+	}
+
+	/**
+	 *
 	 * @return Var
 	 */
 	// Descreva esta função...
@@ -104,6 +127,7 @@ public class AcessoExames {
 
 			private Var resultado = Var.VAR_NULL;
 			private Var relatorio = Var.VAR_NULL;
+			private Var idResultado = Var.VAR_NULL;
 
 			public Var call() throws Exception {
 				return Var.valueOf("Aguardando");
@@ -118,6 +142,10 @@ public class AcessoExames {
 	// Descreva esta função...
 	public static Var retornarAutorizado() throws Exception {
 		return new Callable<Var>() {
+
+			private Var resultado = Var.VAR_NULL;
+			private Var relatorio = Var.VAR_NULL;
+			private Var idResultado = Var.VAR_NULL;
 
 			public Var call() throws Exception {
 				return Var.valueOf("Autorizado");

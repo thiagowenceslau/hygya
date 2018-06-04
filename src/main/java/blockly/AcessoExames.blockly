@@ -1,5 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly formTarget="" resourceType="JAVA" ruleDescription="AcessoExames" ruleName="AcessoExames" ruleSynchronous="false" ruleTimeout="" ruleType="I">
-  <metadata scale="1" scrollx="368.00000000000074" scrolly="6.9999999999998295" target="RzDA7e~b]|F4N7KYJqDT"/>
+  <metadata scale="1" scrollx="327.3922413793114" scrolly="9.999999999999858" target="8FN8#e,5t%Y7s6Ao$6~X"/>
+  <block colour="#995ba5" id="8FN8#e,5t%Y7s6Ao$6~X" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-112" y="53">
+    <mutation>
+      <arg name="idResultado"/>
+    </mutation>
+    <field name="NAME">baixarPaciente</field>
+    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <statement name="STACK">
+      <block colour="#a55b80" dependencyby="8FN8#e,5t%Y7s6Ao$6~X" id="SiLg}wJ$Q(2!Wzx9:Hg," origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+        <field name="VAR">resultado</field>
+        <value name="VALUE">
+          <block colour="#5ba58c" dependencyby="8FN8#e,5t%Y7s6Ao$6~X" id="h)Bp:x[D82?5r,3@x,bf" origintype="text_join" output="true" tooltip="Criar um pedaço de texto juntando qualquer número de itens." type="text_join">
+            <mutation items="4"/>
+            <value name="ADD0">
+              <block colour="#723333" dependencyby="8FN8#e,5t%Y7s6Ao$6~X" id="2Ds2p^?*;q4bAE)2h.]H" multilayer="false" namespace="cronapi.io.Operations.fileAppReclycleDir" origintype="procedures_callreturn" output="true" returntype="ObjectType.STRING" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EPasta%20recicl%C3%A1vel%20da%20aplica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20retornar%20o%20caminho%20da%20pasta%20recicl%C3%A1vel%20da%20aplica%C3%A7%C3%A3o.%20Essa%20pasta%20tem%20seus%20arquivos%20apagados%20a%20cada%2010%20minutos.%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Texto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.io.Operations.fileAppReclycleDir%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.io.Operations.fileAppReclycleDir%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                <mutation name="{{cronapi.io.Operations.fileAppReclycleDir}}" return-raw-type="cronapi.Var"/>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block colour="#723333" dependencyby="8FN8#e,5t%Y7s6Ao$6~X" id="MjaXSzO*[3%A#pk==6LB" multilayer="false" namespace="cronapi.io.Operations.fileSeparator" origintype="procedures_callreturn" output="true" returntype="ObjectType.STRING" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3ESeparador%20de%20arquivos%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20retorna%20um%20separador%20de%20arquivos%20conforme%20o%20Sistema%20Operacional.%20Exemplo:'/'%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Texto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.io.Operations.fileSeparator%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.io.Operations.fileSeparator%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                <mutation name="{{cronapi.io.Operations.fileSeparator}}" return-raw-type="cronapi.Var"/>
+              </block>
+            </value>
+            <value name="ADD2">
+              <block colour="#487f7f" dependencyby="8FN8#e,5t%Y7s6Ao$6~X" id="}a@@*|E3PlNVX@vPh%xp" multilayer="false" namespace="cronapi.util.Operations.generateUUID" origintype="procedures_callreturn" output="true" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3ECria%20identificador%20universal%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20cria%20um%20identificador%20universal%20(UUID)%20e%20retorna%20como%20texto%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Sem%20retorno%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.util.Operations.generateUUID%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.util.Operations.generateUUID%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                <mutation name="{{cronapi.util.Operations.generateUUID}}" return-raw-type="cronapi.Var"/>
+              </block>
+            </value>
+            <value name="ADD3">
+              <block colour="#5ba593" dependencyby="8FN8#e,5t%Y7s6Ao$6~X" id="tCs36g.UW1~}8g|5%v|)" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field name="TEXT">.pdf</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block colour="#a55b80" dependencyby="8FN8#e,5t%Y7s6Ao$6~X" id="x+q)_BcNHHHek*I`+dkk" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+            <field name="VAR">relatorio</field>
+            <value name="VALUE">
+              <block colour="#487f7f" dependencyby="8FN8#e,5t%Y7s6Ao$6~X" id="9CW|^Px/v*`f*UAfx/$V" multilayer="false" namespace="cronapi.report.Operations.generateReport" origintype="procedures_generatereport_callreturn" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EGerar%20Relat%C3%B3rio%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20gerar%20arquivo%20do%20relat%C3%B3rio%20na%20pasta%20desejada.%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Relat%C3%B3rio%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Caminho%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.report.Operations.generateReport%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.report.Operations.generateReport%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_generatereport_callreturn">
+                <mutation name="{{cronapi.report.Operations.generateReport}}" return-raw-type="cronapi.Var">
+                  <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Relatório"/>
+                  <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Caminho"/>
+                  <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="IDRESULTADO"/>
+                </mutation>
+                <value name="ARG0">
+                  <block colour="#487f7f" dependencyby="8FN8#e,5t%Y7s6Ao$6~X" id="m5R/dc%@vn;cm5q:%u,w" origintype="util_report_list" output="true" type="util_report_list">
+                    <mutation>
+                      <arg name="reports/Resultado.jrxml" value="reports/Resultado.jrxml"/>
+                      <arg name="reports/ResultadoPaciente.jrxml" value="reports/ResultadoPaciente.jrxml"/>
+                    </mutation>
+                    <field name="SELECT">reports/ResultadoPaciente.jrxml</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <shadow colour="#5ba593" dependencyby="RzDA7e~b]|F4N7KYJqDT" id="j|$~5q_e{=Q4.BlEMmgi" origintype="text" output="true" tooltip="function () { [native code] }" type="text" xmlns="">
+                    <field name="TEXT"/>
+                  </shadow>
+                  <block colour="#a55b80" dependencyby="8FN8#e,5t%Y7s6Ao$6~X" id="SvUK]OPJ5AX~A*qLx+br" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                    <field name="VAR">resultado</field>
+                  </block>
+                </value>
+                <value name="ARG2">
+                  <block colour="#a55b80" dependencyby="8FN8#e,5t%Y7s6Ao$6~X" id="li7]Lw$Y*U7!fE~V$C*B" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                    <field name="VAR">idResultado</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block colour="#723333" dependencyby="8FN8#e,5t%Y7s6Ao$6~X" id="y^#^Gma=tUL(ohuurjlP" multilayer="false" namespace="cronapi.io.Operations.fileDownload" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EIniciar%20download%20de%20arquivo%20f%C3%ADsico%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20abre%20o%20processo%20de%20download%20do%20arquivo%20do%20par%C3%A2metro%20para%20o%20usu%C3%A1rio%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Arquivo%20:%20Objeto%3C/span%3E%3Cdiv%3E%20Arquivo%20que%20ser%C3%A1%20feito%20o%20download%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.io.Operations.fileDownload%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.io.Operations.fileDownload%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+                <mutation name="{{cronapi.io.Operations.fileDownload}}" return-raw-type="void">
+                  <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.OBJECT" name="Arquivo"/>
+                </mutation>
+                <value name="ARG0">
+                  <block colour="#a55b80" dependencyby="8FN8#e,5t%Y7s6Ao$6~X" id="H4Z~ShFz+(9B(o@EWs3j" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                    <field name="VAR">relatorio</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
   <block colour="#995ba5" id="Zrc0scj;@5`r6_c##~a," origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-172" y="68">
     <field name="NAME">retornarAutorizado</field>
     <comment h="80" pinned="false" w="160">Descreva esta função...</comment>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly formTarget="src/main/mobileapp/www/views/logged/meusexames.view.html" resourceType="JS" ruleDescription="ModalMeusExames" ruleName="ModalMeusExames" ruleSynchronous="false" ruleTimeout="300" ruleType="I">
-  <metadata scale="1" scrollx="357.9999999999999" scrolly="7.000000000000341" target="|{PySH:d,f*zer=8C?MU"/>
+  <metadata scale="1" scrollx="357.9999999999999" scrolly="7.000000000000284" target="|{PySH:d,f*zer=8C?MU"/>
   <block colour="#995ba5" id="6BfViHo3d@=B!TIwMK0*" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-82" y="98">
     <field name="NAME">fechar</field>
     <comment h="80" pinned="false" w="160">Descreva esta função...</comment>

@@ -16,83 +16,106 @@
         <ion-item ng-repeat="rowData in datasource.data" class="item"> 
           <div class="row"> 
             <div class="col genClass9310">
-              Exame: {{rowData.resultado.nomeExame}}
+               Exame: {{rowData.resultado.nomeExame}} 
               <br> Data: {{rowData.resultado.dataEmissao | date:'dd/MM/yyyy'}} 
-            </div><button class="button component-holder button-positive" type="submit" ng-click="blockly.js.blockly.ModalResultado.abrir()" data-component="crn-button" id="crn-button-952397" xattr-theme="button-positive" ng-paste=""><i class="ion ion-android-search"></i> <span></span></button> 
+            </div>
+            <button class="button component-holder button-positive" type="submit" ng-click="blockly.js.blockly.ModalResultado.abrir()" data-component="crn-button" id="crn-button-952397" xattr-theme="button-positive" ng-paste=""><i class="ion ion-android-search"></i> <span></span></button> 
           </div> 
         </ion-item> 
       </ion-list> 
     </div> 
   </ion-content> 
 </ion-view> 
-
-
-<!-- modal begin -->
-<div class="modal fade genClass8370" id="modalTeste">
- <div class="modal-dialog">
-     <ion-scroll zooming="false" direction="y" style="width:auto;height:500px">
-   <div class="modal-content">
-     <div class="component-holder modal-header">
-       <div class="list-group list-group-sm col">
-         <div data-container="true" data-replace="true">
-            <h1 xattr-position="text-center" class="text-center" data-component="crn-label" id="crn-label-691025">Resultado</h1>
-             
-         </div>
-       </div>
-      </div>
-      <div class="modal-body">
-       <div class="list-group list-group-sm col">
-         <div data-container="true" data-replace="true">
-              <ion-item class="item dark component-holder col-xs-12" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-396803">
-  <h4 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-794171">Nome: {{ExameAutorizado.active.resultado.nomePaciente}}</h4>
-  <h4 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-691025">Médico: {{ExameAutorizado.active.resultado.medico}}</h4>
-  <h4 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-451145">Data: {{ExameAutorizado.active.resultado.dataEmissao | date:'dd/MM/yyyy'}}</h4>
-  </ion-item>
-             
-             <h2 xattr-position="text-center" class="text-center component-holder" data-component="crn-label" id="crn-label-883918">{{ExameAutorizado.active.resultado.nomeExame}}</h2>
-          
-  <ion-item class="item dark component-holder col-xs-12" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-396803">
-  <h3 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-794171">Método:</h3>
-  <h4 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-691025">{{ExameAutorizado.active.resultado.metodoExame}}</h4>
-  </ion-item>
-  <ion-item class="item dark component-holder col-xs-12" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-396803">
-  <h3 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-794171">Análise:</h3>
-  <h4 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-691025">{{ExameAutorizado.active.resultado.materialExame}}</h4>
-  </ion-item>
-  <ion-item class="item dark component-holder col-xs-12" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-396803">
-  <h3 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-794171">Comentários:</h3>
-  <h4 xattr-position="text-left" class="text-left" data-component="crn-label" id="quebra">{{ExameAutorizado.active.resultado.comentario}}</h4>
-  </ion-item>
-  <ion-item class="item dark component-holder col-xs-6" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-396803">
-  <h5 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-794171">Laudado por:</h5>
-  <h5 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-691025">{{ExameAutorizado.active.resultado.medico}}</h5>
-  </ion-item>
-  <ion-item class="item dark component-holder  col-xs-6" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-396803">
-  <h5 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-794171">Assinado por:</h5>
-  <h5 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-691025">{{ExameAutorizado.active.resultado.medico}}</h5>
-  </ion-item>
-  <div class="component-holder ng-binding ng-scope col-xs-12" data-component="crn-button-bar" id="crn-button-bar-493403">
-  <div class="button-bar">
-  <button class="component-holder button button-block button-assertive" data-component="crn-button" type="submit" ng-click="blockly.js.blockly.ModalResultado.fechar()" xattr-size="" xattr-type="" xattr-theme="button-assertive" xattr-fullsize="button-block">
-  <i class="icon icon-left ion ion-close"></i>
-  <span></span></button>
-  <button class="component-holder button button-block button-positive" data-component="crn-button" type="submit" ng-click="cronapi.util.makeCallServerBlocklyAsync('blockly.AcessoExames:baixarRelatorio', null, null)" xattr-size="" xattr-type="" xattr-theme="button-positive" xattr-fullsize="button-block"><i class="icon icon-left ion ion-android-download"></i><span></span></button> </div></div>
-            
-         </div>
-       </div>
-     </div>
-     <div class="modal-footer">
-       <div class="list-group list-group-sm row">
-       
-       </div>
-     </div>
-   </div>
-   
-   </ion-scroll>
- </div>
-</div>
-
-
+<!-- modal begin --> 
+<div class="modal fade genClass8370" id="modalTeste"> 
+  <div class="modal-dialog"> 
+    <ion-scroll zooming="false" direction="y" style="width:auto;height:500px"> 
+      <div class="modal-content"> 
+        <div class="component-holder modal-header"> 
+          <div class="list-group list-group-sm col"> 
+            <div data-container="true" data-replace="true"> 
+              <h1 xattr-position="text-center" class="text-center" data-component="crn-label" id="crn-label-691025">Resultado</h1> 
+            </div> 
+          </div> 
+        </div> 
+        <div class="modal-body"> 
+          <div class="list-group list-group-sm col"> 
+            <div data-container="true" data-replace="true"> 
+              <ion-item class="item dark component-holder col-xs-12" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-396803"> 
+                <h4 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-794171">Nome: {{ExameAutorizado.active.resultado.nomePaciente}}</h4> 
+                <h4 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-691025">Médico: {{ExameAutorizado.active.resultado.medico}}</h4> 
+                <h4 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-451145">Data: {{ExameAutorizado.active.resultado.dataEmissao | date:'dd/MM/yyyy'}}</h4> 
+              </ion-item> 
+              <h2 xattr-position="text-center" class="text-center component-holder" data-component="crn-label" id="crn-label-883918">{{ExameAutorizado.active.resultado.nomeExame}}</h2> 
+              <ion-item class="item dark component-holder col-xs-12" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-396803"> 
+                <h3 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-794171">Material:</h3> 
+                <div class="component-holder ng-binding ng-scope" data-component="crn-textarea" id="crn-textarea-165536"> 
+                  <div class=""> 
+                    <textarea id="textArea1225" ng-model="ExameAutorizado.active.resultado.materialExame" readonly cols="35" maxlength="300" style="resize:none;font-size:12px;" resize="none" rows="2" placeholder="" wrap="soft"> </textarea> 
+                  </div> 
+                </div> 
+                <h3 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-451145">Método:</h3> 
+                <div class="component-holder ng-binding ng-scope" data-component="crn-textarea" id="crn-textarea-165536"> 
+                  <div class=""> 
+                    <textarea id="textArea1225" ng-model="ExameAutorizado.active.resultado.metodo" readonly cols="35" maxlength="300" style="resize:none;font-size:12px;" resize="none" rows="2" placeholder="" wrap="soft"> </textarea> 
+                  </div> 
+                </div> 
+                <h3 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-451145">Valor de Referência:</h3> 
+                <div class="component-holder ng-binding ng-scope" data-component="crn-textarea" id="crn-textarea-165536"> 
+                  <div class=""> 
+                    <textarea id="textArea1225" ng-model="ExameAutorizado.active.resultado.valorReferencia" readonly cols="35" maxlength="300" style="resize:none;font-size:12px;" resize="none" rows="4" placeholder="" wrap="soft"> </textarea> 
+                  </div> 
+                </div> 
+                <h3 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-451145">Valor Encontrado:</h3> 
+                <div class="component-holder ng-binding ng-scope" data-component="crn-textarea" id="crn-textarea-165536"> 
+                  <div class=""> 
+                    <textarea id="textArea1225" ng-model="ExameAutorizado.active.resultado.valorResultado" readonly cols="35" maxlength="300" style="resize:none;font-size:12px;" resize="none" rows="2" placeholder="" wrap="soft"> </textarea> 
+                  </div> 
+                </div> 
+                <h3 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-451145">Comentário:</h3> 
+                <div class="component-holder ng-binding ng-scope" data-component="crn-textarea" id="crn-textarea-165536"> 
+                  <div class=""> 
+                    <textarea id="textArea1225" ng-model="ExameAutorizado.active.resultado.comentario" readonly cols="35" maxlength="300" style="resize:none;font-size:12px;" resize="none" rows="2" placeholder="" wrap="soft"> </textarea> 
+                  </div> 
+                </div> 
+                <h3 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-451145">Nota:</h3> 
+                <div class="component-holder ng-binding ng-scope" data-component="crn-textarea" id="crn-textarea-165536"> 
+                  <div class=""> 
+                    <textarea id="textArea1225" ng-model="ExameAutorizado.active.resultado.nota" readonly cols="35" maxlength="300" style="resize:none;font-size:12px;" resize="none" rows="9" placeholder="" wrap="soft"> </textarea> 
+                  </div> 
+                </div> 
+                <h3 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-451145">Conclusão:</h3> 
+                <div class="component-holder ng-binding ng-scope" data-component="crn-textarea" id="crn-textarea-165536"> 
+                  <div class=""> 
+                    <textarea id="textArea1225" ng-model="ExameAutorizado.active.resultado.conclusao" readonly cols="35" maxlength="300" style="resize:none;font-size:12px;" resize="none" rows="2" placeholder="" wrap="soft"> </textarea> 
+                  </div> 
+                </div> 
+              </ion-item> 
+              <ion-item class="item dark component-holder col-xs-6" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-396803"> 
+                <h5 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-794171">Laudado por:</h5> 
+                <h5 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-691025">{{ExameAutorizado.active.resultado.medico}}</h5> 
+              </ion-item> 
+              <ion-item class="item dark component-holder  col-xs-6" xattr-theme="dark" data-replace="false" data-component="crn-list-item" id="crn-list-item-396803"> 
+                <h5 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-794171">Assinado por:</h5> 
+                <h5 xattr-position="text-left" class="text-left" data-component="crn-label" id="crn-label-691025">{{ExameAutorizado.active.resultado.medico}}</h5> 
+              </ion-item> 
+              <div class="component-holder ng-binding ng-scope col-xs-12" data-component="crn-button-bar" id="crn-button-bar-493403"> 
+                <div class="button-bar"> 
+                  <button class="component-holder button button-block button-assertive" data-component="crn-button" type="submit" ng-click="blockly.js.blockly.ModalResultado.fechar()" xattr-size="" xattr-type="" xattr-theme="button-assertive" xattr-fullsize="button-block"> <i class="icon icon-left ion ion-close"></i> <span></span></button> 
+                  <button class="component-holder button button-block button-positive" data-component="crn-button" type="submit" ng-click="cronapi.util.makeCallServerBlocklyAsync('blockly.AcessoExames:baixarRelatorio', null, null)" xattr-size="" xattr-type="" xattr-theme="button-positive" xattr-fullsize="button-block"><i class="icon icon-left ion ion-android-download"></i><span></span></button> 
+                </div>
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+        <div class="modal-footer"> 
+          <div class="list-group list-group-sm row"> 
+          </div> 
+        </div> 
+      </div> 
+    </ion-scroll> 
+  </div> 
+</div> 
 <script type="text/ng-template" id="modal32812"><ion-modal-view>
    <ion-header-bar>
      <div class="component-holder ng-binding ng-scope" data-component="crn-textarea" id="crn-textarea-165536"><div class=""><textarea id="textArea1225" ng-model="vars.textarea1225" maxlength="300" style="resize:none;" resize="none" class="col item item-input" rows="5" placeholder="Textarea component"></textarea></div></div><h1 class="title">Resultado</h1>

@@ -8,8 +8,6 @@ window.blockly.js.blockly.ModalMeusExames = window.blockly.js.blockly.ModalMeusE
  * Descreva esta função...
  */
 window.blockly.js.blockly.ModalMeusExames.fechar = function() {
-
-	var item, idResultado, x;
 	this.cronapi.screen.hideModal("modalExame");
 }
 
@@ -17,7 +15,5 @@ window.blockly.js.blockly.ModalMeusExames.fechar = function() {
  * Descreva esta função...
  */
 window.blockly.js.blockly.ModalMeusExames.exibir = function() {
-
-	var item, idResultado, x;
 	this.cronapi.screen.showModal("modalExame");
 }

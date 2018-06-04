@@ -2,7 +2,10 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Resultado" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="4a58a2aa-83fc-4c9f-9c2b-0b36db242826">
 	<property name="zoom.factor" value="50.0"/>
 	<property name="DATASOURCE" value="jdbc/main"/>
-	<property name="REPORT_DATASET" value="[{&quot;name&quot;:&quot;RESULTADOEXAME&quot;,&quot;j4CDataset&quot;:{&quot;datasetType&quot;:&quot;DATASOURCE&quot;,&quot;freeQuery&quot;:false,&quot;jndiConnection&quot;:&quot;jdbc/main&quot;,&quot;recordLimit&quot;:10,&quot;tables&quot;:[{&quot;name&quot;:&quot;EXAMEAUTORIZADO&quot;}],&quot;joins&quot;:[{&quot;right&quot;:{&quot;parent&quot;:{&quot;name&quot;:&quot;EXAMEAUTORIZADO&quot;},&quot;name&quot;:&quot;fk_resultado&quot;},&quot;operator&quot;:&quot;EQUALS&quot;,&quot;left&quot;:{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;id&quot;}},{&quot;right&quot;:{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;fk_estabelecimentoDeSaude&quot;},&quot;operator&quot;:&quot;EQUALS&quot;,&quot;left&quot;:{&quot;parent&quot;:{&quot;name&quot;:&quot;ESTABELECIMENTODESAUDE&quot;},&quot;name&quot;:&quot;id&quot;}}],&quot;columns&quot;:[{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;valorResultado&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;valorReferencia&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;nota&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;nomePaciente&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;exame&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;metodo&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;medico&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;materialExame&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;dataNascimento&quot;,&quot;type&quot;:&quot;DATE&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;dataEmissao&quot;,&quot;type&quot;:&quot;DATE&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;conclusao&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;comentario&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;ESTABELECIMENTODESAUDE&quot;},&quot;name&quot;:&quot;Nome&quot;,&quot;type&quot;:&quot;VARCHAR&quot;}],&quot;wheres&quot;:[],&quot;persistenceUnitName&quot;:&quot;app&quot;},&quot;main&quot;:true}]"/>
+	<property name="REPORT_DATASET" value="[{&quot;name&quot;:&quot;RESULTADOEXAME&quot;,&quot;j4CDataset&quot;:{&quot;datasetType&quot;:&quot;DATASOURCE&quot;,&quot;freeQuery&quot;:true,&quot;jndiConnection&quot;:&quot;jdbc/main&quot;,&quot;sql&quot;:&quot;SELECT\n    \&quot;RESULTADO\&quot;.valorResultado ,\n    \&quot;RESULTADO\&quot;.valorReferencia ,\n    \&quot;RESULTADO\&quot;.nota ,\n    \&quot;RESULTADO\&quot;.nomePaciente ,\n    \&quot;RESULTADO\&quot;.exame ,\n    \&quot;RESULTADO\&quot;.metodoExame ,\n    \&quot;RESULTADO\&quot;.metodo ,\n    \&quot;RESULTADO\&quot;.medico ,\n    \&quot;RESULTADO\&quot;.materialExame ,\n    \&quot;RESULTADO\&quot;.horaEmissao ,\n    \&quot;RESULTADO\&quot;.dataNascimento ,\n    \&quot;RESULTADO\&quot;.dataEmissao ,\n    \&quot;RESULTADO\&quot;.cpfPaciente ,\n    \&quot;RESULTADO\&quot;.conclusao ,\n    \&quot;RESULTADO\&quot;.comentario ,\n    \&quot;RESULTADO\&quot;.Categoria ,\n    \&quot;RESULTADO\&quot;.id ,\n    \&quot;ESTABELECIMENTODESAUDE\&quot;.Telefone2 ,\n    \&quot;ESTABELECIMENTODESAUDE\&quot;.Telefone1 ,\n    \&quot;ESTABELECIMENTODESAUDE\&quot;.RazaoSocial ,\n    \&quot;ESTABELECIMENTODESAUDE\&quot;.Numero ,\n    \&quot;ESTABELECIMENTODESAUDE\&quot;.Nome ,\n    \&quot;ESTABELECIMENTODESAUDE\&quot;.Estado ,\n    \&quot;ESTABELECIMENTODESAUDE\&quot;.Endereco ,\n    \&quot;ESTABELECIMENTODESAUDE\&quot;.Email ,\n    \&quot;ESTABELECIMENTODESAUDE\&quot;.DataInclusao ,\n    \&quot;ESTABELECIMENTODESAUDE\&quot;.ContatoResponsavel ,\n    \&quot;ESTABELECIMENTODESAUDE\&quot;.Complemento ,\n    \&quot;ESTABELECIMENTODESAUDE\&quot;.CNPJ ,\n    \&quot;ESTABELECIMENTODESAUDE\&quot;.CNES ,\n    \&quot;ESTABELECIMENTODESAUDE\&quot;.Cidade ,\n    \&quot;ESTABELECIMENTODESAUDE\&quot;.CEP ,\n    \&quot;ESTABELECIMENTODESAUDE\&quot;.Bloqueado ,\n    \&quot;ESTABELECIMENTODESAUDE\&quot;.Bairro ,\n    \&quot;ESTABELECIMENTODESAUDE\&quot;.Ativo ,\n    \&quot;ESTABELECIMENTODESAUDE\&quot;.id \nFROM\n    \&quot;RESULTADO\&quot; ,\n    \&quot;ESTABELECIMENTODESAUDE\&quot; \nWHERE\n    \&quot;ESTABELECIMENTODESAUDE\&quot;.id \u003d \&quot;RESULTADO\&quot;.fk_estabelecimentoDeSaude \n    AND \&quot;RESULTADO\&quot;.id \u003d $P!{IDRESULTADO}&quot;,&quot;recordLimit&quot;:10,&quot;tables&quot;:[{&quot;name&quot;:&quot;RESULTADO&quot;}],&quot;joins&quot;:[{&quot;right&quot;:{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;fk_estabelecimentoDeSaude&quot;},&quot;operator&quot;:&quot;EQUALS&quot;,&quot;left&quot;:{&quot;parent&quot;:{&quot;name&quot;:&quot;ESTABELECIMENTODESAUDE&quot;},&quot;name&quot;:&quot;id&quot;}}],&quot;columns&quot;:[{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;valorResultado&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;valorReferencia&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;nota&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;nomePaciente&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;exame&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;metodoExame&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;metodo&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;medico&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;materialExame&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;horaEmissao&quot;,&quot;type&quot;:&quot;TIME&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;dataNascimento&quot;,&quot;type&quot;:&quot;DATE&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;dataEmissao&quot;,&quot;type&quot;:&quot;DATE&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;cpfPaciente&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;conclusao&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;comentario&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;Categoria&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;RESULTADO&quot;},&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;ESTABELECIMENTODESAUDE&quot;},&quot;name&quot;:&quot;Telefone2&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;ESTABELECIMENTODESAUDE&quot;},&quot;name&quot;:&quot;Telefone1&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;ESTABELECIMENTODESAUDE&quot;},&quot;name&quot;:&quot;RazaoSocial&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;ESTABELECIMENTODESAUDE&quot;},&quot;name&quot;:&quot;Numero&quot;,&quot;type&quot;:&quot;INTEGER&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;ESTABELECIMENTODESAUDE&quot;},&quot;name&quot;:&quot;Nome&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;ESTABELECIMENTODESAUDE&quot;},&quot;name&quot;:&quot;Estado&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;ESTABELECIMENTODESAUDE&quot;},&quot;name&quot;:&quot;Endereco&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;ESTABELECIMENTODESAUDE&quot;},&quot;name&quot;:&quot;Email&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;ESTABELECIMENTODESAUDE&quot;},&quot;name&quot;:&quot;DataInclusao&quot;,&quot;type&quot;:&quot;DATE&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;ESTABELECIMENTODESAUDE&quot;},&quot;name&quot;:&quot;ContatoResponsavel&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;ESTABELECIMENTODESAUDE&quot;},&quot;name&quot;:&quot;Complemento&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;ESTABELECIMENTODESAUDE&quot;},&quot;name&quot;:&quot;CNPJ&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;ESTABELECIMENTODESAUDE&quot;},&quot;name&quot;:&quot;CNES&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;ESTABELECIMENTODESAUDE&quot;},&quot;name&quot;:&quot;Cidade&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;ESTABELECIMENTODESAUDE&quot;},&quot;name&quot;:&quot;CEP&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;ESTABELECIMENTODESAUDE&quot;},&quot;name&quot;:&quot;Bloqueado&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;ESTABELECIMENTODESAUDE&quot;},&quot;name&quot;:&quot;Bairro&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;ESTABELECIMENTODESAUDE&quot;},&quot;name&quot;:&quot;Ativo&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;ESTABELECIMENTODESAUDE&quot;},&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;VARCHAR&quot;}],&quot;wheres&quot;:[],&quot;persistenceUnitName&quot;:&quot;app&quot;},&quot;main&quot;:true}]"/>
+	<parameter name="IDRESULTADO" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
 	<queryString>
 		<![CDATA[SELECT
     "RESULTADO".valorResultado ,
@@ -10,65 +13,48 @@
     "RESULTADO".nota ,
     "RESULTADO".nomePaciente ,
     "RESULTADO".exame ,
+    "RESULTADO".metodoExame ,
     "RESULTADO".metodo ,
     "RESULTADO".medico ,
     "RESULTADO".materialExame ,
+    "RESULTADO".horaEmissao ,
     "RESULTADO".dataNascimento ,
     "RESULTADO".dataEmissao ,
+    "RESULTADO".cpfPaciente ,
     "RESULTADO".conclusao ,
     "RESULTADO".comentario ,
-    "ESTABELECIMENTODESAUDE".Nome 
+    "RESULTADO".Categoria ,
+    "RESULTADO".id ,
+    "ESTABELECIMENTODESAUDE".Telefone2 ,
+    "ESTABELECIMENTODESAUDE".Telefone1 ,
+    "ESTABELECIMENTODESAUDE".RazaoSocial ,
+    "ESTABELECIMENTODESAUDE".Numero ,
+    "ESTABELECIMENTODESAUDE".Nome ,
+    "ESTABELECIMENTODESAUDE".Estado ,
+    "ESTABELECIMENTODESAUDE".Endereco ,
+    "ESTABELECIMENTODESAUDE".Email ,
+    "ESTABELECIMENTODESAUDE".DataInclusao ,
+    "ESTABELECIMENTODESAUDE".ContatoResponsavel ,
+    "ESTABELECIMENTODESAUDE".Complemento ,
+    "ESTABELECIMENTODESAUDE".CNPJ ,
+    "ESTABELECIMENTODESAUDE".CNES ,
+    "ESTABELECIMENTODESAUDE".Cidade ,
+    "ESTABELECIMENTODESAUDE".CEP ,
+    "ESTABELECIMENTODESAUDE".Bloqueado ,
+    "ESTABELECIMENTODESAUDE".Bairro ,
+    "ESTABELECIMENTODESAUDE".Ativo ,
+    "ESTABELECIMENTODESAUDE".id 
 FROM
     "RESULTADO" ,
-    "ESTABELECIMENTODESAUDE" ,
-    "EXAMEAUTORIZADO" 
+    "ESTABELECIMENTODESAUDE" 
 WHERE
-    "RESULTADO".id = "EXAMEAUTORIZADO".fk_resultado AND
-    "ESTABELECIMENTODESAUDE".id = "RESULTADO".fk_estabelecimentoDeSaude ]]>
+    "ESTABELECIMENTODESAUDE".id = "RESULTADO".fk_estabelecimentoDeSaude 
+    AND "RESULTADO".id = $P!{IDRESULTADO}]]>
 	</queryString>
-	<field name="exame" class="java.lang.String">
-		<fieldDescription><![CDATA[exame]]></fieldDescription>
-	</field>
-	<field name="valorResultado" class="java.lang.String">
-		<fieldDescription><![CDATA[valorResultado]]></fieldDescription>
-	</field>
-	<field name="conclusao" class="java.lang.String">
-		<fieldDescription><![CDATA[conclusao]]></fieldDescription>
-	</field>
-	<field name="materialExame" class="java.lang.String">
-		<fieldDescription><![CDATA[materialExame]]></fieldDescription>
-	</field>
-	<field name="dataEmissao" class="java.sql.Date">
-		<fieldDescription><![CDATA[dataEmissao]]></fieldDescription>
-	</field>
-	<field name="comentario" class="java.lang.String">
-		<fieldDescription><![CDATA[comentario]]></fieldDescription>
-	</field>
-	<field name="nomePaciente" class="java.lang.String">
-		<fieldDescription><![CDATA[nomePaciente]]></fieldDescription>
-	</field>
-	<field name="medico" class="java.lang.String">
-		<fieldDescription><![CDATA[medico]]></fieldDescription>
-	</field>
-	<field name="valorReferencia" class="java.lang.String">
-		<fieldDescription><![CDATA[valorReferencia]]></fieldDescription>
-	</field>
-	<field name="metodo" class="java.lang.String">
-		<fieldDescription><![CDATA[metodo]]></fieldDescription>
-	</field>
-	<field name="dataNascimento" class="java.sql.Date">
-		<fieldDescription><![CDATA[dataNascimento]]></fieldDescription>
-	</field>
-	<field name="Nome" class="java.lang.String">
-		<fieldDescription><![CDATA[Nome]]></fieldDescription>
-	</field>
-	<field name="nota" class="java.lang.String">
-		<fieldDescription><![CDATA[nota]]></fieldDescription>
-	</field>
 	<title>
 		<band height="61">
 			<textField>
-				<reportElement mode="Transparent" x="121" y="0" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="f981e751-7eb8-41ab-a03f-4e0f369a1315"/>
+				<reportElement mode="Transparent" x="121" y="0" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="86842e49-ec96-42e4-aa90-aa4bfb115b2f"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -81,7 +67,7 @@ WHERE
 				<textFieldExpression><![CDATA[$F{Nome}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement mode="Transparent" x="0" y="21" width="121" height="19" forecolor="#000000" backcolor="#FFFFFF" uuid="5e9757b1-862e-4412-935f-67f1e950f524"/>
+				<reportElement mode="Transparent" x="0" y="21" width="121" height="19" forecolor="#000000" backcolor="#FFFFFF" uuid="47448bad-6257-4b2a-ba4d-e4d78753b394"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -94,7 +80,7 @@ WHERE
 				<text><![CDATA[Data de Emissão:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Transparent" x="0" y="0" width="121" height="19" forecolor="#000000" backcolor="#FFFFFF" uuid="84a70980-227e-47a0-8d13-57630dd21bf9"/>
+				<reportElement mode="Transparent" x="0" y="0" width="121" height="19" forecolor="#000000" backcolor="#FFFFFF" uuid="1fb16f06-b51e-434c-99e6-17f188f667f5"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -107,7 +93,7 @@ WHERE
 				<text><![CDATA[Emitido por: ]]></text>
 			</staticText>
 			<textField>
-				<reportElement mode="Transparent" x="121" y="21" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="08a10ea7-61cb-4a1c-90da-3b8e18cec5d8"/>
+				<reportElement mode="Transparent" x="121" y="21" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="23c24359-26fd-4d62-be54-d3325921698b"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -121,7 +107,7 @@ WHERE
 				<patternExpression><![CDATA[]]></patternExpression>
 			</textField>
 			<staticText>
-				<reportElement mode="Transparent" x="345" y="0" width="129" height="18" forecolor="#000000" backcolor="#FFFFFF" uuid="b7d9b1d6-b1f3-4b08-aafc-4af7faaba764"/>
+				<reportElement mode="Transparent" x="345" y="0" width="129" height="18" forecolor="#000000" backcolor="#FFFFFF" uuid="c0ed41d4-60a8-4a03-9388-94b0504db1ed"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -134,7 +120,7 @@ WHERE
 				<text><![CDATA[Paciente:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Transparent" x="345" y="21" width="130" height="17" forecolor="#000000" backcolor="#FFFFFF" uuid="86cd0896-2e26-42e9-9731-51f687d93789"/>
+				<reportElement mode="Transparent" x="345" y="21" width="130" height="17" forecolor="#000000" backcolor="#FFFFFF" uuid="51e1fffe-a1af-40c0-8d6d-173e293e57ff"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -147,7 +133,7 @@ WHERE
 				<text><![CDATA[Data de Nascimento:]]></text>
 			</staticText>
 			<textField>
-				<reportElement mode="Transparent" x="475" y="21" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="c5db9191-8030-4a9d-8fc3-d938216daf76"/>
+				<reportElement mode="Transparent" x="475" y="21" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="aa566f54-e1d9-4205-bed2-28980802a476"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -161,7 +147,7 @@ WHERE
 				<patternExpression><![CDATA[]]></patternExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Transparent" x="474" y="0" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="9ea4837c-6d33-4eb4-a508-95eb06e5b8a1"/>
+				<reportElement mode="Transparent" x="474" y="0" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="53273142-a2dc-42bf-82cc-26df60c9b541"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -178,7 +164,7 @@ WHERE
 	<pageHeader>
 		<band height="51">
 			<textField>
-				<reportElement mode="Transparent" x="245" y="7" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="66b4c971-4ed1-4871-b196-09a4a733747a"/>
+				<reportElement mode="Transparent" x="245" y="7" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="08622bdb-6791-4c45-b011-da7686469042"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -195,7 +181,7 @@ WHERE
 	<detail>
 		<band height="295">
 			<textField>
-				<reportElement mode="Transparent" x="21" y="19" width="533" height="18" forecolor="#000000" backcolor="#FFFFFF" uuid="c83a7944-1b3e-43e2-ab14-b1a0122f44c5"/>
+				<reportElement mode="Transparent" x="21" y="19" width="533" height="18" forecolor="#000000" backcolor="#FFFFFF" uuid="2ad32fae-da95-42bd-a63a-2bd50d13671e"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -208,7 +194,7 @@ WHERE
 				<textFieldExpression><![CDATA[$F{materialExame}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement mode="Transparent" x="0" y="0" width="155" height="19" forecolor="#000000" backcolor="#FFFFFF" uuid="38fdc006-273a-4431-9037-624087117e34"/>
+				<reportElement mode="Transparent" x="0" y="0" width="155" height="19" forecolor="#000000" backcolor="#FFFFFF" uuid="c20047fe-58ad-4ebb-84bc-5cb6f10e3080"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -221,7 +207,7 @@ WHERE
 				<text><![CDATA[Material do Exame:]]></text>
 			</staticText>
 			<textField>
-				<reportElement mode="Transparent" x="21" y="60" width="533" height="17" forecolor="#000000" backcolor="#FFFFFF" uuid="b12cee3f-0e84-4337-a888-634b1fb8bcdd"/>
+				<reportElement mode="Transparent" x="21" y="60" width="533" height="17" forecolor="#000000" backcolor="#FFFFFF" uuid="0916de2d-1bd2-48d3-b7ff-84c58f1a340c"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -234,7 +220,7 @@ WHERE
 				<textFieldExpression><![CDATA[$F{metodo}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Transparent" x="21" y="99" width="533" height="17" forecolor="#000000" backcolor="#FFFFFF" uuid="3ce809d7-2d80-443c-84be-00103080e051"/>
+				<reportElement mode="Transparent" x="21" y="99" width="533" height="17" forecolor="#000000" backcolor="#FFFFFF" uuid="2138369d-819a-4d70-b924-222ba3fb79b9"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -247,7 +233,7 @@ WHERE
 				<textFieldExpression><![CDATA[$F{valorReferencia}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Transparent" x="20" y="139" width="534" height="18" forecolor="#000000" backcolor="#FFFFFF" uuid="cb4d7bdc-ea71-41fa-bcd9-d039a96a7b2c"/>
+				<reportElement mode="Transparent" x="20" y="139" width="534" height="18" forecolor="#000000" backcolor="#FFFFFF" uuid="1308198a-1423-412b-b1d4-ff3fc543ec66"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -260,7 +246,7 @@ WHERE
 				<textFieldExpression><![CDATA[$F{valorResultado}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Transparent" x="18" y="182" width="533" height="19" forecolor="#000000" backcolor="#FFFFFF" uuid="1352712a-a0d3-4195-b9ca-0e0146598c17"/>
+				<reportElement mode="Transparent" x="18" y="182" width="533" height="19" forecolor="#000000" backcolor="#FFFFFF" uuid="44d2e864-a923-4d66-9c68-0ec5f7f75e59"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -273,7 +259,7 @@ WHERE
 				<textFieldExpression><![CDATA[$F{comentario}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Transparent" x="17" y="229" width="533" height="19" forecolor="#000000" backcolor="#FFFFFF" uuid="9667c2e0-a81b-479b-a2ae-574268aca371"/>
+				<reportElement mode="Transparent" x="17" y="229" width="533" height="19" forecolor="#000000" backcolor="#FFFFFF" uuid="965a24a0-8381-4dda-ae86-a62373af9df2"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -286,7 +272,7 @@ WHERE
 				<textFieldExpression><![CDATA[$F{nota}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Transparent" x="17" y="276" width="532" height="19" forecolor="#000000" backcolor="#FFFFFF" uuid="bf46ff38-5f57-42dd-8209-8e374accfad9"/>
+				<reportElement mode="Transparent" x="17" y="276" width="532" height="19" forecolor="#000000" backcolor="#FFFFFF" uuid="616d2f86-e761-4b1b-a2a1-780a88b17ab0"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -299,7 +285,7 @@ WHERE
 				<textFieldExpression><![CDATA[$F{conclusao}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement mode="Transparent" x="0" y="39" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="576957b0-358d-4264-8cc6-8f0ef86f1a03"/>
+				<reportElement mode="Transparent" x="0" y="39" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="12274596-70bb-498f-9161-7ee49b0b64c4"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -312,7 +298,7 @@ WHERE
 				<text><![CDATA[Método:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Transparent" x="0" y="79" width="153" height="18" forecolor="#000000" backcolor="#FFFFFF" uuid="87dcafc7-6c59-4966-8f0f-1ea9bb6a099d"/>
+				<reportElement mode="Transparent" x="0" y="79" width="153" height="18" forecolor="#000000" backcolor="#FFFFFF" uuid="28c7e2bf-3816-4fd3-a0b0-b75624f5ba0f"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -325,7 +311,7 @@ WHERE
 				<text><![CDATA[Valor de Referência:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Transparent" x="0" y="119" width="153" height="18" forecolor="#000000" backcolor="#FFFFFF" uuid="945ddfe7-5897-48d0-bf22-49e26c19112c"/>
+				<reportElement mode="Transparent" x="0" y="119" width="153" height="18" forecolor="#000000" backcolor="#FFFFFF" uuid="4fd94a0b-7df3-45da-b83a-26bf93f8a01b"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -338,7 +324,7 @@ WHERE
 				<text><![CDATA[Valor do Resultado:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Transparent" x="0" y="161" width="151" height="19" forecolor="#000000" backcolor="#FFFFFF" uuid="99d1cab6-2e2c-481f-ad37-7ae1fc8c5295"/>
+				<reportElement mode="Transparent" x="0" y="161" width="151" height="19" forecolor="#000000" backcolor="#FFFFFF" uuid="02f56cb2-5b6a-42ec-8759-15ff629b9ef7"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -351,7 +337,7 @@ WHERE
 				<text><![CDATA[Comentário:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Transparent" x="0" y="205" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="3fa79f23-ff9d-42d8-9774-95fddacff39f"/>
+				<reportElement mode="Transparent" x="0" y="205" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="5f630b67-df42-4b97-aca2-f96498745c44"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -364,7 +350,7 @@ WHERE
 				<text><![CDATA[Nota:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Transparent" x="0" y="251" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="6e5df6cd-776e-456f-875c-9c9c3eb1cb60"/>
+				<reportElement mode="Transparent" x="0" y="251" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="69ce9b43-1e9c-4538-b80b-dc555a903991"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
