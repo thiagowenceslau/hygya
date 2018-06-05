@@ -7,19 +7,30 @@ window.blockly.js.blockly.ModalResultado = window.blockly.js.blockly.ModalResult
 /**
  * Descreva esta função...
  */
-window.blockly.js.blockly.ModalResultado.fechar = function() {
-	this.cronapi.screen.hideModal("modalResultado");
-}
+window.blockly.js.blockly.ModalResultado.baixar = function() {
 
-/**
- * ModalResultado
- */
-window.blockly.js.blockly.ModalResultado.Executar = function() {
+	var item, dados, idResultado;
+	this.cronapi.util.callServerBlocklyNoReturn(
+			'blockly.AcessoExames:gerarRelatorio', this.cronapi.screen
+					.getScopeVariable('resultadoId'));
 }
 
 /**
  * Descreva esta função...
  */
-window.blockly.js.blockly.ModalResultado.abrir = function() {
+window.blockly.js.blockly.ModalResultado.fechar = function() {
+
+	var item, dados, idResultado;
+	this.cronapi.screen.hideModal("modalResultado");
+}
+
+/**
+ * Descreva esta função...
+ */
+window.blockly.js.blockly.ModalResultado.abrir = function(dados) {
+
+	var item, dados, idResultado;
+	idResultado = this.cronapi.object.getProperty(dados, 'resultado.id');
+	this.cronapi.screen.createScopeVariable('resultadoId', idResultado);
 	this.cronapi.screen.showModal("modalResultado");
 }

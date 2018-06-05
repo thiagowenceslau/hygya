@@ -3,19 +3,19 @@
     <persistence-unit name="app" transaction-type="RESOURCE_LOCAL">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
         <non-jta-data-source>java:comp/env/jdbc/main</non-jta-data-source>
-        <class>app.entity.ExameAutorizado</class>
-        <class>app.entity.AutorizacaoAcessoExame</class>
-        <class>app.entity.ItemValorExame</class>
         <class>app.entity.ItemExame</class>
-        <class>app.entity.Resultado</class>
         <class>app.entity.Profissional</class>
         <class>app.entity.User</class>
         <class>app.entity.Paciente</class>
+        <class>app.entity.AutorizacaoAcessoExame</class>
+        <class>app.entity.Convenio</class>
+        <class>app.entity.ExameAutorizado</class>
         <class>app.entity.Role</class>
         <class>app.entity.Device</class>
         <class>app.entity.EstabelecimentoDeSaude</class>
-        <class>app.entity.Convenio</class>
+        <class>app.entity.ItemValorExame</class>
         <class>app.entity.Agente</class>
+        <class>app.entity.Resultado</class>
         <properties>
             <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
         </properties>

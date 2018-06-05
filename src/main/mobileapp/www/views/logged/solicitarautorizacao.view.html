@@ -43,13 +43,13 @@
         <div class="modal-body"> 
           <div class="list-group list-group-sm row"> 
             <div data-component="crn-datasource-filter" id="crn-datasource-filter-general" class="col"> 
-              <label class="item item-input" id="cloud-search1"> <i class="icon ion-search placeholder-icon"></i> <input type="text" ng-model="vars.busca" cronapp-filter="nome;cpf" cronapp-filter-operator="" cronapp-filter-autopost="true" crn-datasource="Paciente" value="" placeholder="{{'template.crud.search' | translate}}"> </label> 
+              <label class="item item-input" id="cloud-search1"> <i class="icon ion-search placeholder-icon"></i> <input type="text" ng-model="vars.busca" cronapp-filter="cpf" cronapp-filter-operator="" cronapp-filter-autopost="true" crn-datasource="Paciente" value="" placeholder="{{'template.crud.search' | translate}}"> </label> 
             </div> 
             <div class="component-holder ng-binding ng-scope" data-component="crn-datasource" id="crn-datasource-329191"></div> 
           </div> 
-          <div class="component-holder ng-binding ng-scope" data-component="crn-datasource" id="crn-datasource-937901"> 
-            <datasource name="Paciente" entity="api/cronapi/crud/app.entity.Paciente" keys="id" rows-per-page="100" on-before-create="" on-after-create="" on-before-update="" on-after-update="" on-before-delete="" on-after-delete="" on-after-fill=""></datasource> 
-          </div> 
+         <div class="component-holder ng-binding ng-scope col-xs-12" data-component="crn-datasource" id="crn-datasource-761632">
+      <datasource name="Paciente" entity="api/cronapi/query/qxl0qb5iq8o2/{{vars.busca}}/" keys="id" rows-per-page="100" on-before-create="" on-after-create="" on-before-update="" on-after-update="" on-before-delete="" on-after-delete="" on-after-fill=""></datasource>
+    </div>
           <div crn-datasource="Paciente" class=""> 
             <ion-list can-swipe="listCanSwipe"> 
               <ion-item ng-repeat="rowData in datasource.data" class="item"> 

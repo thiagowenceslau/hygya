@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly formTarget="" resourceType="JAVA" ruleDescription="AcessoExames" ruleName="AcessoExames" ruleSynchronous="false" ruleTimeout="" ruleType="I">
-  <metadata scale="1" scrollx="327.3922413793114" scrolly="9.999999999999858" target="8FN8#e,5t%Y7s6Ao$6~X"/>
+  <metadata scale="1" scrollx="329.39224137931143" scrolly="8.999999999999915" target="l0]UzYuHq9bc;qcuVxM["/>
   <block colour="#995ba5" id="8FN8#e,5t%Y7s6Ao$6~X" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-112" y="53">
     <mutation>
       <arg name="idResultado"/>
@@ -47,10 +47,9 @@
                 <value name="ARG0">
                   <block colour="#487f7f" dependencyby="8FN8#e,5t%Y7s6Ao$6~X" id="m5R/dc%@vn;cm5q:%u,w" origintype="util_report_list" output="true" type="util_report_list">
                     <mutation>
-                      <arg name="reports/Resultado.jrxml" value="reports/Resultado.jrxml"/>
-                      <arg name="reports/ResultadoPaciente.jrxml" value="reports/ResultadoPaciente.jrxml"/>
+                      <arg name="" value=""/>
                     </mutation>
-                    <field name="SELECT">reports/ResultadoPaciente.jrxml</field>
+                    <field name="SELECT">reports/ResultadoExame.jrxml</field>
                   </block>
                 </value>
                 <value name="ARG1">
@@ -133,11 +132,12 @@
                 <mutation name="{{cronapi.report.Operations.generateReport}}" return-raw-type="cronapi.Var">
                   <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Relatório"/>
                   <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Caminho"/>
+                  <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="IDRESULTADO"/>
                 </mutation>
                 <value name="ARG0">
                   <block colour="#487f7f" dependencyby="RzDA7e~b]|F4N7KYJqDT" id="G#Z7}qqhl`_*.asO=L/0" origintype="util_report_list" output="true" type="util_report_list">
                     <mutation>
-                      <arg name="reports/Resultado.jrxml" value="reports/Resultado.jrxml"/>
+                      <arg name="" value=""/>
                     </mutation>
                     <field name="SELECT">reports/Resultado.jrxml</field>
                   </block>
@@ -179,25 +179,34 @@
     </value>
   </block>
   <block colour="#995ba5" id="l0]UzYuHq9bc;qcuVxM[" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-105" y="132">
+    <mutation>
+      <arg name="id"/>
+    </mutation>
     <field name="NAME">gerarRelatorio</field>
     <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
     <statement name="STACK">
       <block colour="#487f7f" dependencyby="l0]UzYuHq9bc;qcuVxM[" id="QfCI2~)0.eNr!ZE]c8Kc" multilayer="true" namespace="cronapi.util.openReport" origintype="procedures_openreport_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EAbrir%20Relat%C3%B3rio%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20responsavel%20por%20abrir%20um%20relat%C3%B3rio.%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Relat%C3%B3rio%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.util.openReport%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.util.openReport%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_openreport_callnoreturn">
         <mutation name="{{cronapi.util.openReport}}" return-raw-type="undefined">
           <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Relatório"/>
+          <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="IDRESULTADO"/>
         </mutation>
         <value name="ARG0">
           <block colour="#487f7f" dependencyby="l0]UzYuHq9bc;qcuVxM[" id="[Wf^D`F6_8?V80x{vU86" origintype="util_report_list" output="true" type="util_report_list">
             <mutation>
-              <arg name="" value=""/>
+              <arg name="reports/ResultadoExame.jrxml" value="reports/ResultadoExame.jrxml"/>
             </mutation>
-            <field name="SELECT">reports/Resultado.jrxml</field>
+            <field name="SELECT">reports/ResultadoExame.jrxml</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block colour="#a55b80" dependencyby="l0]UzYuHq9bc;qcuVxM[" id="[CLeku^p0D`C[q_30?C*" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+            <field name="VAR">id</field>
           </block>
         </value>
       </block>
     </statement>
   </block>
-  <block colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-32" y="135">
+  <block colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-8" y="176">
     <mutation>
       <arg name="idAutorizacao"/>
     </mutation>
@@ -246,7 +255,7 @@
       </block>
     </statement>
   </block>
-  <block colour="#995ba5" id="Qc)%jrbl7QcNN^!RK#oZ" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-30" y="154">
+  <block colour="#995ba5" id="Qc)%jrbl7QcNN^!RK#oZ" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-8" y="204">
     <mutation>
       <arg name="idDados"/>
     </mutation>

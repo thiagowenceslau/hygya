@@ -51,6 +51,27 @@ public interface EstabelecimentoDeSaudeDAO extends JpaRepository<Estabelecimento
    */
   @Query("SELECT entity FROM User entity WHERE entity.estabelecimentoDeSaude.id = :id")
   public Page<User> findUser(@Param(value="id") java.lang.String id, Pageable pageable);
+    
+  /**
+   * OneToMany Relation - Searchable fields - General search (Only strings fields)
+   * @generated
+   */
+  @Query("SELECT entity FROM Resultado entity WHERE entity.estabelecimentoDeSaude.id = :id AND (entity.nomeExame like concat('%',coalesce(:search,''),'%'))")
+  public Page<Resultado> findResultadoGeneralSearch(@Param(value="search") java.lang.String search, @Param(value="id") java.lang.String id, Pageable pageable);
+
+  /** 
+   * OneToMany Relation - Searchable fields - Specific search
+   * @generated
+   */
+  @Query("SELECT entity FROM Resultado entity WHERE entity.estabelecimentoDeSaude.id = :id AND (:nomeExame is null OR entity.nomeExame like concat('%',:nomeExame,'%')) AND (:dataEmissao is null OR entity.dataEmissao = :dataEmissao)")
+  public Page<Resultado> findResultadoSpecificSearch(@Param(value="id") java.lang.String id, @Param(value="nomeExame") java.lang.String nomeExame, @Param(value="dataEmissao") java.util.Date dataEmissao, Pageable pageable);
+
+  /**
+   * OneToMany Relation
+   * @generated
+   */
+  @Query("SELECT entity FROM Resultado entity WHERE entity.estabelecimentoDeSaude.id = :id")
+  public Page<Resultado> findResultado(@Param(value="id") java.lang.String id, Pageable pageable);
   
   /**
    * ManyToOne Relation - Searchable fields - General search (Only strings fields)

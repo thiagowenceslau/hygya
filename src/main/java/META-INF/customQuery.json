@@ -5676,5 +5676,269 @@
 			"foreignKey": null
 		},
 		"serviceUrl": "api/cronapi/query/qe9cgq0o55yd/{{resultadoId}}/"
+	},
+	"1hrrkixn4bs4w": {
+		"customId": "dsPacienteSolicitacao",
+		"queryName": "PacienteSolicitacao",
+		"screen": "src/main/webapp/views/logged/solicitarautorizacao.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Paciente",
+		"entityFullName": "app.entity.Paciente",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "Paciente",
+					"namespace": "app.entity.Paciente",
+					"alias": "p"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "p",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "p.cpf",
+						"field": "p.cpf",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":cpf",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "cpf",
+				"fieldValue": "{{vars.filter5656}}"
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"nome": null,
+			"cpf": null,
+			"dataNascimento": null,
+			"telefone1": null,
+			"telefone2": null,
+			"endereco": null,
+			"bairro": null,
+			"numero": null,
+			"complemento": null,
+			"cidade": null,
+			"estado": null,
+			"cep": null,
+			"ativo": null,
+			"bloqueado": null,
+			"dataInclusao": null,
+			"dataAtivacao": null,
+			"user": null,
+			"sexo": null,
+			"cancelado": null,
+			"agenteAutorizador": null
+		},
+		"security": {
+			"id": null,
+			"nome": null,
+			"cpf": null,
+			"dataNascimento": null,
+			"telefone1": null,
+			"telefone2": null,
+			"endereco": null,
+			"bairro": null,
+			"numero": null,
+			"complemento": null,
+			"cidade": null,
+			"estado": null,
+			"cep": null,
+			"ativo": null,
+			"bloqueado": null,
+			"dataInclusao": null,
+			"dataAtivacao": null,
+			"user": null,
+			"sexo": null,
+			"cancelado": null,
+			"agenteAutorizador": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/1hrrkixn4bs4w/{{vars.filter5656}}/"
+	},
+	"qxl0qb5iq8o2": {
+		"customId": "dsPacienteSolicitacaoMobile",
+		"queryName": "PacienteSolicitacaoMobile",
+		"screen": "src/main/mobileapp/www/views/logged/template.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Paciente",
+		"entityFullName": "app.entity.Paciente",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "Paciente",
+					"namespace": "app.entity.Paciente",
+					"alias": "p"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "p",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "p.cpf",
+						"field": "p.cpf",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":cpf",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "cpf",
+				"fieldValue": "{{vars.busca}}"
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"nome": null,
+			"cpf": null,
+			"dataNascimento": null,
+			"telefone1": null,
+			"telefone2": null,
+			"endereco": null,
+			"bairro": null,
+			"numero": null,
+			"complemento": null,
+			"cidade": null,
+			"estado": null,
+			"cep": null,
+			"ativo": null,
+			"bloqueado": null,
+			"dataInclusao": null,
+			"dataAtivacao": null,
+			"user": null,
+			"sexo": null,
+			"cancelado": null,
+			"agenteAutorizador": null
+		},
+		"security": {
+			"id": null,
+			"nome": null,
+			"cpf": null,
+			"dataNascimento": null,
+			"telefone1": null,
+			"telefone2": null,
+			"endereco": null,
+			"bairro": null,
+			"numero": null,
+			"complemento": null,
+			"cidade": null,
+			"estado": null,
+			"cep": null,
+			"ativo": null,
+			"bloqueado": null,
+			"dataInclusao": null,
+			"dataAtivacao": null,
+			"user": null,
+			"sexo": null,
+			"cancelado": null,
+			"agenteAutorizador": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/qxl0qb5iq8o2/{{vars.busca}}/"
 	}
 }

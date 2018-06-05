@@ -52,6 +52,27 @@ public interface ResultadoDAO extends JpaRepository<Resultado, java.lang.String>
   @Query("SELECT entity FROM ItemExame entity WHERE entity.resultado.id = :id")
   public Page<ItemExame> findItemExame(@Param(value="id") java.lang.String id, Pageable pageable);
 
+  /**
+   * OneToMany Relation
+   * @generated
+   */
+  @Query("SELECT entity FROM ExameAutorizado entity WHERE entity.resultado.id = :id")
+  public Page<ExameAutorizado> findExameAutorizado(@Param(value="id") java.lang.String id, Pageable pageable);
+  /**
+   * ManyToOne Relation
+   * @generated
+   */
+  @Query("SELECT entity.autorizacaoAcessoExame FROM ExameAutorizado entity WHERE entity.resultado.id = :id")
+  public Page<AutorizacaoAcessoExame> listAutorizacaoAcessoExame(@Param(value="id") java.lang.String id, Pageable pageable);
+
+  /**
+   * ManyToOne Relation Delete
+   * @generated
+   */
+  @Modifying
+  @Query("DELETE FROM ExameAutorizado entity WHERE entity.resultado.id = :instanceId AND entity.autorizacaoAcessoExame.id = :relationId")
+  public int deleteAutorizacaoAcessoExame(@Param(value="instanceId") java.lang.String instanceId, @Param(value="relationId") java.lang.String relationId);
+
   
   /**
    * Searchable fields - General search (Only strings fields)

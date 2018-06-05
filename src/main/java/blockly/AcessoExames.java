@@ -19,6 +19,8 @@ public class AcessoExames {
 	public static Var recusar(Var idAutorizacao) throws Exception {
 		return new Callable<Var>() {
 
+			private Var id2 = Var.VAR_NULL;
+
 			public Var call() throws Exception {
 				cronapi.database.Operations.execute(Var.valueOf("app.entity.AutorizacaoAcessoExame"),
 						Var.valueOf(
@@ -39,6 +41,8 @@ public class AcessoExames {
 	// Descreva esta função...
 	public static void autorizar(Var idDados) throws Exception {
 		new Callable<Var>() {
+
+			private Var id2 = Var.VAR_NULL;
 
 			public Var call() throws Exception {
 				cronapi.database.Operations.execute(Var.valueOf("app.entity.AutorizacaoAcessoExame"),
@@ -70,7 +74,7 @@ public class AcessoExames {
 				resultado = Var.valueOf(cronapi.io.Operations.fileAppReclycleDir().toString()
 						+ cronapi.io.Operations.fileSeparator().toString()
 						+ cronapi.util.Operations.generateUUID().toString() + Var.valueOf(".pdf").toString());
-				relatorio = cronapi.report.Operations.generateReport(Var.valueOf("reports/ResultadoPaciente.jrxml"),
+				relatorio = cronapi.report.Operations.generateReport(Var.valueOf("reports/ResultadoExame.jrxml"),
 						resultado, cronapi.list.Operations.newList(Var.valueOf("IDRESULTADO", idResultado)));
 				cronapi.io.Operations.fileDownload(relatorio);
 				return Var.VAR_NULL;
@@ -94,7 +98,7 @@ public class AcessoExames {
 						+ cronapi.io.Operations.fileSeparator().toString()
 						+ cronapi.util.Operations.generateUUID().toString() + Var.valueOf(".pdf").toString());
 				relatorio = cronapi.report.Operations.generateReport(Var.valueOf("reports/Resultado.jrxml"), resultado,
-						cronapi.list.Operations.newList());
+						cronapi.list.Operations.newList(Var.valueOf("IDRESULTADO", Var.VAR_NULL)));
 				cronapi.io.Operations.fileDownload(relatorio);
 				return Var.VAR_NULL;
 			}
@@ -103,15 +107,17 @@ public class AcessoExames {
 
 	/**
 	 *
+	 * @param id2
 	 * @return Var
 	 */
 	// Descreva esta função...
-	public static Var gerarRelatorio() throws Exception {
+	public static Var gerarRelatorio(Var id2) throws Exception {
 		return new Callable<Var>() {
 
 			public Var call() throws Exception {
 				cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.util.openReport"),
-						Var.valueOf("reports/Resultado.jrxml"), cronapi.list.Operations.newList());
+						Var.valueOf("reports/ResultadoExame.jrxml"),
+						cronapi.list.Operations.newList(Var.valueOf("IDRESULTADO", id2)));
 				return Var.VAR_NULL;
 			}
 		}.call();

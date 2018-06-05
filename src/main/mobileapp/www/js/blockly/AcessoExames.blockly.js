@@ -9,7 +9,7 @@ window.blockly.js.blockly.AcessoExames = window.blockly.js.blockly.AcessoExames
  */
 window.blockly.js.blockly.AcessoExames.autorizar = function(rowData) {
 
-	var item, dados, idAutorizacao, rowData;
+	var idAutorizacao, rowData, dados;
 	idAutorizacao = this.cronapi.object.getProperty(rowData, 'id');
 	this.cronapi.util.callServerBlocklyNoReturn(
 			'blockly.AcessoExames:autorizar', idAutorizacao);
@@ -22,7 +22,7 @@ window.blockly.js.blockly.AcessoExames.autorizar = function(rowData) {
  */
 window.blockly.js.blockly.AcessoExames.recusar = function(dados) {
 
-	var item, dados, idAutorizacao, rowData;
+	var idAutorizacao, rowData, dados;
 	idAutorizacao = this.cronapi.object.getProperty(dados, 'id');
 	this.cronapi.util.callServerBlocklyNoReturn('blockly.AcessoExames:recusar',
 			idAutorizacao);

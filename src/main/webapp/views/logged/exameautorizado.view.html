@@ -29,7 +29,7 @@
             <div data-container="true">{{rowData.resultado.dataEmissao | mask:'date'}}</div></td> 
           <td class=""> 
             <div class=""> 
-              <button class="btn btn-default component-holder" type="submit" ng-click="blockly.js.blockly.ModalResultado.abrir()" xattr-size="" xattr-fullsize="" xattr-theme="btn-default" data-component="crn-button" id="crn-button-40688"><i class="glyphicon glyphicon-list-alt"></i> <span>Resultado</span></button> 
+              <button class="btn btn-default component-holder" type="submit" ng-click="blockly.js.blockly.ModalResultado.abrir(rowData)" xattr-size="" xattr-fullsize="" xattr-theme="btn-default" data-component="crn-button" id="crn-button-40688"><i class="glyphicon glyphicon-list-alt"></i> <span>Resultado</span></button> 
             </div> </td> 
         </tr> 
       </tbody> 
@@ -84,7 +84,7 @@
           <div class="panel-footer" data-container="true"> 
             
             <div class="genClass263">  
-          <button class="btn component-holder btn-primary" type="submit" ng-click="cronapi.util.makeCallServerBlocklyAsync('blockly.AcessoExames:gerarRelatorio', null, null)" xattr-size="" xattr-fullsize="" xattr-theme="btn-primary" data-component="crn-button" id="crn-button-223240"><i class="glyphicon glyphicon-download-alt"></i> <span></span></button>
+          <button class="btn component-holder btn-primary" type="submit" ng-click="blockly.js.blockly.ModalResultado.baixar()" xattr-size="" xattr-fullsize="" xattr-theme="btn-primary" data-component="crn-button" id="crn-button-223240"><i class="glyphicon glyphicon-download-alt"></i> <span></span></button>
           </div>
           </div> 
         </form> 

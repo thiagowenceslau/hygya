@@ -45,6 +45,42 @@ public interface PacienteDAO extends JpaRepository<Paciente, java.lang.String> {
 
 
 
+  /**
+   * OneToMany Relation
+   * @generated
+   */
+  @Query("SELECT entity FROM AutorizacaoAcessoExame entity WHERE entity.paciente.id = :id")
+  public Page<AutorizacaoAcessoExame> findAutorizacaoAcessoExame(@Param(value="id") java.lang.String id, Pageable pageable);
+  
+  /**
+   * ManyToOne Relation - Searchable fields - General search (Only strings fields)
+   * @generated
+   */
+  @Query("SELECT entity.profissional FROM AutorizacaoAcessoExame entity WHERE entity.paciente.id = :id AND (entity.profissional.nome like concat('%',coalesce(:search,''),'%') OR entity.profissional.cpF like concat('%',coalesce(:search,''),'%'))")
+  public Page<Profissional> listProfissionalGeneralSearch(@Param(value="search") java.lang.String search, @Param(value="id") java.lang.String id, Pageable pageable);
+
+  /**
+   * ManyToOne Relation - Searchable fields - Specific search
+   * @generated
+   */
+  @Query("SELECT entity.profissional FROM AutorizacaoAcessoExame entity WHERE entity.paciente.id = :id AND (:nome is null OR entity.profissional.nome like concat('%',:nome,'%')) AND (:cpF is null OR entity.profissional.cpF like concat('%',:cpF,'%')) AND (:numCRM is null OR entity.profissional.numCRM = :numCRM)")
+  public Page<Profissional> listProfissionalSpecificSearch(@Param(value="id") java.lang.String id, @Param(value="nome") java.lang.String nome, @Param(value="cpF") java.lang.String cpF, @Param(value="numCRM") java.lang.Integer numCRM, Pageable pageable);
+
+  /**
+   * ManyToOne Relation
+   * @generated
+   */
+  @Query("SELECT entity.profissional FROM AutorizacaoAcessoExame entity WHERE entity.paciente.id = :id")
+  public Page<Profissional> listProfissional(@Param(value="id") java.lang.String id, Pageable pageable);
+
+  /**
+   * ManyToOne Relation Delete
+   * @generated
+   */
+  @Modifying
+  @Query("DELETE FROM AutorizacaoAcessoExame entity WHERE entity.paciente.id = :instanceId AND entity.profissional.id = :relationId")
+  public int deleteProfissional(@Param(value="instanceId") java.lang.String instanceId, @Param(value="relationId") java.lang.String relationId);
+
   
   /**
    * Searchable fields - General search (Only strings fields)

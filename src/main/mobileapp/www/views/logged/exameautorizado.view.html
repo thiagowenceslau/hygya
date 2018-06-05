@@ -19,7 +19,7 @@
                Exame: {{rowData.resultado.nomeExame}} 
               <br> Data: {{rowData.resultado.dataEmissao | date:'dd/MM/yyyy'}} 
             </div>
-            <button class="button component-holder button-positive" type="submit" ng-click="blockly.js.blockly.ModalResultado.abrir()" data-component="crn-button" id="crn-button-952397" xattr-theme="button-positive" ng-paste=""><i class="ion ion-android-search"></i> <span></span></button> 
+            <button class="button component-holder button-positive" type="submit" ng-click="blockly.js.blockly.ModalResultado.abrir(rowData)" data-component="crn-button" id="crn-button-952397" xattr-theme="button-positive" ng-paste=""><i class="ion ion-android-search"></i> <span></span></button> 
           </div> 
         </ion-item> 
       </ion-list> 
@@ -102,7 +102,7 @@
               <div class="component-holder ng-binding ng-scope col-xs-12" data-component="crn-button-bar" id="crn-button-bar-493403"> 
                 <div class="button-bar"> 
                   <button class="component-holder button button-block button-assertive" data-component="crn-button" type="submit" ng-click="blockly.js.blockly.ModalResultado.fechar()" xattr-size="" xattr-type="" xattr-theme="button-assertive" xattr-fullsize="button-block"> <i class="icon icon-left ion ion-close"></i> <span></span></button> 
-                  <button class="component-holder button button-block button-positive" data-component="crn-button" type="submit" ng-click="cronapi.util.makeCallServerBlocklyAsync('blockly.AcessoExames:baixarRelatorio', null, null)" xattr-size="" xattr-type="" xattr-theme="button-positive" xattr-fullsize="button-block"><i class="icon icon-left ion ion-android-download"></i><span></span></button> 
+                  <button class="component-holder button button-block button-positive" data-component="crn-button" type="submit" ng-click="blockly.js.blockly.ModalResultado.baixar()" xattr-size="" xattr-type="" xattr-theme="button-positive" xattr-fullsize="button-block"><i class="icon icon-left ion ion-android-download"></i><span></span></button> 
                 </div>
               </div> 
             </div> 

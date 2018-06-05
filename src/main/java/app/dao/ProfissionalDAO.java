@@ -45,6 +45,42 @@ public interface ProfissionalDAO extends JpaRepository<Profissional, java.lang.S
 
 
 
+  /**
+   * OneToMany Relation
+   * @generated
+   */
+  @Query("SELECT entity FROM AutorizacaoAcessoExame entity WHERE entity.profissional.id = :id")
+  public Page<AutorizacaoAcessoExame> findAutorizacaoAcessoExame(@Param(value="id") java.lang.String id, Pageable pageable);
+  
+  /**
+   * ManyToOne Relation - Searchable fields - General search (Only strings fields)
+   * @generated
+   */
+  @Query("SELECT entity.paciente FROM AutorizacaoAcessoExame entity WHERE entity.profissional.id = :id AND (entity.paciente.nome like concat('%',coalesce(:search,''),'%') OR entity.paciente.cpf like concat('%',coalesce(:search,''),'%'))")
+  public Page<Paciente> listPacienteGeneralSearch(@Param(value="search") java.lang.String search, @Param(value="id") java.lang.String id, Pageable pageable);
+
+  /**
+   * ManyToOne Relation - Searchable fields - Specific search
+   * @generated
+   */
+  @Query("SELECT entity.paciente FROM AutorizacaoAcessoExame entity WHERE entity.profissional.id = :id AND (:nome is null OR entity.paciente.nome like concat('%',:nome,'%')) AND (:cpf is null OR entity.paciente.cpf like concat('%',:cpf,'%'))")
+  public Page<Paciente> listPacienteSpecificSearch(@Param(value="id") java.lang.String id, @Param(value="nome") java.lang.String nome, @Param(value="cpf") java.lang.String cpf, Pageable pageable);
+
+  /**
+   * ManyToOne Relation
+   * @generated
+   */
+  @Query("SELECT entity.paciente FROM AutorizacaoAcessoExame entity WHERE entity.profissional.id = :id")
+  public Page<Paciente> listPaciente(@Param(value="id") java.lang.String id, Pageable pageable);
+
+  /**
+   * ManyToOne Relation Delete
+   * @generated
+   */
+  @Modifying
+  @Query("DELETE FROM AutorizacaoAcessoExame entity WHERE entity.profissional.id = :instanceId AND entity.paciente.id = :relationId")
+  public int deletePaciente(@Param(value="instanceId") java.lang.String instanceId, @Param(value="relationId") java.lang.String relationId);
+
   
   /**
    * Searchable fields - General search (Only strings fields)

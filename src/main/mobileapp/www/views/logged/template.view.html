@@ -1,10 +1,18 @@
 <ion-view view-title="Empty"> 
-  <ion-content data-content="true" data-replace="false">
-      <div class="component-holder ng-binding ng-scope col-xs-12" data-component="crn-datasource" id="crn-datasource-761632"><datasource name="Resultado" entity="api/cronapi/crud/app.entity.Resultado" keys="id" rows-per-page="100" on-before-create="" on-after-create="" on-before-update="" on-after-update="" on-before-delete="" on-after-delete="" on-after-fill=""></datasource></div><div class="button col-xs-6">
-    <button class="button component-holder button-block button-assertive" type="submit" ng-click="blockly.js.blockly.ModalMeusExames.fechar()" data-component="crn-button" id="crn-button-661970" xattr-fullsize="button-block" xattr-type="" xattr-theme="button-assertive"><i class="ion ion-android-arrow-back"></i> <span>Voltar</span></button>
+  <ion-content data-content="true" data-replace="false"> 
+    <div class="component-holder ng-binding ng-scope col-xs-12" data-component="crn-datasource" id="crn-datasource-761632">
+      <datasource name="Paciente" entity="api/cronapi/query/qxl0qb5iq8o2/{{vars.busca}}/" keys="id" rows-per-page="100" on-before-create="" on-after-create="" on-before-update="" on-after-update="" on-before-delete="" on-after-delete="" on-after-fill=""></datasource>
     </div>
-    <div class="button col-xs-6">
-    <button class="button component-holder button-block button-positive" type="submit" ng-click="cronapi.util.makeCallServerBlocklyAsync('blockly.AcessoExames:baixarPaciente', null, null, Resultado.active.id)" data-component="crn-button" id="crn-button-662260" xattr-fullsize="button-block" xattr-theme="button-positive"><i class="ion ion-ios-cloud-download"></i> <span>Baixar</span></button>
+    <div class="component-holder ng-binding ng-scope col-xs-12" data-component="crn-search" id="crn-search-491514">
+      <form class="list ng-pristine ng-valid">
+        <label class="item item-input" id="cloud-search1"><i class="icon ion-search placeholder-icon"></i> <input type="search" placeholder="" ng-model="vars.busca"></label>
+      </form>
     </div>
+    <div class="button col-xs-6"> 
+      <button class="button component-holder button-block button-assertive" type="submit" ng-click="blockly.js.blockly.ModalMeusExames.fechar()" data-component="crn-button" id="crn-button-661970" xattr-fullsize="button-block" xattr-type="" xattr-theme="button-assertive"><i class="ion ion-android-arrow-back"></i> <span>Voltar</span></button> 
+    </div> 
+    <div class="button col-xs-6"> 
+      <button class="button component-holder button-block button-positive" type="submit" ng-click="blockly.js.blockly.ModalResultado.baixar()" data-component="crn-button" id="crn-button-662260" xattr-fullsize="button-block" xattr-theme="button-positive"><i class="ion ion-ios-cloud-download"></i> <span>Baixar</span></button> 
+    </div> 
   </ion-content> 
 </ion-view>

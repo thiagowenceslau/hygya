@@ -1,1 +1,1 @@
-window.hostApp = 'https://app-9-77-10080.ide.cronapp.io/';
+window.hostApp = 'https://app-8-79-10020.ide.cronapp.io/';
